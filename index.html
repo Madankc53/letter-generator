@@ -17,449 +17,133 @@
       --border: #e8d8c0;
       --shadow: rgba(192,57,43,0.12);
     }
-
     * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--ink); min-height: 100vh; }
 
-    body {
-      font-family: 'DM Sans', sans-serif;
-      background: var(--cream);
-      color: var(--ink);
-      min-height: 100vh;
-    }
-
-    /* ── Header ── */
     header {
-      background: var(--deep);
-      padding: 0 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 64px;
-      position: sticky;
-      top: 0;
-      z-index: 100;
+      background: var(--deep); padding: 0 2rem;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 64px; position: sticky; top: 0; z-index: 100;
       box-shadow: 0 2px 20px rgba(0,0,0,0.3);
     }
+    .logo { display: flex; align-items: center; gap: 12px; }
+    .logo-icon { width: 36px; height: 36px; background: var(--crimson); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+    .logo-text { font-family: 'Playfair Display', serif; color: var(--cream); font-size: 1.2rem; font-weight: 700; }
+    .logo-text span { color: var(--gold); }
+    .header-badge { background: var(--crimson); color: white; font-size: 0.72rem; padding: 4px 12px; border-radius: 20px; font-weight: 500; }
 
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .logo-icon {
-      width: 36px;
-      height: 36px;
-      background: var(--crimson);
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 18px;
-    }
-
-    .logo-text {
-      font-family: 'Playfair Display', serif;
-      color: var(--cream);
-      font-size: 1.2rem;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-    }
-
-    .logo-text span {
-      color: var(--gold);
-    }
-
-    .header-badge {
-      background: var(--crimson);
-      color: white;
-      font-size: 0.72rem;
-      padding: 4px 12px;
-      border-radius: 20px;
-      font-weight: 500;
-      letter-spacing: 0.5px;
-    }
-
-    /* ── Hero ── */
     .hero {
       background: linear-gradient(135deg, var(--deep) 0%, #3d1a08 100%);
-      padding: 60px 2rem 80px;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
+      padding: 60px 2rem 80px; text-align: center;
     }
+    .hero-flag { font-size: 3rem; margin-bottom: 16px; display: block; animation: float 3s ease-in-out infinite; }
+    @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+    .hero h1 { font-family: 'Tiro Devanagari Nepal', serif; color: white; font-size: clamp(1.8rem,4vw,2.8rem); font-weight: 400; margin-bottom: 8px; }
+    .hero h2 { font-family: 'Playfair Display', serif; color: var(--gold); font-size: clamp(1rem,2.5vw,1.4rem); font-weight: 400; margin-bottom: 20px; }
+    .hero p { color: rgba(255,255,255,0.65); font-size: 0.95rem; max-width: 480px; margin: 0 auto; line-height: 1.7; }
 
-    .hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-    }
+    .container { max-width: 960px; margin: -30px auto 60px; padding: 0 1.5rem; position: relative; z-index: 1; }
 
-    .hero-flag {
-      font-size: 3rem;
-      margin-bottom: 16px;
-      animation: float 3s ease-in-out infinite;
-    }
-
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-8px); }
-    }
-
-    .hero h1 {
-      font-family: 'Tiro Devanagari Nepal', serif;
-      color: white;
-      font-size: clamp(1.8rem, 4vw, 2.8rem);
-      font-weight: 400;
-      margin-bottom: 8px;
-      line-height: 1.3;
-    }
-
-    .hero h2 {
-      font-family: 'Playfair Display', serif;
-      color: var(--gold);
-      font-size: clamp(1rem, 2.5vw, 1.4rem);
-      font-weight: 400;
-      margin-bottom: 20px;
-      letter-spacing: 1px;
-    }
-
-    .hero p {
-      color: rgba(255,255,255,0.65);
-      font-size: 0.95rem;
-      max-width: 480px;
-      margin: 0 auto;
-      line-height: 1.7;
-    }
-
-    /* ── Main Layout ── */
-    .container {
-      max-width: 960px;
-      margin: -30px auto 60px;
-      padding: 0 1.5rem;
-      position: relative;
-      z-index: 1;
-    }
-
-    /* ── Letter Type Cards ── */
     .section-title {
-      font-family: 'Tiro Devanagari Nepal', serif;
-      font-size: 1.3rem;
-      color: var(--ink);
-      margin-bottom: 16px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
+      font-family: 'Tiro Devanagari Nepal', serif; font-size: 1.3rem;
+      color: var(--ink); margin-bottom: 16px;
+      display: flex; align-items: center; gap: 10px;
     }
+    .section-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
 
-    .section-title::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: var(--border);
-    }
-
-    .letter-types {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 12px;
-      margin-bottom: 32px;
-    }
-
+    .letter-types { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px,1fr)); gap: 12px; margin-bottom: 32px; }
     .letter-card {
-      background: var(--paper);
-      border: 2px solid var(--border);
-      border-radius: 12px;
-      padding: 20px 16px;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
+      background: var(--paper); border: 2px solid var(--border); border-radius: 12px;
+      padding: 20px 16px; cursor: pointer; transition: all 0.2s ease; text-align: center; position: relative; overflow: hidden;
     }
+    .letter-card::before { content:''; position:absolute; bottom:0; left:0; right:0; height:3px; background:var(--crimson); transform:scaleX(0); transition:transform 0.2s; }
+    .letter-card:hover { border-color: var(--crimson); transform: translateY(-3px); box-shadow: 0 8px 24px var(--shadow); }
+    .letter-card:hover::before, .letter-card.active::before { transform: scaleX(1); }
+    .letter-card.active { border-color: var(--crimson); background: #fff5f3; box-shadow: 0 4px 16px var(--shadow); }
+    .letter-card .icon { font-size: 2rem; margin-bottom: 10px; display: block; }
+    .letter-card .title { font-family: 'Tiro Devanagari Nepal', serif; font-size: 0.95rem; color: var(--ink); line-height: 1.4; display: block; }
+    .letter-card .subtitle { font-size: 0.72rem; color: var(--muted); margin-top: 4px; display: block; }
 
-    .letter-card::before {
-      content: '';
-      position: absolute;
-      bottom: 0; left: 0; right: 0;
-      height: 3px;
-      background: var(--crimson);
-      transform: scaleX(0);
-      transition: transform 0.2s ease;
-    }
-
-    .letter-card:hover {
-      border-color: var(--crimson);
-      transform: translateY(-3px);
-      box-shadow: 0 8px 24px var(--shadow);
-    }
-
-    .letter-card:hover::before,
-    .letter-card.active::before { transform: scaleX(1); }
-
-    .letter-card.active {
-      border-color: var(--crimson);
-      background: #fff5f3;
-      box-shadow: 0 4px 16px var(--shadow);
-    }
-
-    .letter-card .icon {
-      font-size: 2rem;
-      margin-bottom: 10px;
-      display: block;
-    }
-
-    .letter-card .title {
-      font-family: 'Tiro Devanagari Nepal', serif;
-      font-size: 0.95rem;
-      color: var(--ink);
-      line-height: 1.4;
-      display: block;
-    }
-
-    .letter-card .subtitle {
-      font-size: 0.72rem;
-      color: var(--muted);
-      margin-top: 4px;
-      display: block;
-    }
-
-    /* ── Form ── */
     .form-card {
-      background: var(--paper);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 32px;
-      box-shadow: 0 4px 24px rgba(0,0,0,0.06);
-      margin-bottom: 24px;
-      display: none;
-      animation: slideUp 0.3s ease;
+      background: var(--paper); border: 1px solid var(--border); border-radius: 16px;
+      padding: 32px; box-shadow: 0 4px 24px rgba(0,0,0,0.06); margin-bottom: 24px;
+      display: none; animation: slideUp 0.3s ease;
     }
-
     .form-card.visible { display: block; }
+    @keyframes slideUp { from{opacity:0;transform:translateY(16px)} to{opacity:1;transform:translateY(0)} }
 
-    @keyframes slideUp {
-      from { opacity: 0; transform: translateY(16px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .form-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-    }
-
-    @media (max-width: 600px) {
-      .form-grid { grid-template-columns: 1fr; }
-      header { padding: 0 1rem; }
-      .hero { padding: 40px 1rem 60px; }
-    }
-
-    .form-group {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-
-    .form-group.full { grid-column: 1 / -1; }
-
-    label {
-      font-size: 0.82rem;
-      font-weight: 500;
-      color: var(--muted);
-      letter-spacing: 0.3px;
-      font-family: 'Tiro Devanagari Nepal', serif;
-    }
-
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    @media(max-width:600px){ .form-grid{grid-template-columns:1fr} header{padding:0 1rem} .hero{padding:40px 1rem 60px} }
+    .form-group { display: flex; flex-direction: column; gap: 6px; }
+    .form-group.full { grid-column: 1/-1; }
+    label { font-size: 0.82rem; font-weight: 500; color: var(--muted); font-family: 'Tiro Devanagari Nepal', serif; }
     input, select, textarea {
-      padding: 11px 14px;
-      border: 1.5px solid var(--border);
-      border-radius: 8px;
-      font-size: 0.95rem;
-      font-family: 'DM Sans', sans-serif;
-      color: var(--ink);
-      background: white;
-      transition: border-color 0.2s;
-      outline: none;
+      padding: 11px 14px; border: 1.5px solid var(--border); border-radius: 8px;
+      font-size: 0.95rem; font-family: 'DM Sans', sans-serif; color: var(--ink);
+      background: white; transition: border-color 0.2s; outline: none;
     }
-
-    input:focus, select:focus, textarea:focus {
-      border-color: var(--crimson);
-      box-shadow: 0 0 0 3px rgba(192,57,43,0.08);
-    }
-
+    input:focus, select:focus, textarea:focus { border-color: var(--crimson); box-shadow: 0 0 0 3px rgba(192,57,43,0.08); }
     textarea { resize: vertical; min-height: 80px; }
 
-    /* ── Buttons ── */
-    .btn-row {
-      display: flex;
-      gap: 12px;
-      margin-top: 24px;
-      flex-wrap: wrap;
+    .btn-row { display: flex; gap: 12px; margin-top: 24px; flex-wrap: wrap; }
+    .btn { padding: 13px 28px; border-radius: 8px; border: none; font-size: 0.95rem; font-weight: 500; cursor: pointer; transition: all 0.2s; font-family: 'DM Sans', sans-serif; display: flex; align-items: center; gap: 8px; }
+    .btn-primary { background: var(--crimson); color: white; flex: 1; justify-content: center; }
+    .btn-primary:hover { background: #a93226; transform: translateY(-1px); box-shadow: 0 4px 16px rgba(192,57,43,0.3); }
+    .btn-secondary { background: white; color: var(--ink); border: 1.5px solid var(--border); }
+    .btn-secondary:hover { border-color: var(--crimson); color: var(--crimson); }
+
+    /* Letter Preview Modal */
+    .modal-overlay {
+      display: none; position: fixed; inset: 0;
+      background: rgba(0,0,0,0.7); z-index: 1000;
+      align-items: center; justify-content: center; padding: 20px;
     }
-
-    .btn {
-      padding: 13px 28px;
-      border-radius: 8px;
-      border: none;
-      font-size: 0.95rem;
-      font-weight: 500;
-      cursor: pointer;
-      transition: all 0.2s;
-      font-family: 'DM Sans', sans-serif;
-      display: flex;
-      align-items: center;
-      gap: 8px;
+    .modal-overlay.visible { display: flex; }
+    .modal {
+      background: white; border-radius: 16px; width: 100%; max-width: 760px;
+      max-height: 90vh; display: flex; flex-direction: column; overflow: hidden;
+      box-shadow: 0 24px 80px rgba(0,0,0,0.4);
     }
-
-    .btn-primary {
-      background: var(--crimson);
-      color: white;
-      flex: 1;
-      justify-content: center;
+    .modal-header {
+      background: var(--deep); padding: 16px 20px;
+      display: flex; align-items: center; justify-content: space-between;
     }
+    .modal-title { color: white; font-size: 0.95rem; font-weight: 500; }
+    .modal-actions { display: flex; gap: 8px; }
+    .btn-sm { padding: 7px 16px; font-size: 0.82rem; border-radius: 6px; }
+    .modal-body { flex: 1; overflow-y: auto; padding: 32px; }
 
-    .btn-primary:hover {
-      background: #a93226;
-      transform: translateY(-1px);
-      box-shadow: 0 4px 16px rgba(192,57,43,0.3);
-    }
+    /* Letter Content Styles */
+    .letter-content { max-width: 640px; margin: auto; line-height: 2; font-size: 15px; font-family: 'Tiro Devanagari Nepal', serif; }
+    .letter-content .right { text-align: right; }
+    .letter-content p { margin-bottom: 8px; }
 
-    .btn-secondary {
-      background: white;
-      color: var(--ink);
-      border: 1.5px solid var(--border);
-    }
-
-    .btn-secondary:hover {
-      border-color: var(--crimson);
-      color: var(--crimson);
-    }
-
-    .btn:disabled {
-      opacity: 0.6;
-      cursor: not-allowed;
-      transform: none !important;
-    }
-
-    /* ── Letter Preview ── */
-    #previewSection {
-      display: none;
-      animation: slideUp 0.3s ease;
-    }
-
-    #previewSection.visible { display: block; }
-
-    .preview-toolbar {
-      background: var(--deep);
-      border-radius: 12px 12px 0 0;
-      padding: 14px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .preview-title {
-      color: white;
-      font-size: 0.9rem;
-      font-weight: 500;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .preview-actions {
-      display: flex;
-      gap: 8px;
-    }
-
-    .btn-sm {
-      padding: 7px 16px;
-      font-size: 0.82rem;
-      border-radius: 6px;
-    }
-
-    .preview-frame {
-      width: 100%;
-      height: 600px;
-      border: 1px solid var(--border);
-      border-top: none;
-      border-radius: 0 0 12px 12px;
-      background: white;
-    }
-
-    /* ── Toast ── */
     .toast {
-      position: fixed;
-      bottom: 24px;
-      right: 24px;
-      background: var(--deep);
-      color: white;
-      padding: 14px 20px;
-      border-radius: 10px;
-      font-size: 0.9rem;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
-      transform: translateY(80px);
-      opacity: 0;
-      transition: all 0.3s ease;
-      z-index: 999;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      max-width: 320px;
+      position: fixed; bottom: 24px; right: 24px; background: var(--deep); color: white;
+      padding: 14px 20px; border-radius: 10px; font-size: 0.9rem;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.2); transform: translateY(80px); opacity: 0;
+      transition: all 0.3s ease; z-index: 9999; max-width: 320px;
     }
-
-    .toast.show {
-      transform: translateY(0);
-      opacity: 1;
-    }
-
+    .toast.show { transform: translateY(0); opacity: 1; }
     .toast.success { border-left: 4px solid #27ae60; }
     .toast.error { border-left: 4px solid var(--crimson); }
 
-    /* ── Footer ── */
-    footer {
-      background: var(--deep);
-      color: rgba(255,255,255,0.5);
-      text-align: center;
-      padding: 24px;
-      font-size: 0.82rem;
-    }
-
+    footer { background: var(--deep); color: rgba(255,255,255,0.5); text-align: center; padding: 24px; font-size: 0.82rem; }
     footer a { color: var(--gold); text-decoration: none; }
 
-    /* ── Loading spinner ── */
-    .spinner {
-      width: 18px;
-      height: 18px;
-      border: 2px solid rgba(255,255,255,0.3);
-      border-top-color: white;
-      border-radius: 50%;
-      animation: spin 0.7s linear infinite;
-      display: none;
-    }
+    .ad-slot { background: #f0ebe3; border: 1px dashed #c8b89a; border-radius: 8px; padding: 20px; text-align: center; color: var(--muted); font-size: 0.82rem; margin-bottom: 24px; }
 
-    @keyframes spin { to { transform: rotate(360deg); } }
-
-    /* Ad placeholder */
-    .ad-slot {
-      background: #f0ebe3;
-      border: 1px dashed #c8b89a;
-      border-radius: 8px;
-      padding: 20px;
-      text-align: center;
-      color: var(--muted);
-      font-size: 0.82rem;
-      margin-bottom: 24px;
+    @media print {
+      header, footer, .ad-slot, .modal-header, .btn-row, .letter-types, .form-card, .section-title { display: none !important; }
+      .modal-overlay { position: static; background: none; padding: 0; display: block !important; }
+      .modal { box-shadow: none; max-height: none; border-radius: 0; }
+      .modal-body { padding: 0; overflow: visible; }
+      .letter-content { max-width: 100%; }
     }
   </style>
 </head>
 <body>
 
-<!-- Header -->
 <header>
   <div class="logo">
     <div class="logo-icon">📜</div>
@@ -468,24 +152,17 @@
   <div class="header-badge">🇳🇵 Nepal Letter Generator</div>
 </header>
 
-<!-- Hero -->
 <div class="hero">
-  <div class="hero-flag">🏔️</div>
+  <span class="hero-flag">🏔️</span>
   <h1>आधिकारिक पत्र जेनेरेटर</h1>
   <h2>Official Letter Generator — Nepal</h2>
   <p>आफ्नो विवरण भर्नुहोस् र तयार पत्र प्रिन्ट गर्नुहोस्।<br/>Fill your details and get a print-ready official letter instantly.</p>
 </div>
 
-<!-- Main -->
 <div class="container">
 
-  <!-- Ad Slot -->
-  <div class="ad-slot">
-    <!-- AdSense Ad Unit Here -->
-    📢 विज्ञापन स्थान | Advertisement
-  </div>
+  <div class="ad-slot"><!-- AdSense Ad Unit -->📢 विज्ञापन स्थान | Advertisement</div>
 
-  <!-- Letter Type Selection -->
   <div class="section-title">📋 पत्रको प्रकार छान्नुहोस् | Select Letter Type</div>
 
   <div class="letter-types">
@@ -529,6 +206,16 @@
       <span class="title">चरित्र प्रमाणपत्र</span>
       <span class="subtitle">Character Certificate</span>
     </div>
+    <div class="letter-card" onclick="selectLetter('pan_registration')" id="card-pan_registration">
+      <span class="icon">🧾</span>
+      <span class="title">PAN दर्ता निवेदन</span>
+      <span class="subtitle">PAN Registration</span>
+    </div>
+    <div class="letter-card" onclick="selectLetter('experience_letter')" id="card-experience_letter">
+      <span class="icon">🏅</span>
+      <span class="title">अनुभव पत्र</span>
+      <span class="subtitle">Experience Letter</span>
+    </div>
   </div>
 
   <!-- Form -->
@@ -537,7 +224,7 @@
     <div class="form-grid">
       <div class="form-group">
         <label>पूरा नाम | Full Name *</label>
-        <input type="text" id="full_name" placeholder="राम बहादुर श्रेष्ठ" required/>
+        <input type="text" id="full_name" placeholder="राम बहादुर श्रेष्ठ"/>
       </div>
       <div class="form-group">
         <label>कम्पनी/संस्था | Company/Organization</label>
@@ -559,176 +246,252 @@
         <label>मिति | Date</label>
         <input type="date" id="date"/>
       </div>
-      <div class="form-group full" id="extraGroup">
+      <div class="form-group full">
         <label id="extraLabel">थप विवरण | Additional Info</label>
         <textarea id="extra_info" placeholder="थप विवरण यहाँ लेख्नुहोस्..."></textarea>
       </div>
     </div>
     <div class="btn-row">
       <button class="btn btn-secondary" onclick="resetForm()">🔄 Reset</button>
-      <button class="btn btn-primary" id="generateBtn" onclick="generateLetter()">
-        <span class="spinner" id="spinner"></span>
-        <span id="btnText">📄 पत्र बनाउनुहोस् | Generate Letter</span>
-      </button>
+      <button class="btn btn-primary" onclick="generateLetter()">📄 पत्र बनाउनुहोस् | Generate Letter</button>
     </div>
   </div>
 
-  <!-- Preview -->
-  <div id="previewSection">
-    <div class="preview-toolbar">
-      <div class="preview-title">✅ पत्र तयार छ! | Letter Ready!</div>
-      <div class="preview-actions">
-        <button class="btn btn-secondary btn-sm" onclick="document.getElementById('previewSection').classList.remove('visible'); document.getElementById('previewSection').style.display='none';">✏️ Edit</button>
-        <button class="btn btn-primary btn-sm" onclick="printLetter()">🖨️ Print</button>
-      </div>
-    </div>
-    <iframe id="letterFrame" class="preview-frame"></iframe>
-  </div>
-
-  <!-- Ad Slot Bottom -->
-  <div class="ad-slot" style="margin-top:24px;">
-    <!-- AdSense Ad Unit Here -->
-    📢 विज्ञापन स्थान | Advertisement
-  </div>
+  <div class="ad-slot" style="margin-top:24px;"><!-- AdSense Ad Unit -->📢 विज्ञापन स्थान | Advertisement</div>
 
 </div>
 
-<!-- Footer -->
+<!-- Letter Modal -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal">
+    <div class="modal-header">
+      <div class="modal-title">✅ पत्र तयार छ! | Letter Ready!</div>
+      <div class="modal-actions">
+        <button class="btn btn-secondary btn-sm" onclick="closeModal()">✖ Close</button>
+        <button class="btn btn-primary btn-sm" onclick="printLetter()">🖨️ Print</button>
+      </div>
+    </div>
+    <div class="modal-body">
+      <div class="letter-content" id="letterContent"></div>
+    </div>
+  </div>
+</div>
+
 <footer>
-  <p>© 2081 पत्र सेवा | Powered by <a href="#">madankc.com.np</a> | सेवा सुल्क: eSewa / Khalti मार्फत तिर्नुहोस्</p>
+  <p>© २०८१ पत्र सेवा | Powered by <a href="https://madankc.com.np">madankc.com.np</a> | सेवा सुल्क: eSewa / Khalti मार्फत तिर्नुहोस्</p>
 </footer>
 
-<!-- Toast -->
 <div class="toast" id="toast"></div>
 
 <script>
-  const WORKER_URL = 'https://letter-worker.choedaktsering52.workers.dev';
-  let selectedType = null;
+let selectedType = null;
 
-  // Set today's date
+document.getElementById('date').valueAsDate = new Date();
+
+const extraLabels = {
+  bank_account: 'बैंकको नाम | Bank Name *',
+  nagarpalika: 'सिफारिसको उद्देश्य | Purpose of Recommendation *',
+  business_registration: 'व्यवसायको प्रकार | Business Type',
+  job_application: 'पदको नाम | Post Applied For *',
+  loan_application: 'ऋणको उद्देश्य | Loan Purpose *',
+  noc: 'NOC को उद्देश्य | Purpose of NOC *',
+  scholarship: 'संस्थाको नाम | Institution Name *',
+  character_certificate: 'प्रमाणपत्रको उद्देश्य | Purpose *',
+  pan_registration: 'व्यवसायको प्रकार | Business Type',
+  experience_letter: 'पदको नाम | Designation *',
+};
+
+const formTitles = {
+  bank_account: '🏦 बैंक खाता खोल्ने पत्र',
+  nagarpalika: '🏛️ नगरपालिका सिफारिस पत्र',
+  business_registration: '📋 व्यवसाय दर्ता पत्र',
+  job_application: '💼 जागिर आवेदन पत्र',
+  loan_application: '💰 ऋण आवेदन पत्र',
+  noc: '✅ अनापत्ति पत्र (NOC)',
+  scholarship: '🎓 छात्रवृत्ति आवेदन पत्र',
+  character_certificate: '📜 चरित्र प्रमाणपत्र अनुरोध',
+  pan_registration: '🧾 PAN दर्ता निवेदन',
+  experience_letter: '🏅 अनुभव पत्र',
+};
+
+function selectLetter(type) {
+  selectedType = type;
+  document.querySelectorAll('.letter-card').forEach(c => c.classList.remove('active'));
+  document.getElementById('card-' + type).classList.add('active');
+  const formCard = document.getElementById('formCard');
+  formCard.classList.add('visible');
+  document.getElementById('formTitle').textContent = formTitles[type] || '📝 विवरण भर्नुहोस्';
+  document.getElementById('extraLabel').textContent = extraLabels[type] || 'थप विवरण | Additional Info';
+  formCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function generateLetter() {
+  if (!selectedType) { showToast('❌ पत्रको प्रकार छान्नुहोस्!', 'error'); return; }
+  const name = document.getElementById('full_name').value.trim();
+  const address = document.getElementById('address').value.trim();
+  if (!name) { showToast('❌ नाम अनिवार्य छ!', 'error'); return; }
+  if (!address) { showToast('❌ ठेगाना अनिवार्य छ!', 'error'); return; }
+
+  const company = document.getElementById('company_name').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const dateVal = document.getElementById('date').value;
+  const extra = document.getElementById('extra_info').value.trim();
+
+  const dateStr = dateVal
+    ? new Date(dateVal).toLocaleDateString('ne-NP')
+    : new Date().toLocaleDateString('ne-NP');
+
+  const html = buildLetter(selectedType, { name, company, address, phone, email, dateStr, extra });
+  document.getElementById('letterContent').innerHTML = html;
+  document.getElementById('modalOverlay').classList.add('visible');
+  showToast('✅ पत्र तयार भयो!', 'success');
+}
+
+function buildLetter(type, d) {
+  const { name, company, address, phone, dateStr, extra } = d;
+
+  const templates = {
+
+    bank_account: `
+      <p class="right">मिति: ${dateStr}</p>
+      <p><strong>श्रीमान् शाखा प्रबन्धक महोदय,</strong><br/>
+      ${extra || '................'} बैंक,<br/>${address}</p><br/>
+      <p><strong>विषय: बैंक खाता खोल्ने सम्बन्धमा ।</strong></p><br/>
+      <p>महोदय,</p>
+      <p>उपरोक्त विषयमा म/हामी तपाईंको बैंकमा खाता खोल्न चाहन्छु/चाहन्छौं । म/हामीले आवश्यक सबै कागजातहरू संलग्न गरेको छु/छौं । कृपया मेरो/हाम्रो खाता खोलिदिनुहुन हार्दिक अनुरोध गर्दछु/गर्दछौं ।</p>
+      <br/><br/>
+      <p>निवेदक,<br/><strong>${name}</strong><br/>${company ? company+'<br/>' : ''}${address}<br/>सम्पर्क: ${phone}</p>
+    `,
+
+    nagarpalika: `
+      <p class="right">मिति: ${dateStr}</p>
+      <p><strong>श्रीमान् कार्यालय प्रमुख महोदय,</strong><br/>
+      शुक्लागण्डकी नगरपालिका,<br/>तनहुँ, गण्डकी प्रदेश</p><br/>
+      <p><strong>विषय: सिफारिस पत्रको लागि निवेदन ।</strong></p><br/>
+      <p>महोदय,</p>
+      <p>म तपाईंको नगरपालिका अन्तर्गतको स्थायी बासिन्दा <strong>${name}</strong> हुँ । मलाई <strong>${extra || '.............'}</strong> को लागि सिफारिस पत्र आवश्यक परेको हुँदा कृपया सिफारिस गरिदिनुहुन हार्दिक अनुरोध गर्दछु ।</p>
+      <br/><br/>
+      <p>निवेदक,<br/><strong>${name}</strong><br/>${address}<br/>सम्पर्क: ${phone}</p>
+    `,
+
+    business_registration: `
+      <p class="right">मिति: ${dateStr}</p>
+      <p><strong>श्रीमान् कार्यालय प्रमुख महोदय,</strong><br/>
+      उद्योग वाणिज्य तथा आपूर्ति कार्यालय,<br/>तनहुँ</p><br/>
+      <p><strong>विषय: व्यवसाय दर्ता गर्ने सम्बन्धमा ।</strong></p><br/>
+      <p>महोदय,</p>
+      <p>म <strong>${name}</strong> ले <strong>${company || extra || '.............'}</strong> नामक व्यवसाय दर्ता गर्न चाहेकोले आवश्यक कागजातहरू संलग्न राखी यो निवेदन पेश गरेको छु । कृपया दर्ता गरिदिनुहुन अनुरोध छ ।</p>
+      <br/><br/>
+      <p>निवेदक,<br/><strong>${name}</strong><br/>${address}<br/>सम्पर्क: ${phone}</p>
+    `,
+
+    job_application: `
+      <p class="right">Date: ${dateStr}</p>
+      <p><strong>The Manager/HR Department,</strong><br/>
+      ${company || '................'}<br/>${address}</p><br/>
+      <p><strong>Subject: Application for the post of ${extra || '................'}</strong></p><br/>
+      <p>Dear Sir/Madam,</p>
+      <p>I, <strong>${name}</strong>, hereby apply for the post of <strong>${extra || '................'}</strong> in your esteemed organization. I am confident that my skills and dedication will be a valuable contribution to your team. I have enclosed all necessary documents for your consideration.</p>
+      <p>I look forward to a favorable response.</p>
+      <br/><br/>
+      <p>Yours sincerely,<br/><strong>${name}</strong><br/>${address}<br/>Contact: ${phone}</p>
+    `,
+
+    loan_application: `
+      <p class="right">मिति: ${dateStr}</p>
+      <p><strong>श्रीमान् शाखा प्रबन्धक महोदय,</strong><br/>
+      ${company || '................'} बैंक/वित्तीय संस्था,<br/>${address}</p><br/>
+      <p><strong>विषय: ऋण प्रदान गर्ने सम्बन्धमा ।</strong></p><br/>
+      <p>महोदय,</p>
+      <p>म <strong>${name}</strong>, ${address} बासिन्दाले <strong>${extra || '.............'}</strong> को लागि ऋण आवश्यक परेकोले आवश्यक कागजातहरू संलग्न गरी यो निवेदन पेश गरेको छु । कृपया ऋण उपलब्ध गराइदिनुहुन हार्दिक अनुरोध गर्दछु ।</p>
+      <br/><br/>
+      <p>निवेदक,<br/><strong>${name}</strong><br/>${address}<br/>सम्पर्क: ${phone}</p>
+    `,
+
+    noc: `
+      <p class="right">मिति: ${dateStr}</p>
+      <p><strong>श्रीमान् सम्बन्धित निकाय महोदय,</strong><br/>${address}</p><br/>
+      <p><strong>विषय: अनापत्ति पत्र (NOC) को लागि निवेदन ।</strong></p><br/>
+      <p>महोदय,</p>
+      <p>म <strong>${name}</strong>${company ? ', '+company+',' : ''} ले <strong>${extra || '.............'}</strong> को लागि अनापत्ति पत्र (NOC) आवश्यक परेकोले कृपया उपलब्ध गराइदिनुहुन हार्दिक अनुरोध गर्दछु ।</p>
+      <br/><br/>
+      <p>निवेदक,<br/><strong>${name}</strong><br/>${company ? company+'<br/>' : ''}${address}<br/>सम्पर्क: ${phone}</p>
+    `,
+
+    scholarship: `
+      <p class="right">मिति: ${dateStr}</p>
+      <p><strong>श्रीमान् प्रमुख महोदय,</strong><br/>
+      ${extra || '................'},<br/>${address}</p><br/>
+      <p><strong>विषय: छात्रवृत्तिको लागि निवेदन ।</strong></p><br/>
+      <p>महोदय,</p>
+      <p>म <strong>${name}</strong> ले तपाईंको संस्थामा अध्ययन गर्न छात्रवृत्तिका लागि यो निवेदन पेश गरेको छु । आवश्यक सबै कागजातहरू संलग्न गरेको छु । कृपया छात्रवृत्ति प्रदान गरिदिनुहुन हार्दिक अनुरोध गर्दछु ।</p>
+      <br/><br/>
+      <p>निवेदक,<br/><strong>${name}</strong><br/>${address}<br/>सम्पर्क: ${phone}</p>
+    `,
+
+    character_certificate: `
+      <p class="right">मिति: ${dateStr}</p>
+      <p><strong>श्रीमान् कार्यालय प्रमुख महोदय,</strong><br/>
+      शुक्लागण्डकी नगरपालिका,<br/>तनहुँ, गण्डकी प्रदेश</p><br/>
+      <p><strong>विषय: चरित्र प्रमाणपत्रको लागि निवेदन ।</strong></p><br/>
+      <p>महोदय,</p>
+      <p>म <strong>${name}</strong>, ${address} बासिन्दाले <strong>${extra || '.............'}</strong> को लागि चरित्र प्रमाणपत्र आवश्यक परेकोले कृपया उपलब्ध गराइदिनुहुन हार्दिक अनुरोध गर्दछु ।</p>
+      <br/><br/>
+      <p>निवेदक,<br/><strong>${name}</strong><br/>${address}<br/>सम्पर्क: ${phone}</p>
+    `,
+
+    pan_registration: `
+      <p class="right">मिति: ${dateStr}</p>
+      <p><strong>श्रीमान् कार्यालय प्रमुख महोदय,</strong><br/>
+      आन्तरिक राजस्व कार्यालय,<br/>तनहुँ</p><br/>
+      <p><strong>विषय: स्थायी लेखा नम्बर (PAN) दर्ताको लागि निवेदन ।</strong></p><br/>
+      <p>महोदय,</p>
+      <p>म <strong>${name}</strong>${company ? ', '+company+',' : ''} ले व्यवसाय सञ्चालन गर्ने उद्देश्यले स्थायी लेखा नम्बर (PAN) दर्ता गर्न चाहेकोले आवश्यक कागजातहरू संलग्न गरी यो निवेदन पेश गरेको छु । कृपया दर्ता गरिदिनुहुन अनुरोध छ ।</p>
+      <br/><br/>
+      <p>निवेदक,<br/><strong>${name}</strong><br/>${company ? company+'<br/>' : ''}${address}<br/>सम्पर्क: ${phone}</p>
+    `,
+
+    experience_letter: `
+      <p class="right">Date: ${dateStr}</p>
+      <p><strong>TO WHOM IT MAY CONCERN</strong></p><br/>
+      <p><strong>Subject: Experience Certificate</strong></p><br/>
+      <p>This is to certify that <strong>${name}</strong> has worked with <strong>${company || '................'}</strong> as <strong>${extra || '................'}</strong>.</p>
+      <p>During their tenure, they have shown dedication, professionalism, and commitment to their responsibilities. We wish them success in their future endeavors.</p>
+      <br/><br/>
+      <p>Authorized Signatory,<br/><strong>${company || '................'}</strong><br/>${address}<br/>Contact: ${phone}</p>
+    `,
+  };
+
+  return templates[type] || '<p>Letter type not found.</p>';
+}
+
+function closeModal() {
+  document.getElementById('modalOverlay').classList.remove('visible');
+}
+
+function printLetter() {
+  window.print();
+}
+
+function resetForm() {
+  ['full_name','company_name','address','phone','email','extra_info'].forEach(id => {
+    document.getElementById(id).value = '';
+  });
   document.getElementById('date').valueAsDate = new Date();
+}
 
-  // Extra field labels per letter type
-  const extraLabels = {
-    nagarpalika: 'सिफारिसको उद्देश्य | Purpose of Recommendation *',
-    noc: 'कुन कामको लागि NOC चाहिन्छ? | Purpose of NOC *',
-    scholarship: 'कुन संस्थामा छात्रवृत्ति? | Institution Name *',
-    character_certificate: 'कुन कामको लागि? | Purpose *',
-    loan_application: 'ऋणको उद्देश्य | Loan Purpose',
-    bank_account: 'बैंकको नाम | Bank Name *',
-    business_registration: 'व्यवसायको प्रकार | Business Type',
-    job_application: 'पदको नाम | Post Applied For',
-  };
+function showToast(msg, type = 'success') {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.className = `toast ${type} show`;
+  setTimeout(() => t.classList.remove('show'), 3000);
+}
 
-  const formTitles = {
-    bank_account: '🏦 बैंक खाता खोल्ने पत्र',
-    nagarpalika: '🏛️ नगरपालिका सिफारिस पत्र',
-    business_registration: '📋 व्यवसाय दर्ता पत्र',
-    job_application: '💼 जागिर आवेदन पत्र',
-    loan_application: '💰 ऋण आवेदन पत्र',
-    noc: '✅ अनापत्ति पत्र (NOC)',
-    scholarship: '🎓 छात्रवृत्ति आवेदन पत्र',
-    character_certificate: '📜 चरित्र प्रमाणपत्र अनुरोध',
-  };
-
-  function selectLetter(type) {
-    selectedType = type;
-    // Update active card
-    document.querySelectorAll('.letter-card').forEach(c => c.classList.remove('active'));
-    document.getElementById('card-' + type).classList.add('active');
-    // Show form
-    const formCard = document.getElementById('formCard');
-    formCard.classList.add('visible');
-    document.getElementById('formTitle').textContent = formTitles[type] || '📝 विवरण भर्नुहोस्';
-    // Update extra label
-    document.getElementById('extraLabel').textContent = extraLabels[type] || 'थप विवरण | Additional Info';
-    // Scroll to form
-    formCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    // Hide preview
-    document.getElementById('previewSection').classList.remove('visible');
-    document.getElementById('previewSection').style.display = 'none';
-  }
-
-  async function generateLetter() {
-    if (!selectedType) { showToast('❌ पत्रको प्रकार छान्नुहोस्!', 'error'); return; }
-    const full_name = document.getElementById('full_name').value.trim();
-    const address = document.getElementById('address').value.trim();
-    if (!full_name) { showToast('❌ नाम अनिवार्य छ!', 'error'); return; }
-    if (!address) { showToast('❌ ठेगाना अनिवार्य छ!', 'error'); return; }
-
-    const data = {
-      letter_type: selectedType,
-      full_name,
-      company_name: document.getElementById('company_name').value.trim(),
-      address,
-      phone: document.getElementById('phone').value.trim(),
-      email: document.getElementById('email').value.trim(),
-      date: document.getElementById('date').value,
-      extra_info: document.getElementById('extra_info').value.trim(),
-    };
-
-    // Show loading
-    const btn = document.getElementById('generateBtn');
-    const spinner = document.getElementById('spinner');
-    const btnText = document.getElementById('btnText');
-    btn.disabled = true;
-    spinner.style.display = 'block';
-    btnText.textContent = 'बनाउँदै छ...';
-
-    try {
-      // Save to D1
-      await fetch(`${WORKER_URL}/submit`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
-      });
-
-      // Generate letter preview
-      const params = new URLSearchParams(data);
-      const previewURL = `${WORKER_URL}/generate?${params}`;
-      const frame = document.getElementById('letterFrame');
-      frame.src = previewURL;
-
-      // Show preview
-      const preview = document.getElementById('previewSection');
-      preview.style.display = 'block';
-      preview.classList.add('visible');
-      preview.scrollIntoView({ behavior: 'smooth', block: 'start' });
-
-      showToast('✅ पत्र सफलतापूर्वक बन्यो!', 'success');
-
-    } catch (err) {
-      showToast('❌ Error: ' + err.message, 'error');
-    } finally {
-      btn.disabled = false;
-      spinner.style.display = 'none';
-      btnText.textContent = '📄 पत्र बनाउनुहोस् | Generate Letter';
-    }
-  }
-
-  function printLetter() {
-    const frame = document.getElementById('letterFrame');
-    frame.contentWindow.print();
-  }
-
-  function resetForm() {
-    document.getElementById('full_name').value = '';
-    document.getElementById('company_name').value = '';
-    document.getElementById('address').value = '';
-    document.getElementById('phone').value = '';
-    document.getElementById('email').value = '';
-    document.getElementById('extra_info').value = '';
-    document.getElementById('date').valueAsDate = new Date();
-    document.getElementById('previewSection').classList.remove('visible');
-    document.getElementById('previewSection').style.display = 'none';
-  }
-
-  function showToast(msg, type = 'success') {
-    const toast = document.getElementById('toast');
-    toast.textContent = msg;
-    toast.className = `toast ${type} show`;
-    setTimeout(() => toast.classList.remove('show'), 3500);
-  }
+// Close modal on overlay click
+document.getElementById('modalOverlay').addEventListener('click', function(e) {
+  if (e.target === this) closeModal();
+});
 </script>
 </body>
 </html>
