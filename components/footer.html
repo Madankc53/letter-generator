@@ -1,0 +1,195 @@
+<footer class="site-footer">
+  <div class="footer-inner">
+
+    <!-- Top Section -->
+    <div class="footer-top">
+
+      <!-- Brand -->
+      <div class="footer-brand">
+        <a href="/" class="logo">
+          <div class="logo-icon">📜</div>
+          <div class="logo-text">पत्र <span>सेवा</span></div>
+        </a>
+        <p class="brand-desc">नेपालमा आधिकारिक पत्र लेख्न सहयोग गर्ने निःशुल्क सेवा। सबै पत्र प्रिन्ट-तयार र पेशेवर ढाँचामा।</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook">📘</a>
+          <a href="#" aria-label="YouTube">📺</a>
+          <a href="#" aria-label="TikTok">🎵</a>
+        </div>
+      </div>
+
+      <!-- Bank Letters -->
+      <div class="footer-col">
+        <h4>🏦 बैंक पत्रहरू</h4>
+        <ul>
+          <li><a href="/letter-for-bank/account-opening/">खाता खोल्ने पत्र</a></li>
+          <li><a href="/letter-for-bank/cheque-book/">चेकबुक माग पत्र</a></li>
+          <li><a href="/letter-for-bank/atm-card/">ATM कार्ड पत्र</a></li>
+          <li><a href="/letter-for-bank/loan-application/">ऋण आवेदन पत्र</a></li>
+          <li><a href="/letter-for-bank/bank-statement/">स्टेटमेन्ट माग पत्र</a></li>
+          <li><a href="/letter-for-bank/">सबै बैंक पत्र →</a></li>
+        </ul>
+      </div>
+
+      <!-- Government Letters -->
+      <div class="footer-col">
+        <h4>🏛️ सरकारी पत्रहरू</h4>
+        <ul>
+          <li><a href="/letter-for-nagarpalika/">नगरपालिका सिफारिस</a></li>
+          <li><a href="/letter-for-government/pan-registration/">PAN दर्ता पत्र</a></li>
+          <li><a href="/letter-for-government/character-certificate/">चरित्र प्रमाणपत्र</a></li>
+          <li><a href="/letter-for-government/noc/">अनापत्ति पत्र</a></li>
+          <li><a href="/letter-for-job/">जागिर आवेदन पत्र</a></li>
+          <li><a href="/letter-for-job/experience-letter/">अनुभव पत्र</a></li>
+        </ul>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-col">
+        <h4>🔗 अन्य लिंकहरू</h4>
+        <ul>
+          <li><a href="/">गृहपृष्ठ</a></li>
+          <li><a href="/about/">हाम्रो बारेमा</a></li>
+          <li><a href="/contact/">सम्पर्क गर्नुहोस्</a></li>
+          <li><a href="/privacy/">गोपनीयता नीति</a></li>
+          <li><a href="https://madankc.com.np" target="_blank">madankc.com.np</a></li>
+          <li><a href="https://thenepal.io" target="_blank">thenepal.io</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Divider -->
+    <div class="footer-divider"></div>
+
+    <!-- Bottom Section -->
+    <div class="footer-bottom">
+      <p>© २०८१ पत्र सेवा | सर्वाधिकार सुरक्षित</p>
+      <p>Powered by <a href="https://madankc.com.np" target="_blank">madankc.com.np</a> | Made with ❤️ in Nepal 🇳🇵</p>
+    </div>
+
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background: #1a0a00;
+    color: rgba(255,255,255,0.6);
+    margin-top: 60px;
+  }
+
+  .footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 48px 1.5rem 24px;
+  }
+
+  .footer-top {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: 900px) {
+    .footer-top { grid-template-columns: 1fr 1fr; gap: 32px; }
+    .footer-brand { grid-column: 1 / -1; }
+  }
+
+  @media (max-width: 500px) {
+    .footer-top { grid-template-columns: 1fr; }
+  }
+
+  .footer-brand .logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    margin-bottom: 16px;
+  }
+
+  .footer-brand .logo-icon {
+    width: 36px; height: 36px;
+    background: #c0392b;
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px;
+  }
+
+  .footer-brand .logo-text {
+    font-family: 'Playfair Display', serif;
+    color: #fdf6ec;
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+
+  .footer-brand .logo-text span { color: #d4a017; }
+
+  .brand-desc {
+    font-family: 'Tiro Devanagari Nepal', serif;
+    font-size: 0.88rem;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 16px;
+    max-width: 300px;
+  }
+
+  .social-links { display: flex; gap: 10px; }
+  .social-links a {
+    font-size: 1.3rem;
+    text-decoration: none;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+  }
+  .social-links a:hover { opacity: 1; }
+
+  .footer-col h4 {
+    font-family: 'Tiro Devanagari Nepal', serif;
+    color: #d4a017;
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+    letter-spacing: 0.3px;
+  }
+
+  .footer-col ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-col ul li a {
+    color: rgba(255,255,255,0.55);
+    text-decoration: none;
+    font-family: 'Tiro Devanagari Nepal', serif;
+    font-size: 0.88rem;
+    transition: color 0.2s;
+    line-height: 1.5;
+  }
+
+  .footer-col ul li a:hover { color: #d4a017; }
+
+  .footer-divider {
+    height: 1px;
+    background: rgba(255,255,255,0.08);
+    margin-bottom: 24px;
+  }
+
+  .footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.35);
+  }
+
+  .footer-bottom a {
+    color: #d4a017;
+    text-decoration: none;
+  }
+
+  .footer-bottom a:hover { text-decoration: underline; }
+</style>
