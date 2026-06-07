@@ -3,495 +3,114 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>पत्र सेवा | Nepal Letter Generator</title>
+  <title>पत्र सेवा | Nepal Letter Generator — निःशुल्क आधिकारिक पत्र</title>
+  <meta name="description" content="नेपालमा बैंक, नगरपालिका, सरकारी र जागिरका लागि आधिकारिक पत्र निःशुल्क बनाउनुहोस्।"/>
+  <meta name="keywords" content="nepal letter generator, पत्र सेवा, bank letter nepal, nagarpalika letter, सरकारी पत्र"/>
+  <meta property="og:title" content="पत्र सेवा | Nepal Letter Generator"/>
+  <meta property="og:url" content="https://letter.madankc.com.np/"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://letter.madankc.com.np/"/>
   <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Nepal&family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
   <style>
     :root {
-      --crimson: #c0392b;
-      --deep: #1a0a00;
-      --gold: #d4a017;
-      --cream: #fdf6ec;
-      --paper: #fffdf8;
-      --ink: #2c1a0e;
-      --muted: #8a7060;
-      --border: #e8d8c0;
-      --shadow: rgba(192,57,43,0.12);
+      --crimson: #c0392b; --deep: #1a0a00; --gold: #d4a017;
+      --cream: #fdf6ec; --paper: #fffdf8; --ink: #2c1a0e;
+      --muted: #8a7060; --border: #e8d8c0; --shadow: rgba(192,57,43,0.12);
     }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--ink); min-height: 100vh; }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:'DM Sans',sans-serif; background:var(--cream); color:var(--ink); min-height:100vh; }
 
-    header {
-      background: var(--deep); padding: 0 2rem;
-      display: flex; align-items: center; justify-content: space-between;
-      height: 64px; position: sticky; top: 0; z-index: 100;
-      box-shadow: 0 2px 20px rgba(0,0,0,0.3);
-    }
-    .logo { display: flex; align-items: center; gap: 12px; }
-    .logo-icon { width: 36px; height: 36px; background: var(--crimson); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
-    .logo-text { font-family: 'Playfair Display', serif; color: var(--cream); font-size: 1.2rem; font-weight: 700; }
-    .logo-text span { color: var(--gold); }
-    .header-badge { background: var(--crimson); color: white; font-size: 0.72rem; padding: 4px 12px; border-radius: 20px; font-weight: 500; }
-
-    .hero {
-      background: linear-gradient(135deg, var(--deep) 0%, #3d1a08 100%);
-      padding: 60px 2rem 80px; text-align: center;
-    }
-    .hero-flag { font-size: 3rem; margin-bottom: 16px; display: block; animation: float 3s ease-in-out infinite; }
+    .hero { background:linear-gradient(135deg,var(--deep) 0%,#3d1a08 100%); padding:64px 2rem 90px; text-align:center; }
+    .hero-flag { font-size:3rem; margin-bottom:16px; display:block; animation:float 3s ease-in-out infinite; }
     @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
-    .hero h1 { font-family: 'Tiro Devanagari Nepal', serif; color: white; font-size: clamp(1.8rem,4vw,2.8rem); font-weight: 400; margin-bottom: 8px; }
-    .hero h2 { font-family: 'Playfair Display', serif; color: var(--gold); font-size: clamp(1rem,2.5vw,1.4rem); font-weight: 400; margin-bottom: 20px; }
-    .hero p { color: rgba(255,255,255,0.65); font-size: 0.95rem; max-width: 480px; margin: 0 auto; line-height: 1.7; }
+    .hero h1 { font-family:'Tiro Devanagari Nepal',serif; color:white; font-size:clamp(1.8rem,4vw,2.8rem); font-weight:400; margin-bottom:8px; }
+    .hero h2 { font-family:'Playfair Display',serif; color:var(--gold); font-size:clamp(1rem,2.5vw,1.3rem); font-weight:400; margin-bottom:16px; }
+    .hero p { color:rgba(255,255,255,0.6); font-size:0.95rem; max-width:480px; margin:0 auto; line-height:1.8; }
 
-    .container { max-width: 960px; margin: -30px auto 60px; padding: 0 1.5rem; position: relative; z-index: 1; }
+    .container { max-width:1100px; margin:-36px auto 60px; padding:0 1.5rem; position:relative; z-index:1; }
 
-    .section-title {
-      font-family: 'Tiro Devanagari Nepal', serif; font-size: 1.3rem;
-      color: var(--ink); margin-bottom: 16px;
-      display: flex; align-items: center; gap: 10px;
-    }
-    .section-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+    .section-title { font-family:'Tiro Devanagari Nepal',serif; font-size:1.3rem; color:var(--ink); margin-bottom:20px; display:flex; align-items:center; gap:10px; }
+    .section-title::after { content:''; flex:1; height:1px; background:var(--border); }
 
-    .letter-types { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px,1fr)); gap: 12px; margin-bottom: 32px; }
-    .letter-card {
-      background: var(--paper); border: 2px solid var(--border); border-radius: 12px;
-      padding: 20px 16px; cursor: pointer; transition: all 0.2s ease; text-align: center; position: relative; overflow: hidden;
-    }
-    .letter-card::before { content:''; position:absolute; bottom:0; left:0; right:0; height:3px; background:var(--crimson); transform:scaleX(0); transition:transform 0.2s; }
-    .letter-card:hover { border-color: var(--crimson); transform: translateY(-3px); box-shadow: 0 8px 24px var(--shadow); }
-    .letter-card:hover::before, .letter-card.active::before { transform: scaleX(1); }
-    .letter-card.active { border-color: var(--crimson); background: #fff5f3; box-shadow: 0 4px 16px var(--shadow); }
-    .letter-card .icon { font-size: 2rem; margin-bottom: 10px; display: block; }
-    .letter-card .title { font-family: 'Tiro Devanagari Nepal', serif; font-size: 0.95rem; color: var(--ink); line-height: 1.4; display: block; }
-    .letter-card .subtitle { font-size: 0.72rem; color: var(--muted); margin-top: 4px; display: block; }
+    .category-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:16px; margin-bottom:48px; }
+    .category-card { background:var(--paper); border:1.5px solid var(--border); border-radius:14px; padding:28px 20px; text-decoration:none; color:var(--ink); transition:all 0.2s ease; display:block; position:relative; overflow:hidden; }
+    .category-card::before { content:''; position:absolute; bottom:0; left:0; right:0; height:3px; background:var(--crimson); transform:scaleX(0); transition:transform 0.2s; }
+    .category-card:hover { border-color:var(--crimson); transform:translateY(-4px); box-shadow:0 12px 32px var(--shadow); }
+    .category-card:hover::before { transform:scaleX(1); }
+    .category-card .icon { font-size:2.2rem; margin-bottom:12px; display:block; }
+    .category-card .cat-title { font-family:'Tiro Devanagari Nepal',serif; font-size:1.05rem; font-weight:600; margin-bottom:6px; }
+    .category-card .cat-sub { font-size:0.78rem; color:var(--muted); margin-bottom:12px; }
+    .category-card .cat-count { font-size:0.75rem; color:var(--crimson); font-weight:500; }
 
-    .form-card {
-      background: var(--paper); border: 1px solid var(--border); border-radius: 16px;
-      padding: 32px; box-shadow: 0 4px 24px rgba(0,0,0,0.06); margin-bottom: 24px;
-      display: none; animation: slideUp 0.3s ease;
-    }
-    .form-card.visible { display: block; }
-    @keyframes slideUp { from{opacity:0;transform:translateY(16px)} to{opacity:1;transform:translateY(0)} }
+    .letter-list { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:12px; margin-bottom:48px; }
+    .letter-item { background:var(--paper); border:1px solid var(--border); border-radius:10px; padding:16px 18px; text-decoration:none; color:var(--ink); display:flex; align-items:center; gap:12px; transition:all 0.2s; font-family:'Tiro Devanagari Nepal',serif; font-size:0.92rem; }
+    .letter-item:hover { border-color:var(--crimson); color:var(--crimson); background:#fff5f3; transform:translateX(4px); }
+    .letter-item .li-icon { font-size:1.3rem; flex-shrink:0; }
+    .letter-item .li-arrow { margin-left:auto; color:var(--muted); font-size:0.8rem; }
 
-    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-    @media(max-width:600px){ .form-grid{grid-template-columns:1fr} header{padding:0 1rem} .hero{padding:40px 1rem 60px} }
-    .form-group { display: flex; flex-direction: column; gap: 6px; }
-    .form-group.full { grid-column: 1/-1; }
-    label { font-size: 0.82rem; font-weight: 500; color: var(--muted); font-family: 'Tiro Devanagari Nepal', serif; }
-    input, select, textarea {
-      padding: 11px 14px; border: 1.5px solid var(--border); border-radius: 8px;
-      font-size: 0.95rem; font-family: 'DM Sans', sans-serif; color: var(--ink);
-      background: white; transition: border-color 0.2s; outline: none;
-    }
-    input:focus, select:focus, textarea:focus { border-color: var(--crimson); box-shadow: 0 0 0 3px rgba(192,57,43,0.08); }
-    textarea { resize: vertical; min-height: 80px; }
-
-    .btn-row { display: flex; gap: 12px; margin-top: 24px; flex-wrap: wrap; }
-    .btn { padding: 13px 28px; border-radius: 8px; border: none; font-size: 0.95rem; font-weight: 500; cursor: pointer; transition: all 0.2s; font-family: 'DM Sans', sans-serif; display: flex; align-items: center; gap: 8px; }
-    .btn-primary { background: var(--crimson); color: white; flex: 1; justify-content: center; }
-    .btn-primary:hover { background: #a93226; transform: translateY(-1px); box-shadow: 0 4px 16px rgba(192,57,43,0.3); }
-    .btn-secondary { background: white; color: var(--ink); border: 1.5px solid var(--border); }
-    .btn-secondary:hover { border-color: var(--crimson); color: var(--crimson); }
-
-    /* Letter Preview Modal */
-    .modal-overlay {
-      display: none; position: fixed; inset: 0;
-      background: rgba(0,0,0,0.7); z-index: 1000;
-      align-items: center; justify-content: center; padding: 20px;
-    }
-    .modal-overlay.visible { display: flex; }
-    .modal {
-      background: white; border-radius: 16px; width: 100%; max-width: 760px;
-      max-height: 90vh; display: flex; flex-direction: column; overflow: hidden;
-      box-shadow: 0 24px 80px rgba(0,0,0,0.4);
-    }
-    .modal-header {
-      background: var(--deep); padding: 16px 20px;
-      display: flex; align-items: center; justify-content: space-between;
-    }
-    .modal-title { color: white; font-size: 0.95rem; font-weight: 500; }
-    .modal-actions { display: flex; gap: 8px; }
-    .btn-sm { padding: 7px 16px; font-size: 0.82rem; border-radius: 6px; }
-    .modal-body { flex: 1; overflow-y: auto; padding: 32px; }
-
-    /* Letter Content Styles */
-    .letter-content { max-width: 640px; margin: auto; line-height: 2; font-size: 15px; font-family: 'Tiro Devanagari Nepal', serif; }
-    .letter-content .right { text-align: right; }
-    .letter-content p { margin-bottom: 8px; }
-
-    .toast {
-      position: fixed; bottom: 24px; right: 24px; background: var(--deep); color: white;
-      padding: 14px 20px; border-radius: 10px; font-size: 0.9rem;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.2); transform: translateY(80px); opacity: 0;
-      transition: all 0.3s ease; z-index: 9999; max-width: 320px;
-    }
-    .toast.show { transform: translateY(0); opacity: 1; }
-    .toast.success { border-left: 4px solid #27ae60; }
-    .toast.error { border-left: 4px solid var(--crimson); }
-
-    footer { background: var(--deep); color: rgba(255,255,255,0.5); text-align: center; padding: 24px; font-size: 0.82rem; }
-    footer a { color: var(--gold); text-decoration: none; }
-
-    .ad-slot { background: #f0ebe3; border: 1px dashed #c8b89a; border-radius: 8px; padding: 20px; text-align: center; color: var(--muted); font-size: 0.82rem; margin-bottom: 24px; }
-
-    @media print {
-      header, footer, .ad-slot, .modal-header, .btn-row, .letter-types, .form-card, .section-title { display: none !important; }
-      .modal-overlay { position: static; background: none; padding: 0; display: block !important; }
-      .modal { box-shadow: none; max-height: none; border-radius: 0; }
-      .modal-body { padding: 0; overflow: visible; }
-      .letter-content { max-width: 100%; }
-    }
+    .ad-slot { background:#f0ebe3; border:1px dashed #c8b89a; border-radius:8px; padding:20px; text-align:center; color:var(--muted); font-size:0.82rem; margin-bottom:32px; min-height:100px; display:flex; align-items:center; justify-content:center; }
   </style>
 </head>
 <body>
 
-<header>
-  <div class="logo">
-    <div class="logo-icon">📜</div>
-    <div class="logo-text">पत्र <span>सेवा</span></div>
-  </div>
-  <div class="header-badge">🇳🇵 Nepal Letter Generator</div>
-</header>
+<div id="site-header"></div>
 
 <div class="hero">
   <span class="hero-flag">🏔️</span>
   <h1>आधिकारिक पत्र जेनेरेटर</h1>
   <h2>Official Letter Generator — Nepal</h2>
-  <p>आफ्नो विवरण भर्नुहोस् र तयार पत्र प्रिन्ट गर्नुहोस्।<br/>Fill your details and get a print-ready official letter instantly.</p>
+  <p>विवरण भर्नुहोस् र तयार पत्र तुरुन्त प्रिन्ट गर्नुहोस्।<br/>Free, fast, professional letters for Nepal.</p>
 </div>
 
 <div class="container">
 
-  <div class="ad-slot"><!-- AdSense Ad Unit -->📢 विज्ञापन स्थान | Advertisement</div>
+  <div class="ad-slot">📢 विज्ञापन स्थान | Advertisement</div>
 
-  <div class="section-title">📋 पत्रको प्रकार छान्नुहोस् | Select Letter Type</div>
-
-  <div class="letter-types">
-    <div class="letter-card" onclick="selectLetter('bank_account')" id="card-bank_account">
+  <div class="section-title">📂 पत्रको श्रेणी छान्नुहोस्</div>
+  <div class="category-grid">
+    <a href="/letter-for-bank/" class="category-card">
       <span class="icon">🏦</span>
-      <span class="title">बैंक खाता खोल्ने</span>
-      <span class="subtitle">Bank Account Opening</span>
-    </div>
-    <div class="letter-card" onclick="selectLetter('nagarpalika')" id="card-nagarpalika">
+      <div class="cat-title">बैंक सम्बन्धी पत्र</div>
+      <div class="cat-sub">Bank Related Letters</div>
+      <div class="cat-count">१० पत्रहरू उपलब्ध</div>
+    </a>
+    <a href="/letter-for-nagarpalika/" class="category-card">
       <span class="icon">🏛️</span>
-      <span class="title">नगरपालिका सिफारिस</span>
-      <span class="subtitle">Nagarpalika Recommendation</span>
-    </div>
-    <div class="letter-card" onclick="selectLetter('business_registration')" id="card-business_registration">
-      <span class="icon">📋</span>
-      <span class="title">व्यवसाय दर्ता</span>
-      <span class="subtitle">Business Registration</span>
-    </div>
-    <div class="letter-card" onclick="selectLetter('job_application')" id="card-job_application">
+      <div class="cat-title">नगरपालिका पत्र</div>
+      <div class="cat-sub">Nagarpalika Letters</div>
+      <div class="cat-count">८ पत्रहरू उपलब्ध</div>
+    </a>
+    <a href="/letter-for-job/" class="category-card">
       <span class="icon">💼</span>
-      <span class="title">जागिर आवेदन</span>
-      <span class="subtitle">Job Application</span>
-    </div>
-    <div class="letter-card" onclick="selectLetter('loan_application')" id="card-loan_application">
-      <span class="icon">💰</span>
-      <span class="title">ऋण आवेदन</span>
-      <span class="subtitle">Loan Application</span>
-    </div>
-    <div class="letter-card" onclick="selectLetter('noc')" id="card-noc">
-      <span class="icon">✅</span>
-      <span class="title">अनापत्ति पत्र</span>
-      <span class="subtitle">NOC Letter</span>
-    </div>
-    <div class="letter-card" onclick="selectLetter('scholarship')" id="card-scholarship">
-      <span class="icon">🎓</span>
-      <span class="title">छात्रवृत्ति आवेदन</span>
-      <span class="subtitle">Scholarship Application</span>
-    </div>
-    <div class="letter-card" onclick="selectLetter('character_certificate')" id="card-character_certificate">
-      <span class="icon">📜</span>
-      <span class="title">चरित्र प्रमाणपत्र</span>
-      <span class="subtitle">Character Certificate</span>
-    </div>
-    <div class="letter-card" onclick="selectLetter('pan_registration')" id="card-pan_registration">
-      <span class="icon">🧾</span>
-      <span class="title">PAN दर्ता निवेदन</span>
-      <span class="subtitle">PAN Registration</span>
-    </div>
-    <div class="letter-card" onclick="selectLetter('experience_letter')" id="card-experience_letter">
-      <span class="icon">🏅</span>
-      <span class="title">अनुभव पत्र</span>
-      <span class="subtitle">Experience Letter</span>
-    </div>
+      <div class="cat-title">जागिर सम्बन्धी पत्र</div>
+      <div class="cat-sub">Job Related Letters</div>
+      <div class="cat-count">६ पत्रहरू उपलब्ध</div>
+    </a>
+    <a href="/letter-for-government/" class="category-card">
+      <span class="icon">🏢</span>
+      <div class="cat-title">सरकारी पत्र</div>
+      <div class="cat-sub">Government Letters</div>
+      <div class="cat-count">८ पत्रहरू उपलब्ध</div>
+    </a>
   </div>
 
-  <!-- Form -->
-  <div class="form-card" id="formCard">
-    <div class="section-title" id="formTitle">📝 विवरण भर्नुहोस्</div>
-    <div class="form-grid">
-      <div class="form-group">
-        <label>पूरा नाम | Full Name *</label>
-        <input type="text" id="full_name" placeholder="राम बहादुर श्रेष्ठ"/>
-      </div>
-      <div class="form-group">
-        <label>कम्पनी/संस्था | Company/Organization</label>
-        <input type="text" id="company_name" placeholder="श्रेष्ठ ट्रेडिङ्ग प्रा.लि."/>
-      </div>
-      <div class="form-group">
-        <label>ठेगाना | Address *</label>
-        <input type="text" id="address" placeholder="शुक्लागण्डकी, तनहुँ"/>
-      </div>
-      <div class="form-group">
-        <label>सम्पर्क नम्बर | Phone</label>
-        <input type="tel" id="phone" placeholder="९८XXXXXXXX"/>
-      </div>
-      <div class="form-group">
-        <label>इमेल | Email</label>
-        <input type="email" id="email" placeholder="example@email.com"/>
-      </div>
-      <div class="form-group">
-        <label>मिति | Date</label>
-        <input type="date" id="date"/>
-      </div>
-      <div class="form-group full">
-        <label id="extraLabel">थप विवरण | Additional Info</label>
-        <textarea id="extra_info" placeholder="थप विवरण यहाँ लेख्नुहोस्..."></textarea>
-      </div>
-    </div>
-    <div class="btn-row">
-      <button class="btn btn-secondary" onclick="resetForm()">🔄 Reset</button>
-      <button class="btn btn-primary" onclick="generateLetter()">📄 पत्र बनाउनुहोस् | Generate Letter</button>
-    </div>
+  <div class="section-title">🔥 लोकप्रिय पत्रहरू</div>
+  <div class="letter-list">
+    <a href="/letter-for-bank/account-opening/" class="letter-item"><span class="li-icon">🏦</span> बैंक खाता खोल्ने पत्र <span class="li-arrow">→</span></a>
+    <a href="/letter-for-bank/cheque-book/" class="letter-item"><span class="li-icon">📋</span> चेकबुक माग पत्र <span class="li-arrow">→</span></a>
+    <a href="/letter-for-bank/loan-application/" class="letter-item"><span class="li-icon">💰</span> ऋण आवेदन पत्र <span class="li-arrow">→</span></a>
+    <a href="/letter-for-nagarpalika/sifarish/" class="letter-item"><span class="li-icon">🏛️</span> नगरपालिका सिफारिस पत्र <span class="li-arrow">→</span></a>
+    <a href="/letter-for-job/application/" class="letter-item"><span class="li-icon">💼</span> जागिर आवेदन पत्र <span class="li-arrow">→</span></a>
+    <a href="/letter-for-government/noc/" class="letter-item"><span class="li-icon">✅</span> अनापत्ति पत्र (NOC) <span class="li-arrow">→</span></a>
+    <a href="/letter-for-bank/atm-card/" class="letter-item"><span class="li-icon">💳</span> ATM कार्ड माग पत्र <span class="li-arrow">→</span></a>
+    <a href="/letter-for-government/character-certificate/" class="letter-item"><span class="li-icon">📜</span> चरित्र प्रमाणपत्र अनुरोध <span class="li-arrow">→</span></a>
   </div>
 
-  <div class="ad-slot" style="margin-top:24px;"><!-- AdSense Ad Unit -->📢 विज्ञापन स्थान | Advertisement</div>
+  <div class="ad-slot">📢 विज्ञापन स्थान | Advertisement</div>
 
 </div>
 
-<!-- Letter Modal -->
-<div class="modal-overlay" id="modalOverlay">
-  <div class="modal">
-    <div class="modal-header">
-      <div class="modal-title">✅ पत्र तयार छ! | Letter Ready!</div>
-      <div class="modal-actions">
-        <button class="btn btn-secondary btn-sm" onclick="closeModal()">✖ Close</button>
-        <button class="btn btn-primary btn-sm" onclick="printLetter()">🖨️ Print</button>
-      </div>
-    </div>
-    <div class="modal-body">
-      <div class="letter-content" id="letterContent"></div>
-    </div>
-  </div>
-</div>
-
-<footer>
-  <p>© २०८१ पत्र सेवा | Powered by <a href="https://madankc.com.np">madankc.com.np</a> | सेवा सुल्क: eSewa / Khalti मार्फत तिर्नुहोस्</p>
-</footer>
-
-<div class="toast" id="toast"></div>
-
-<script>
-let selectedType = null;
-
-document.getElementById('date').valueAsDate = new Date();
-
-const extraLabels = {
-  bank_account: 'बैंकको नाम | Bank Name *',
-  nagarpalika: 'सिफारिसको उद्देश्य | Purpose of Recommendation *',
-  business_registration: 'व्यवसायको प्रकार | Business Type',
-  job_application: 'पदको नाम | Post Applied For *',
-  loan_application: 'ऋणको उद्देश्य | Loan Purpose *',
-  noc: 'NOC को उद्देश्य | Purpose of NOC *',
-  scholarship: 'संस्थाको नाम | Institution Name *',
-  character_certificate: 'प्रमाणपत्रको उद्देश्य | Purpose *',
-  pan_registration: 'व्यवसायको प्रकार | Business Type',
-  experience_letter: 'पदको नाम | Designation *',
-};
-
-const formTitles = {
-  bank_account: '🏦 बैंक खाता खोल्ने पत्र',
-  nagarpalika: '🏛️ नगरपालिका सिफारिस पत्र',
-  business_registration: '📋 व्यवसाय दर्ता पत्र',
-  job_application: '💼 जागिर आवेदन पत्र',
-  loan_application: '💰 ऋण आवेदन पत्र',
-  noc: '✅ अनापत्ति पत्र (NOC)',
-  scholarship: '🎓 छात्रवृत्ति आवेदन पत्र',
-  character_certificate: '📜 चरित्र प्रमाणपत्र अनुरोध',
-  pan_registration: '🧾 PAN दर्ता निवेदन',
-  experience_letter: '🏅 अनुभव पत्र',
-};
-
-function selectLetter(type) {
-  selectedType = type;
-  document.querySelectorAll('.letter-card').forEach(c => c.classList.remove('active'));
-  document.getElementById('card-' + type).classList.add('active');
-  const formCard = document.getElementById('formCard');
-  formCard.classList.add('visible');
-  document.getElementById('formTitle').textContent = formTitles[type] || '📝 विवरण भर्नुहोस्';
-  document.getElementById('extraLabel').textContent = extraLabels[type] || 'थप विवरण | Additional Info';
-  formCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
-}
-
-function generateLetter() {
-  if (!selectedType) { showToast('❌ पत्रको प्रकार छान्नुहोस्!', 'error'); return; }
-  const name = document.getElementById('full_name').value.trim();
-  const address = document.getElementById('address').value.trim();
-  if (!name) { showToast('❌ नाम अनिवार्य छ!', 'error'); return; }
-  if (!address) { showToast('❌ ठेगाना अनिवार्य छ!', 'error'); return; }
-
-  const company = document.getElementById('company_name').value.trim();
-  const phone = document.getElementById('phone').value.trim();
-  const email = document.getElementById('email').value.trim();
-  const dateVal = document.getElementById('date').value;
-  const extra = document.getElementById('extra_info').value.trim();
-
-  const dateStr = dateVal
-    ? new Date(dateVal).toLocaleDateString('ne-NP')
-    : new Date().toLocaleDateString('ne-NP');
-
-  const html = buildLetter(selectedType, { name, company, address, phone, email, dateStr, extra });
-  document.getElementById('letterContent').innerHTML = html;
-  document.getElementById('modalOverlay').classList.add('visible');
-  showToast('✅ पत्र तयार भयो!', 'success');
-}
-
-function buildLetter(type, d) {
-  const { name, company, address, phone, dateStr, extra } = d;
-
-  const templates = {
-
-    bank_account: `
-      <p class="right">मिति: ${dateStr}</p>
-      <p><strong>श्रीमान् शाखा प्रबन्धक महोदय,</strong><br/>
-      ${extra || '................'} बैंक,<br/>${address}</p><br/>
-      <p><strong>विषय: बैंक खाता खोल्ने सम्बन्धमा ।</strong></p><br/>
-      <p>महोदय,</p>
-      <p>उपरोक्त विषयमा म/हामी तपाईंको बैंकमा खाता खोल्न चाहन्छु/चाहन्छौं । म/हामीले आवश्यक सबै कागजातहरू संलग्न गरेको छु/छौं । कृपया मेरो/हाम्रो खाता खोलिदिनुहुन हार्दिक अनुरोध गर्दछु/गर्दछौं ।</p>
-      <br/><br/>
-      <p>निवेदक,<br/><strong>${name}</strong><br/>${company ? company+'<br/>' : ''}${address}<br/>सम्पर्क: ${phone}</p>
-    `,
-
-    nagarpalika: `
-      <p class="right">मिति: ${dateStr}</p>
-      <p><strong>श्रीमान् कार्यालय प्रमुख महोदय,</strong><br/>
-      शुक्लागण्डकी नगरपालिका,<br/>तनहुँ, गण्डकी प्रदेश</p><br/>
-      <p><strong>विषय: सिफारिस पत्रको लागि निवेदन ।</strong></p><br/>
-      <p>महोदय,</p>
-      <p>म तपाईंको नगरपालिका अन्तर्गतको स्थायी बासिन्दा <strong>${name}</strong> हुँ । मलाई <strong>${extra || '.............'}</strong> को लागि सिफारिस पत्र आवश्यक परेको हुँदा कृपया सिफारिस गरिदिनुहुन हार्दिक अनुरोध गर्दछु ।</p>
-      <br/><br/>
-      <p>निवेदक,<br/><strong>${name}</strong><br/>${address}<br/>सम्पर्क: ${phone}</p>
-    `,
-
-    business_registration: `
-      <p class="right">मिति: ${dateStr}</p>
-      <p><strong>श्रीमान् कार्यालय प्रमुख महोदय,</strong><br/>
-      उद्योग वाणिज्य तथा आपूर्ति कार्यालय,<br/>तनहुँ</p><br/>
-      <p><strong>विषय: व्यवसाय दर्ता गर्ने सम्बन्धमा ।</strong></p><br/>
-      <p>महोदय,</p>
-      <p>म <strong>${name}</strong> ले <strong>${company || extra || '.............'}</strong> नामक व्यवसाय दर्ता गर्न चाहेकोले आवश्यक कागजातहरू संलग्न राखी यो निवेदन पेश गरेको छु । कृपया दर्ता गरिदिनुहुन अनुरोध छ ।</p>
-      <br/><br/>
-      <p>निवेदक,<br/><strong>${name}</strong><br/>${address}<br/>सम्पर्क: ${phone}</p>
-    `,
-
-    job_application: `
-      <p class="right">Date: ${dateStr}</p>
-      <p><strong>The Manager/HR Department,</strong><br/>
-      ${company || '................'}<br/>${address}</p><br/>
-      <p><strong>Subject: Application for the post of ${extra || '................'}</strong></p><br/>
-      <p>Dear Sir/Madam,</p>
-      <p>I, <strong>${name}</strong>, hereby apply for the post of <strong>${extra || '................'}</strong> in your esteemed organization. I am confident that my skills and dedication will be a valuable contribution to your team. I have enclosed all necessary documents for your consideration.</p>
-      <p>I look forward to a favorable response.</p>
-      <br/><br/>
-      <p>Yours sincerely,<br/><strong>${name}</strong><br/>${address}<br/>Contact: ${phone}</p>
-    `,
-
-    loan_application: `
-      <p class="right">मिति: ${dateStr}</p>
-      <p><strong>श्रीमान् शाखा प्रबन्धक महोदय,</strong><br/>
-      ${company || '................'} बैंक/वित्तीय संस्था,<br/>${address}</p><br/>
-      <p><strong>विषय: ऋण प्रदान गर्ने सम्बन्धमा ।</strong></p><br/>
-      <p>महोदय,</p>
-      <p>म <strong>${name}</strong>, ${address} बासिन्दाले <strong>${extra || '.............'}</strong> को लागि ऋण आवश्यक परेकोले आवश्यक कागजातहरू संलग्न गरी यो निवेदन पेश गरेको छु । कृपया ऋण उपलब्ध गराइदिनुहुन हार्दिक अनुरोध गर्दछु ।</p>
-      <br/><br/>
-      <p>निवेदक,<br/><strong>${name}</strong><br/>${address}<br/>सम्पर्क: ${phone}</p>
-    `,
-
-    noc: `
-      <p class="right">मिति: ${dateStr}</p>
-      <p><strong>श्रीमान् सम्बन्धित निकाय महोदय,</strong><br/>${address}</p><br/>
-      <p><strong>विषय: अनापत्ति पत्र (NOC) को लागि निवेदन ।</strong></p><br/>
-      <p>महोदय,</p>
-      <p>म <strong>${name}</strong>${company ? ', '+company+',' : ''} ले <strong>${extra || '.............'}</strong> को लागि अनापत्ति पत्र (NOC) आवश्यक परेकोले कृपया उपलब्ध गराइदिनुहुन हार्दिक अनुरोध गर्दछु ।</p>
-      <br/><br/>
-      <p>निवेदक,<br/><strong>${name}</strong><br/>${company ? company+'<br/>' : ''}${address}<br/>सम्पर्क: ${phone}</p>
-    `,
-
-    scholarship: `
-      <p class="right">मिति: ${dateStr}</p>
-      <p><strong>श्रीमान् प्रमुख महोदय,</strong><br/>
-      ${extra || '................'},<br/>${address}</p><br/>
-      <p><strong>विषय: छात्रवृत्तिको लागि निवेदन ।</strong></p><br/>
-      <p>महोदय,</p>
-      <p>म <strong>${name}</strong> ले तपाईंको संस्थामा अध्ययन गर्न छात्रवृत्तिका लागि यो निवेदन पेश गरेको छु । आवश्यक सबै कागजातहरू संलग्न गरेको छु । कृपया छात्रवृत्ति प्रदान गरिदिनुहुन हार्दिक अनुरोध गर्दछु ।</p>
-      <br/><br/>
-      <p>निवेदक,<br/><strong>${name}</strong><br/>${address}<br/>सम्पर्क: ${phone}</p>
-    `,
-
-    character_certificate: `
-      <p class="right">मिति: ${dateStr}</p>
-      <p><strong>श्रीमान् कार्यालय प्रमुख महोदय,</strong><br/>
-      शुक्लागण्डकी नगरपालिका,<br/>तनहुँ, गण्डकी प्रदेश</p><br/>
-      <p><strong>विषय: चरित्र प्रमाणपत्रको लागि निवेदन ।</strong></p><br/>
-      <p>महोदय,</p>
-      <p>म <strong>${name}</strong>, ${address} बासिन्दाले <strong>${extra || '.............'}</strong> को लागि चरित्र प्रमाणपत्र आवश्यक परेकोले कृपया उपलब्ध गराइदिनुहुन हार्दिक अनुरोध गर्दछु ।</p>
-      <br/><br/>
-      <p>निवेदक,<br/><strong>${name}</strong><br/>${address}<br/>सम्पर्क: ${phone}</p>
-    `,
-
-    pan_registration: `
-      <p class="right">मिति: ${dateStr}</p>
-      <p><strong>श्रीमान् कार्यालय प्रमुख महोदय,</strong><br/>
-      आन्तरिक राजस्व कार्यालय,<br/>तनहुँ</p><br/>
-      <p><strong>विषय: स्थायी लेखा नम्बर (PAN) दर्ताको लागि निवेदन ।</strong></p><br/>
-      <p>महोदय,</p>
-      <p>म <strong>${name}</strong>${company ? ', '+company+',' : ''} ले व्यवसाय सञ्चालन गर्ने उद्देश्यले स्थायी लेखा नम्बर (PAN) दर्ता गर्न चाहेकोले आवश्यक कागजातहरू संलग्न गरी यो निवेदन पेश गरेको छु । कृपया दर्ता गरिदिनुहुन अनुरोध छ ।</p>
-      <br/><br/>
-      <p>निवेदक,<br/><strong>${name}</strong><br/>${company ? company+'<br/>' : ''}${address}<br/>सम्पर्क: ${phone}</p>
-    `,
-
-    experience_letter: `
-      <p class="right">Date: ${dateStr}</p>
-      <p><strong>TO WHOM IT MAY CONCERN</strong></p><br/>
-      <p><strong>Subject: Experience Certificate</strong></p><br/>
-      <p>This is to certify that <strong>${name}</strong> has worked with <strong>${company || '................'}</strong> as <strong>${extra || '................'}</strong>.</p>
-      <p>During their tenure, they have shown dedication, professionalism, and commitment to their responsibilities. We wish them success in their future endeavors.</p>
-      <br/><br/>
-      <p>Authorized Signatory,<br/><strong>${company || '................'}</strong><br/>${address}<br/>Contact: ${phone}</p>
-    `,
-  };
-
-  return templates[type] || '<p>Letter type not found.</p>';
-}
-
-function closeModal() {
-  document.getElementById('modalOverlay').classList.remove('visible');
-}
-
-function printLetter() {
-  window.print();
-}
-
-function resetForm() {
-  ['full_name','company_name','address','phone','email','extra_info'].forEach(id => {
-    document.getElementById(id).value = '';
-  });
-  document.getElementById('date').valueAsDate = new Date();
-}
-
-function showToast(msg, type = 'success') {
-  const t = document.getElementById('toast');
-  t.textContent = msg;
-  t.className = `toast ${type} show`;
-  setTimeout(() => t.classList.remove('show'), 3000);
-}
-
-// Close modal on overlay click
-document.getElementById('modalOverlay').addEventListener('click', function(e) {
-  if (e.target === this) closeModal();
-});
-</script>
+<div id="site-footer"></div>
+<script src="/components/loader.js"></script>
 </body>
 </html>
