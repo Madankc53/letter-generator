@@ -1,0 +1,167 @@
+<header class="site-header">
+  <div class="header-inner">
+
+    <!-- Logo -->
+    <a href="/" class="logo">
+      <div class="logo-icon">📜</div>
+      <div class="logo-text">पत्र <span>सेवा</span></div>
+    </a>
+
+    <!-- Desktop Nav -->
+    <nav class="nav-links">
+      <a href="/">🏠 गृहपृष्ठ</a>
+      <a href="/letter-for-bank/">🏦 बैंक पत्र</a>
+      <a href="/letter-for-nagarpalika/">🏛️ नगरपालिका</a>
+      <a href="/letter-for-job/">💼 जागिर</a>
+      <a href="/letter-for-government/">🏢 सरकारी</a>
+    </nav>
+
+    <!-- Mobile Menu Button -->
+    <button class="menu-toggle" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="/" onclick="toggleMenu()">🏠 गृहपृष्ठ</a>
+    <a href="/letter-for-bank/" onclick="toggleMenu()">🏦 बैंक पत्र</a>
+    <a href="/letter-for-nagarpalika/" onclick="toggleMenu()">🏛️ नगरपालिका पत्र</a>
+    <a href="/letter-for-job/" onclick="toggleMenu()">💼 जागिर पत्र</a>
+    <a href="/letter-for-government/" onclick="toggleMenu()">🏢 सरकारी पत्र</a>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    background: #1a0a00;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+  }
+
+  .header-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+  }
+
+  .logo-icon {
+    width: 36px;
+    height: 36px;
+    background: #c0392b;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+
+  .logo-text {
+    font-family: 'Playfair Display', serif;
+    color: #fdf6ec;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+
+  .logo-text span { color: #d4a017; }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .nav-links a {
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-family: 'Tiro Devanagari Nepal', serif;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: all 0.2s;
+    white-space: nowrap;
+  }
+
+  .nav-links a:hover,
+  .nav-links a.active {
+    background: rgba(255,255,255,0.1);
+    color: #d4a017;
+  }
+
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+  }
+
+  .menu-toggle span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: white;
+    border-radius: 2px;
+    transition: all 0.3s;
+  }
+
+  .mobile-nav {
+    display: none;
+    flex-direction: column;
+    background: #2c1a0e;
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .mobile-nav.open { display: flex; }
+
+  .mobile-nav a {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    font-family: 'Tiro Devanagari Nepal', serif;
+    font-size: 0.95rem;
+    padding: 14px 1.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    transition: background 0.2s;
+  }
+
+  .mobile-nav a:hover { background: rgba(255,255,255,0.05); color: #d4a017; }
+
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .menu-toggle { display: flex; }
+  }
+</style>
+
+<script>
+  function toggleMenu() {
+    document.getElementById('mobileNav').classList.toggle('open');
+  }
+
+  // Auto highlight active nav link
+  document.addEventListener('DOMContentLoaded', function() {
+    const path = window.location.pathname;
+    document.querySelectorAll('.nav-links a, .mobile-nav a').forEach(a => {
+      if (a.getAttribute('href') !== '/' && path.startsWith(a.getAttribute('href'))) {
+        a.classList.add('active');
+      }
+    });
+  });
+</script>
