@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>बैंक खाता बन्द गर्ने निवेदन | Bank Account Closing Letter Nepal</title>
+  <meta name="description" content="नेपालमा बैंक खाता बन्द गर्नको लागि तयार निवेदन पत्र।"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://letter.madankc.com.np/letter-for-bank/account-closing.html"/>
+  <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Nepal&family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/components/letter.css"/>
+</head>
+<body>
+<div id="site-header"></div>
+<div class="page-hero">
+  <div class="breadcrumb"><a href="/">गृहपृष्ठ</a> › <a href="/letter-for-bank/bank-letters.html">बैंक पत्र</a> › खाता बन्द गर्ने पत्र</div>
+  <h1>🔒 बैंक खाता बन्द गर्ने निवेदन पत्र</h1>
+  <p>Bank Account Closing Letter — Nepal</p>
+</div>
+<div class="container">
+  <div class="ad-slot">📢 Advertisement</div>
+  <div class="form-card">
+    <div class="form-section-title">📝 विवरण भर्नुहोस्</div>
+    <div class="form-grid">
+      <div class="form-group"><label>पूरा नाम * | Full Name</label><input type="text" id="full_name" placeholder="राम बहादुर श्रेष्ठ"/></div>
+      <div class="form-group"><label>बैंकको नाम * | Bank Name</label><input type="text" id="bank_name" placeholder="नबिल बैंक लि."/></div>
+      <div class="form-group"><label>शाखा | Branch</label><input type="text" id="branch_name" placeholder="दमौली शाखा"/></div>
+      <div class="form-group"><label>खाता नम्बर * | Account Number</label><input type="text" id="account_no" placeholder="XXXXXXXXXXXXXXXX"/></div>
+      <div class="form-group"><label>खाता बन्द गर्नुको कारण | Reason</label>
+        <select id="reason">
+          <option value="व्यक्तिगत कारणले">व्यक्तिगत कारणले</option>
+          <option value="अर्को बैंकमा सरेकोले">अर्को बैंकमा सरेकोले</option>
+          <option value="खाता निष्क्रिय भएकोले">खाता निष्क्रिय भएकोले</option>
+          <option value="व्यवसाय बन्द भएकोले">व्यवसाय बन्द भएकोले</option>
+        </select>
+      </div>
+      <div class="form-group"><label>बाँकी रकम फिर्ता पाउने विधि | Refund Method</label>
+        <select id="refund">
+          <option value="नगद">नगद (Cash)</option>
+          <option value="अर्को खातामा स्थानान्तरण">अर्को खातामा स्थानान्तरण</option>
+        </select>
+      </div>
+      <div class="form-group"><label>ठेगाना * | Address</label><input type="text" id="address" placeholder="शुक्लागण्डकी-३, तनहुँ"/></div>
+      <div class="form-group"><label>सम्पर्क नम्बर | Phone</label><input type="tel" id="phone" placeholder="९८XXXXXXXX"/></div>
+      <div class="form-group"><label>नागरिकता नम्बर | Citizenship No.</label><input type="text" id="citizenship_no" placeholder="XX-XX-XXXXXXX"/></div>
+      <div class="form-group"><label>मिति | Date</label><input type="date" id="date"/></div>
+    </div>
+    <div class="btn-row">
+      <button class="btn btn-secondary" onclick="resetForm()">🔄 Reset</button>
+      <button class="btn btn-primary" onclick="generateLetter()">📄 पत्र बनाउनुहोस्</button>
+    </div>
+  </div>
+  <div class="ad-slot">📢 Advertisement</div>
+</div>
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal">
+    <div class="modal-header">
+      <div class="modal-title">✅ पत्र तयार छ!</div>
+      <div class="modal-actions">
+        <button class="btn btn-secondary btn-sm" onclick="closeModal()">✖ बन्द</button>
+        <button class="btn btn-primary btn-sm" onclick="window.print()">🖨️ Print</button>
+      </div>
+    </div>
+    <div class="modal-body"><div class="letter-doc" id="letterDoc"></div></div>
+  </div>
+</div>
+<div id="site-footer"></div>
+<div class="toast" id="toast"></div>
+<script src="/components/loader.js"></script>
+<script src="/components/letter.js"></script>
+<script>
+document.getElementById('date').valueAsDate = new Date();
+function generateLetter() {
+  const name = document.getElementById('full_name').value.trim();
+  const bank = document.getElementById('bank_name').value.trim();
+  const branch = document.getElementById('branch_name').value.trim();
+  const accNo = document.getElementById('account_no').value.trim();
+  const reason = document.getElementById('reason').value;
+  const refund = document.getElementById('refund').value;
+  const address = document.getElementById('address').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+  const cit = document.getElementById('citizenship_no').value.trim();
+  const dateStr = getDate();
+  if (!name) { showToast('❌ नाम अनिवार्य छ!', 'error'); return; }
+  if (!bank) { showToast('❌ बैंकको नाम अनिवार्य छ!', 'error'); return; }
+  if (!accNo) { showToast('❌ खाता नम्बर अनिवार्य छ!', 'error'); return; }
+  const html = `
+    <p class="right">मिति: ${dateStr}</p><br/>
+    <p><strong>श्रीमान् शाखा प्रबन्धक महोदय,</strong></p>
+    <p>${bank}${branch ? ', ' + branch : ''},</p>
+    <p>${address}</p><br/>
+    <p><strong>विषय: बैंक खाता बन्द गर्ने सम्बन्धमा ।</strong></p><br/>
+    <p>महोदय,</p>
+    <p>म <strong>${name}</strong>, ${address} बासिन्दाको तपाईंको बैंकमा खाता नम्बर <strong>${accNo}</strong> रहेको छ । <strong>${reason}</strong> उक्त खाता बन्द गर्न चाहेकोले कृपया खाता बन्द गरी बाँकी रकम <strong>${refund}</strong> मार्फत फिर्ता गरिदिनुहुन हार्दिक अनुरोध गर्दछु ।</p>
+    <br/><br/>
+    <p>निवेदक,</p><br/><br/>
+    <p>..............................</p>
+    <p><strong>${name}</strong></p>
+    <p>खाता नं.: ${accNo}</p>
+    <p>${address}</p>
+    ${cit ? '<p>ना.प्र.नं.: ' + cit + '</p>' : ''}
+    ${phone ? '<p>सम्पर्क: ' + phone + '</p>' : ''}
+  `;
+  showLetter(html);
+}
+</script>
+</body>
+</html>
