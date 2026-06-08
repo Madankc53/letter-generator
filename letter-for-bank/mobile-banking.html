@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>मोबाइल बैंकिङ सक्रिय निवेदन | Mobile Banking Activation Letter Nepal</title>
+  <meta name="description" content="नेपालमा मोबाइल बैंकिङ सक्रिय गर्नको लागि तयार निवेदन पत्र।"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://letter.madankc.com.np/letter-for-bank/mobile-banking.html"/>
+  <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Nepal&family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/components/letter.css"/>
+</head>
+<body>
+<div id="site-header"></div>
+<div class="page-hero">
+  <div class="breadcrumb"><a href="/">गृहपृष्ठ</a> › <a href="/letter-for-bank/bank-letters.html">बैंक पत्र</a> › मोबाइल बैंकिङ पत्र</div>
+  <h1>📱 मोबाइल बैंकिङ सक्रिय निवेदन पत्र</h1>
+  <p>Mobile Banking Activation Letter — Nepal</p>
+</div>
+<div class="container">
+  <div class="ad-slot">📢 Advertisement</div>
+  <div class="toggle-row">
+    <button class="toggle-btn active" onclick="setAction('activate', this)">✅ सक्रिय गर्ने | Activate</button>
+    <button class="toggle-btn" onclick="setAction('reset', this)">🔄 पासवर्ड रिसेट | Reset</button>
+    <button class="toggle-btn" onclick="setAction('deactivate', this)">❌ बन्द गर्ने | Deactivate</button>
+  </div>
+  <div class="form-card">
+    <div class="form-section-title">📝 विवरण भर्नुहोस्</div>
+    <div class="form-grid">
+      <div class="form-group"><label>पूरा नाम * | Full Name</label><input type="text" id="full_name" placeholder="राम बहादुर श्रेष्ठ"/></div>
+      <div class="form-group"><label>बैंकको नाम * | Bank Name</label><input type="text" id="bank_name" placeholder="नबिल बैंक लि."/></div>
+      <div class="form-group"><label>शाखा | Branch</label><input type="text" id="branch_name" placeholder="दमौली शाखा"/></div>
+      <div class="form-group"><label>खाता नम्बर * | Account Number</label><input type="text" id="account_no" placeholder="XXXXXXXXXXXXXXXX"/></div>
+      <div class="form-group"><label>मोबाइल नम्बर * | Mobile Number</label><input type="tel" id="mobile_no" placeholder="९८XXXXXXXX"/></div>
+      <div class="form-group"><label>ठेगाना * | Address</label><input type="text" id="address" placeholder="शुक्लागण्डकी-३, तनहुँ"/></div>
+      <div class="form-group"><label>नागरिकता नम्बर | Citizenship No.</label><input type="text" id="citizenship_no" placeholder="XX-XX-XXXXXXX"/></div>
+      <div class="form-group"><label>मिति | Date</label><input type="date" id="date"/></div>
+    </div>
+    <div class="btn-row">
+      <button class="btn btn-secondary" onclick="resetForm()">🔄 Reset</button>
+      <button class="btn btn-primary" onclick="generateLetter()">📄 पत्र बनाउनुहोस्</button>
+    </div>
+  </div>
+  <div class="ad-slot">📢 Advertisement</div>
+</div>
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal">
+    <div class="modal-header">
+      <div class="modal-title">✅ पत्र तयार छ!</div>
+      <div class="modal-actions">
+        <button class="btn btn-secondary btn-sm" onclick="closeModal()">✖ बन्द</button>
+        <button class="btn btn-primary btn-sm" onclick="window.print()">🖨️ Print</button>
+      </div>
+    </div>
+    <div class="modal-body"><div class="letter-doc" id="letterDoc"></div></div>
+  </div>
+</div>
+<div id="site-footer"></div>
+<div class="toast" id="toast"></div>
+<script src="/components/loader.js"></script>
+<script src="/components/letter.js"></script>
+<script>
+document.getElementById('date').valueAsDate = new Date();
+let action = 'activate';
+function setAction(a, btn) {
+  action = a;
+  document.querySelectorAll('.toggle-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+}
+function generateLetter() {
+  const name = document.getElementById('full_name').value.trim();
+  const bank = document.getElementById('bank_name').value.trim();
+  const branch = document.getElementById('branch_name').value.trim();
+  const accNo = document.getElementById('account_no').value.trim();
+  const mobile = document.getElementById('mobile_no').value.trim();
+  const address = document.getElementById('address').value.trim();
+  const cit = document.getElementById('citizenship_no').value.trim();
+  const dateStr = getDate();
+  if (!name) { showToast('❌ नाम अनिवार्य छ!', 'error'); return; }
+  if (!bank) { showToast('❌ बैंकको नाम अनिवार्य छ!', 'error'); return; }
+  if (!accNo) { showToast('❌ खाता नम्बर अनिवार्य छ!', 'error'); return; }
+  if (!mobile) { showToast('❌ मोबाइल नम्बर अनिवार्य छ!', 'error'); return; }
+  const actions = {
+    activate: 'मोबाइल बैंकिङ सेवा सक्रिय गरिदिने',
+    reset: 'मोबाइल बैंकिङको पासवर्ड रिसेट गरिदिने',
+    deactivate: 'मोबाइल बैंकिङ सेवा बन्द गरिदिने'
+  };
+  const subjects = {
+    activate: 'मोबाइल बैंकिङ सेवा सक्रिय गर्ने',
+    reset: 'मोबाइल बैंकिङ पासवर्ड रिसेट गर्ने',
+    deactivate: 'मोबाइल बैंकिङ सेवा बन्द गर्ने'
+  };
+  const html = `
+    <p class="right">मिति: ${dateStr}</p><br/>
+    <p><strong>श्रीमान् शाखा प्रबन्धक महोदय,</strong></p>
+    <p>${bank}${branch ? ', ' + branch : ''},</p>
+    <p>${address}</p><br/>
+    <p><strong>विषय: ${subjects[action]} सम्बन्धमा ।</strong></p><br/>
+    <p>महोदय,</p>
+    <p>म <strong>${name}</strong>, ${address} बासिन्दाको तपाईंको बैंकमा खाता नम्बर <strong>${accNo}</strong> रहेको छ । मोबाइल नम्बर <strong>${mobile}</strong> मा ${actions[action]} सम्बन्धमा कृपया आवश्यक कारबाही गरिदिनुहुन हार्दिक अनुरोध गर्दछु ।</p>
+    <br/><br/>
+    <p>निवेदक,</p><br/><br/>
+    <p>..............................</p>
+    <p><strong>${name}</strong></p>
+    <p>खाता नं.: ${accNo}</p>
+    <p>मोबाइल: ${mobile}</p>
+    <p>${address}</p>
+    ${cit ? '<p>ना.प्र.नं.: ' + cit + '</p>' : ''}
+  `;
+  showLetter(html);
+}
+</script>
+</body>
+</html>
