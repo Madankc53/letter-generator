@@ -4,1086 +4,1332 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>बैंक खाता बन्द गर्ने निवेदन | Bank Account Closing Letter Nepal</title>
-  <meta name="description" content="नेपालमा बैंक खाता बन्द गर्नको लागि तयार bilingual निवेदन पत्र। Generate Nepali, English, or both. Download PDF, print, and save your form." />
-  <meta name="keywords" content="bank account closing letter Nepal, नेपाली बैंक खाता बन्द गर्ने निवेदन, bilingual letter, PDF download, html2pdf" />
+  <meta name="description" content="नेपालमा बैंक खाता बन्द गर्नको लागि तयार bilingual निवेदन पत्र। AI-powered letter generation. Generate Nepali, English, or both. Download PDF, print, and save." />
+  <meta name="keywords" content="bank account closing letter Nepal, नेपाली बैंक खाता बन्द गर्ने निवेदन, bilingual letter, PDF download, AI letter generator" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://letter.madankc.com.np/letter-for-bank/account-closing.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="बैंक खाता बन्द गर्ने निवेदन | Bank Account Closing Letter Nepal" />
+  <meta property="og:description" content="AI-powered bilingual bank account closing letter generator for Nepal. Nepali & English." />
+  <meta property="og:type" content="website" />
+
   <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Nepal&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/components/letter.css" />
-  <meta name="theme-color" content="#0d6efd" />
+  <meta name="theme-color" content="#1a56db" />
 
+  <!-- Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1239173186536702" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 
   <style>
     :root {
-      --bg: #f6f8fb;
+      --bg: #f0f4f8;
       --card: #ffffff;
-      --text: #1f2937;
-      --muted: #6b7280;
-      --border: #e5e7eb;
-      --primary: #0d6efd;
-      --primary-2: #0b5ed7;
-      --danger: #dc3545;
-      --success: #198754;
+      --text: #1a202c;
+      --muted: #64748b;
+      --border: #e2e8f0;
+      --primary: #1a56db;
+      --primary-2: #1347c2;
+      --primary-light: #eff6ff;
+      --danger: #dc2626;
+      --danger-light: #fef2f2;
+      --success: #16a34a;
+      --success-light: #f0fdf4;
+      --warning: #d97706;
+      --warning-light: #fffbeb;
+      --info-light: #eff6ff;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.04);
+      --shadow-md: 0 4px 12px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.04);
+      --radius: 12px;
+      --radius-sm: 8px;
     }
-
     [data-theme="dark"] {
       --bg: #0f172a;
-      --card: #111827;
-      --text: #e5e7eb;
-      --muted: #9ca3af;
-      --border: #374151;
+      --card: #1e293b;
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+      --border: #334155;
       --primary: #3b82f6;
       --primary-2: #2563eb;
+      --primary-light: #1e3a5f;
+      --danger: #ef4444;
+      --danger-light: #450a0a;
+      --success: #22c55e;
+      --success-light: #052e16;
+      --warning: #f59e0b;
+      --warning-light: #451a03;
+      --info-light: #1e3a5f;
     }
+    * { box-sizing: border-box; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); margin: 0; padding: 0; font-size: 15px; line-height: 1.6; }
 
-    body {
-      font-family: 'DM Sans', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      margin: 0;
-    }
+    /* TOP BAR */
+    .topbar { background: var(--card); border-bottom: 1px solid var(--border); padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; position: sticky; top: 0; z-index: 100; box-shadow: var(--shadow-sm); }
+    .topbar-left, .topbar-right { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+    .lang-switcher, .mode-switcher { display: inline-flex; border: 1px solid var(--border); border-radius: 999px; overflow: hidden; background: var(--bg); }
+    .lang-switcher button, .mode-switcher button { border: 0; padding: 7px 14px; cursor: pointer; background: transparent; color: var(--muted); font-weight: 500; font-size: 13px; transition: all 0.15s; }
+    .lang-switcher button.active, .mode-switcher button.active { background: var(--primary); color: #fff; }
+    .lang-switcher button:hover:not(.active), .mode-switcher button:hover:not(.active) { background: var(--primary-light); color: var(--primary); }
 
-    .topbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 12px 16px;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
+    /* LAYOUT */
+    .container { max-width: 1200px; margin: 0 auto; padding: 20px 16px; }
+    .page-layout { display: grid; grid-template-columns: 1fr 420px; gap: 20px; align-items: start; }
+    @media (max-width: 960px) { .page-layout { grid-template-columns: 1fr; } }
 
-    .toolbar, .action-row, .btn-row, .chips {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
+    /* HERO */
+    .page-hero { background: linear-gradient(135deg, var(--primary) 0%, #1347c2 100%); color: #fff; padding: 28px 24px; border-radius: var(--radius); margin-bottom: 20px; }
+    .page-hero h1 { margin: 0 0 6px; font-size: 22px; font-weight: 700; }
+    .page-hero p { margin: 0; opacity: 0.85; font-size: 14px; }
+    .breadcrumb { font-size: 13px; margin-bottom: 10px; opacity: 0.8; }
+    .breadcrumb a { color: rgba(255,255,255,0.85); text-decoration: none; }
+    .breadcrumb a:hover { color: #fff; }
 
-    .lang-switcher, .mode-switcher {
-      display: inline-flex;
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      overflow: hidden;
-      background: var(--card);
-    }
+    /* CARDS */
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow-sm); margin-bottom: 16px; overflow: hidden; }
+    .card-header { padding: 14px 18px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; background: var(--bg); }
+    .card-header-title { font-weight: 600; font-size: 15px; display: flex; align-items: center; gap: 8px; }
+    .card-body { padding: 18px; }
 
-    .lang-switcher button, .mode-switcher button {
-      border: 0;
-      padding: 8px 14px;
-      cursor: pointer;
-      background: transparent;
-      color: var(--text);
-      font-weight: 600;
-    }
-
-    .lang-switcher button.active, .mode-switcher button.active {
-      background: var(--primary);
-      color: white;
-    }
-
-    .container {
-      max-width: 1180px;
-      margin: 0 auto;
-      padding: 16px;
-    }
-
-    .page-hero, .form-card, .section-card, .modal, .letter-panel, .feedback-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.04);
-    }
-
-    .page-hero {
-      padding: 20px;
-      margin-bottom: 16px;
-    }
-
-    .form-card, .section-card, .feedback-card {
-      padding: 18px;
-      margin-bottom: 16px;
-    }
-
-    .form-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
-    }
-
-    .form-group label {
-      display: block;
-      margin-bottom: 6px;
-      font-weight: 600;
-    }
-
+    /* FORM */
+    .form-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+    @media (max-width: 600px) { .form-grid { grid-template-columns: 1fr; } }
+    .form-group { display: flex; flex-direction: column; gap: 5px; }
+    .form-group label { font-size: 13px; font-weight: 600; color: var(--text); }
+    .form-group .label-sub { font-size: 11px; font-weight: 400; color: var(--muted); }
     .form-group input, .form-group select, .form-group textarea {
-      width: 100%;
-      box-sizing: border-box;
-      padding: 11px 12px;
-      border-radius: 10px;
-      border: 1px solid var(--border);
-      background: var(--card);
-      color: var(--text);
+      padding: 10px 12px; border-radius: var(--radius-sm); border: 1.5px solid var(--border);
+      background: var(--card); color: var(--text); font-size: 14px; font-family: inherit;
+      transition: border-color 0.15s, box-shadow 0.15s; outline: none; width: 100%;
     }
-
-    .form-group textarea {
-      min-height: 110px;
-      resize: vertical;
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+      border-color: var(--primary); box-shadow: 0 0 0 3px rgba(26,86,219,0.12);
     }
+    .form-group input.error, .form-group select.error { border-color: var(--danger); }
+    .form-group .field-error { font-size: 12px; color: var(--danger); display: none; }
+    .form-group.has-error .field-error { display: block; }
+    .form-group.has-error input, .form-group.has-error select { border-color: var(--danger); }
+    .form-group.has-success input, .form-group.has-success select { border-color: var(--success); }
+    .form-group textarea { min-height: 80px; resize: vertical; }
+    .input-wrapper { position: relative; }
+    .input-icon { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); font-size: 16px; pointer-events: none; }
+    .input-icon.valid { color: var(--success); }
+    .input-icon.invalid { color: var(--danger); }
 
-    .btn {
-      border: 0;
-      border-radius: 10px;
-      padding: 10px 14px;
-      cursor: pointer;
-      font-weight: 600;
-    }
+    /* TRANSLITERATE TOGGLE */
+    .translit-btn { font-size: 11px; color: var(--primary); background: var(--primary-light); border: 1px solid var(--primary); border-radius: 4px; padding: 2px 7px; cursor: pointer; margin-left: 6px; font-weight: 500; }
+    .translit-btn:hover { background: var(--primary); color: #fff; }
 
+    /* TEMPLATE CHIPS */
+    .chips { display: flex; gap: 6px; flex-wrap: wrap; }
+    .chip { border: 1.5px solid var(--border); background: transparent; color: var(--muted); border-radius: 999px; padding: 5px 13px; cursor: pointer; font-size: 13px; font-weight: 500; transition: all 0.15s; }
+    .chip.active { background: var(--primary); color: #fff; border-color: var(--primary); }
+    .chip:hover:not(.active) { background: var(--primary-light); color: var(--primary); border-color: var(--primary); }
+
+    /* BUTTONS */
+    .btn { border: 0; border-radius: var(--radius-sm); padding: 10px 16px; cursor: pointer; font-weight: 600; font-size: 14px; display: inline-flex; align-items: center; gap: 7px; transition: all 0.15s; font-family: inherit; }
+    .btn:active { transform: scale(0.98); }
     .btn-primary { background: var(--primary); color: #fff; }
     .btn-primary:hover { background: var(--primary-2); }
-    .btn-secondary { background: #6c757d; color: #fff; }
+    .btn-secondary { background: var(--bg); color: var(--text); border: 1px solid var(--border); }
+    .btn-secondary:hover { background: var(--border); }
     .btn-success { background: var(--success); color: #fff; }
+    .btn-success:hover { background: #15803d; }
     .btn-danger { background: var(--danger); color: #fff; }
+    .btn-sm { padding: 7px 12px; font-size: 13px; }
+    .btn-row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px; }
 
-    .btn-row, .action-row {
-      margin-top: 14px;
+    /* AI TONE */
+    .ai-badge { background: linear-gradient(135deg, #7c3aed, #1a56db); color: #fff; font-size: 11px; padding: 3px 8px; border-radius: 999px; font-weight: 600; margin-left: 6px; }
+
+    /* LIVE PREVIEW PANEL */
+    .preview-panel { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow-sm); position: sticky; top: 68px; }
+    .preview-header { padding: 12px 16px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; background: var(--bg); border-radius: var(--radius) var(--radius) 0 0; }
+    .preview-body { padding: 16px; min-height: 300px; font-size: 14px; line-height: 1.8; }
+    .preview-body .letter-content { font-family: 'Tiro Devanagari Nepal', serif; }
+    .preview-body .placeholder-msg { color: var(--muted); text-align: center; padding: 40px 20px; font-size: 14px; }
+    .preview-actions { padding: 12px 16px; border-top: 1px solid var(--border); display: flex; gap: 8px; flex-wrap: wrap; background: var(--bg); border-radius: 0 0 var(--radius) var(--radius); }
+
+    /* CHECKLIST */
+    .checklist { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+    .checklist li { display: flex; align-items: center; gap: 10px; font-size: 14px; }
+    .checklist li input[type="checkbox"] { width: 16px; height: 16px; accent-color: var(--primary); cursor: pointer; flex-shrink: 0; }
+    .checklist li label { cursor: pointer; }
+    .checklist li input:checked + label { text-decoration: line-through; color: var(--muted); }
+
+    /* BS DATE */
+    .date-row { display: flex; gap: 10px; align-items: flex-end; }
+    .date-row .form-group { flex: 1; }
+    .bs-date-display { background: var(--primary-light); color: var(--primary); border-radius: var(--radius-sm); padding: 10px 12px; font-size: 13px; font-weight: 500; border: 1.5px solid var(--primary); min-width: 140px; text-align: center; line-height: 1.4; }
+    .bs-label { font-size: 11px; font-weight: 400; color: var(--muted); display: block; }
+
+    /* BRANCH DATALIST */
+    input[list] { cursor: pointer; }
+
+    /* HISTORY */
+    .history-list { display: grid; gap: 10px; }
+    .history-item { border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 12px 14px; display: flex; justify-content: space-between; align-items: center; }
+    .history-item-info { font-size: 14px; }
+    .history-item-meta { font-size: 12px; color: var(--muted); margin-top: 2px; }
+    .history-item-actions { display: flex; gap: 6px; }
+
+    /* RELATED */
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+    @media (max-width: 600px) { .related-grid { grid-template-columns: 1fr; } }
+    .related-grid a { display: block; padding: 12px 14px; border: 1px solid var(--border); border-radius: var(--radius-sm); text-decoration: none; color: var(--text); font-size: 13px; font-weight: 500; transition: all 0.15s; }
+    .related-grid a:hover { border-color: var(--primary); color: var(--primary); background: var(--primary-light); }
+
+    /* MODAL */
+    .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 9998; padding: 16px; overflow-y: auto; }
+    .modal { background: var(--card); border-radius: var(--radius); max-width: 860px; margin: 0 auto; box-shadow: var(--shadow-md); }
+    .modal-header { padding: 14px 18px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+    .modal-body { padding: 20px; }
+    .modal-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+    .letter-split { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    @media (max-width: 700px) { .letter-split { grid-template-columns: 1fr; } }
+    .letter-panel { border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 18px; font-family: 'Tiro Devanagari Nepal', serif; font-size: 14px; line-height: 1.9; }
+    .letter-title { font-size: 14px; font-weight: 700; color: var(--primary); margin-bottom: 12px; font-family: 'DM Sans', sans-serif; }
+    .right { text-align: right; }
+
+    /* AI LOADING */
+    .ai-loader { display: none; align-items: center; gap: 10px; padding: 14px; background: var(--primary-light); border-radius: var(--radius-sm); color: var(--primary); font-size: 14px; font-weight: 500; margin-top: 10px; }
+    .ai-loader.show { display: flex; }
+    .spinner { width: 18px; height: 18px; border: 2px solid var(--primary); border-top-color: transparent; border-radius: 50%; animation: spin 0.7s linear infinite; flex-shrink: 0; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* TOAST */
+    .toast { position: fixed; right: 16px; bottom: 24px; padding: 12px 18px; border-radius: var(--radius-sm); display: none; z-index: 9999; max-width: 320px; font-size: 14px; font-weight: 500; box-shadow: var(--shadow-md); animation: slideUp 0.2s ease; }
+    @keyframes slideUp { from { transform: translateY(10px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+    .toast.info { background: #1e293b; color: #fff; }
+    .toast.success { background: var(--success); color: #fff; }
+    .toast.error { background: var(--danger); color: #fff; }
+
+    /* MOBILE BOTTOM BAR */
+    .mobile-action-bar { display: none; position: fixed; bottom: 0; left: 0; right: 0; background: var(--card); border-top: 1px solid var(--border); padding: 10px 14px; gap: 8px; z-index: 200; flex-wrap: wrap; }
+    @media (max-width: 768px) { .mobile-action-bar { display: flex; } body { padding-bottom: 70px; } }
+
+    /* SIGNATURE */
+    .signature-preview { max-width: 180px; max-height: 80px; border: 1px solid var(--border); border-radius: var(--radius-sm); margin-top: 8px; display: none; }
+
+    /* FEEDBACK */
+    .star-rating { display: flex; gap: 4px; }
+    .star-rating button { background: none; border: none; font-size: 22px; cursor: pointer; color: var(--border); transition: color 0.1s; }
+    .star-rating button.active, .star-rating button:hover { color: #f59e0b; }
+
+    /* PRINT STYLES */
+    @media print {
+      body * { visibility: hidden; }
+      #printArea, #printArea * { visibility: visible; }
+      #printArea { position: absolute; left: 0; top: 0; width: 100%; font-family: 'Tiro Devanagari Nepal', serif; font-size: 14pt; line-height: 2; padding: 30mm 20mm; }
+      .letter-title { display: none; }
+      @page { margin: 20mm; }
     }
 
-    .chips button {
-      border: 1px solid var(--border);
-      background: transparent;
-      color: var(--text);
-      border-radius: 999px;
-      padding: 8px 12px;
-      cursor: pointer;
-    }
+    /* PROGRESS BAR */
+    .progress-bar { height: 4px; background: var(--border); border-radius: 999px; overflow: hidden; margin-bottom: 16px; }
+    .progress-fill { height: 100%; background: var(--primary); border-radius: 999px; transition: width 0.3s; }
+    .progress-label { font-size: 12px; color: var(--muted); margin-bottom: 6px; }
 
-    .chips button.active {
-      background: var(--primary);
-      color: #fff;
-      border-color: var(--primary);
-    }
+    /* ADSENSE SLOTS */
+    .ad-slot { background: var(--bg); border: 1px dashed var(--border); border-radius: var(--radius-sm); padding: 8px; text-align: center; margin: 12px 0; overflow: hidden; }
 
-    .letter-split {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-    }
+    /* WHATSAPP BTN */
+    .btn-whatsapp { background: #25d366; color: #fff; }
+    .btn-whatsapp:hover { background: #1da851; }
 
-    .letter-panel {
-      padding: 18px;
-    }
+    /* TONE SELECTOR */
+    .tone-options { display: flex; gap: 6px; flex-wrap: wrap; }
+    .tone-btn { border: 1.5px solid var(--border); background: transparent; color: var(--muted); border-radius: var(--radius-sm); padding: 6px 12px; cursor: pointer; font-size: 13px; transition: all 0.15s; }
+    .tone-btn.active { background: #7c3aed; color: #fff; border-color: #7c3aed; }
 
-    .letter-title {
-      margin: 0 0 10px;
-      font-size: 18px;
-      font-weight: 700;
-    }
-
-    .meta-line {
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .toast {
-      position: fixed;
-      right: 16px;
-      bottom: 16px;
-      background: #111827;
-      color: #fff;
-      padding: 12px 14px;
-      border-radius: 10px;
-      display: none;
-      z-index: 9999;
-      max-width: 320px;
-    }
-
-    .modal-overlay {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.55);
-      z-index: 9998;
-      padding: 16px;
-    }
-
-    .modal {
-      max-width: 1120px;
-      margin: 0 auto;
-      max-height: 92vh;
-      overflow: auto;
-    }
-
-    .modal-header, .section-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 12px;
-      padding: 14px 16px;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .modal-body {
-      padding: 16px;
-    }
-
-    .related-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 10px;
-    }
-
-    .related-grid a {
-      display: block;
-      padding: 12px;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      text-decoration: none;
-      color: var(--text);
-      background: rgba(255,255,255,0.02);
-    }
-
-    .history-list {
-      display: grid;
-      gap: 10px;
-    }
-
-    .history-item {
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 12px;
-    }
-
-    .small-muted {
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    .signature-preview {
-      max-width: 180px;
-      max-height: 90px;
-      display: block;
-      margin-top: 10px;
-    }
-
-    @media (max-width: 900px) {
-      .form-grid, .letter-split, .related-grid {
-        grid-template-columns: 1fr;
-      }
-      .topbar {
-        justify-content: center;
-      }
-    }
+    /* COLLAPSE */
+    .collapse-header { cursor: pointer; user-select: none; display: flex; justify-content: space-between; align-items: center; }
+    .collapse-arrow { transition: transform 0.2s; font-size: 16px; color: var(--muted); }
+    .collapse-arrow.open { transform: rotate(180deg); }
+    .collapse-body { display: none; }
+    .collapse-body.open { display: block; }
   </style>
 </head>
 <body>
-  <div class="topbar container">
-    <div class="toolbar">
-      <div class="lang-switcher" role="group" aria-label="Language toggle">
-        <button type="button" id="btnNepali" onclick="setLanguage('ne')">नेपाली</button>
-        <button type="button" id="btnEnglish" onclick="setLanguage('en')">English</button>
-        <button type="button" id="btnBoth" onclick="setLanguage('both')">Both</button>
+
+<!-- STICKY TOPBAR -->
+<div class="topbar">
+  <div class="topbar-left">
+    <div class="lang-switcher" role="group" aria-label="Language toggle">
+      <button type="button" id="btnNepali" onclick="setLanguage('ne')">नेपाली</button>
+      <button type="button" id="btnEnglish" onclick="setLanguage('en')">English</button>
+      <button type="button" id="btnBoth" onclick="setLanguage('both')">Both</button>
+    </div>
+  </div>
+  <div class="topbar-right">
+    <button class="btn btn-sm btn-secondary" onclick="fillSampleData()">Sample</button>
+    <button class="btn btn-sm btn-secondary" onclick="clearSavedData()">Clear</button>
+    <div class="mode-switcher">
+      <button type="button" id="themeBtn" onclick="toggleTheme()">🌙 Dark</button>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER from components -->
+<div id="site-header"></div>
+
+<!-- TOP ADSENSE -->
+<div class="container" style="padding-bottom: 0;">
+  <div class="ad-slot">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1239173186536702" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- HERO -->
+  <div class="page-hero">
+    <div class="breadcrumb">
+      <a href="/" data-i18n="breadcrumb_home">गृहपृष्ठ</a> ›
+      <a href="/letter-for-bank/bank-letters.html" data-i18n="breadcrumb_bank">बैंक पत्र</a> ›
+      <span data-i18n="breadcrumb_current">खाता बन्द गर्ने पत्र</span>
+    </div>
+    <h1 data-i18n="hero_title">🔒 बैंक खाता बन्द गर्ने निवेदन पत्र</h1>
+    <p data-i18n="hero_subtitle">AI-powered Bilingual Bank Account Closing Letter — Nepal</p>
+  </div>
+
+  <!-- FORM PROGRESS -->
+  <div class="progress-label" id="progressLabel">Form completion: 0%</div>
+  <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+
+  <div class="page-layout">
+    <!-- LEFT: FORM -->
+    <div>
+
+      <!-- TEMPLATE & AI SECTION -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-header-title">📝 <span data-i18n="form_title">विवरण भर्नुहोस्</span></div>
+          <div class="chips">
+            <button type="button" id="tpl_default" class="chip active" onclick="setTemplate('default')" data-i18n="tpl_default">Default</button>
+            <button type="button" id="tpl_savings" class="chip" onclick="setTemplate('savings')" data-i18n="tpl_savings">Savings</button>
+            <button type="button" id="tpl_current" class="chip" onclick="setTemplate('current')" data-i18n="tpl_current">Current</button>
+            <button type="button" id="tpl_fd" class="chip" onclick="setTemplate('fd')" data-i18n="tpl_fd">FD Closing</button>
+          </div>
+        </div>
+
+        <!-- AI TONE -->
+        <div style="padding: 12px 18px; border-bottom: 1px solid var(--border); background: var(--bg);">
+          <div style="font-size: 13px; font-weight: 600; margin-bottom: 8px;">✨ AI Letter Tone <span class="ai-badge">AI Powered</span></div>
+          <div class="tone-options">
+            <button class="tone-btn active" id="tone_formal" onclick="setTone('formal')">📋 Formal</button>
+            <button class="tone-btn" id="tone_polite" onclick="setTone('polite')">🙏 Polite</button>
+            <button class="tone-btn" id="tone_brief" onclick="setTone('brief')">⚡ Brief</button>
+            <button class="tone-btn" id="tone_detailed" onclick="setTone('detailed')">📄 Detailed</button>
+          </div>
+          <div class="ai-loader" id="aiLoader"><div class="spinner"></div> <span id="aiLoaderText">Generating AI letter...</span></div>
+        </div>
+
+        <div class="card-body">
+          <div class="form-grid">
+
+            <!-- Full Name with transliteration -->
+            <div class="form-group" id="fg_name">
+              <label>
+                <span data-i18n="label_full_name">पूरा नाम * | Full Name</span>
+                <button class="translit-btn" id="translitBtn" onclick="toggleTranslit()" title="Toggle Nepali input">अ↔A</button>
+              </label>
+              <div class="input-wrapper">
+                <input type="text" id="full_name" placeholder="राम बहादुर श्रेष्ठ" oninput="liveValidate('name', this); updatePreview(); updateProgress();" />
+                <span class="input-icon" id="icon_name"></span>
+              </div>
+              <div class="field-error" id="err_name">Name is required</div>
+            </div>
+
+            <!-- Bank Name -->
+            <div class="form-group" id="fg_bank">
+              <label data-i18n="label_bank_name">बैंकको नाम * | Bank Name</label>
+              <select id="bank_name" onchange="updateBranchList(); updatePreview(); updateProgress();"></select>
+              <div class="field-error" id="err_bank">Bank name is required</div>
+            </div>
+
+            <!-- Branch with datalist -->
+            <div class="form-group">
+              <label data-i18n="label_branch">शाखा | Branch</label>
+              <input type="text" id="branch_name" list="branch_list" placeholder="दमौली शाखा" oninput="updatePreview();" />
+              <datalist id="branch_list"></datalist>
+            </div>
+
+            <!-- Account No -->
+            <div class="form-group" id="fg_acc">
+              <label data-i18n="label_account_no">खाता नम्बर * | Account Number</label>
+              <div class="input-wrapper">
+                <input type="text" id="account_no" placeholder="XXXXXXXXXXXXXXXX" oninput="liveValidate('acc', this); updatePreview(); updateProgress();" maxlength="20" />
+                <span class="input-icon" id="icon_acc"></span>
+              </div>
+              <div class="field-error" id="err_acc">Account number is required</div>
+            </div>
+
+            <!-- Reason -->
+            <div class="form-group">
+              <label data-i18n="label_reason">खाता बन्द गर्नुको कारण | Reason</label>
+              <select id="reason" onchange="updatePreview();"></select>
+            </div>
+
+            <!-- Refund -->
+            <div class="form-group">
+              <label data-i18n="label_refund">बाँकी रकम फिर्ता | Refund Method</label>
+              <select id="refund" onchange="updatePreview();"></select>
+            </div>
+
+            <!-- Address -->
+            <div class="form-group" id="fg_addr">
+              <label data-i18n="label_address">ठेगाना * | Address</label>
+              <div class="input-wrapper">
+                <input type="text" id="address" placeholder="शुक्लागण्डकी-३, तनहुँ" oninput="liveValidate('addr', this); updatePreview(); updateProgress();" />
+                <span class="input-icon" id="icon_addr"></span>
+              </div>
+              <div class="field-error" id="err_addr">Address is required</div>
+            </div>
+
+            <!-- Phone -->
+            <div class="form-group" id="fg_phone">
+              <label data-i18n="label_phone">सम्पर्क नम्बर | Phone</label>
+              <div class="input-wrapper">
+                <input type="tel" id="phone" placeholder="९८XXXXXXXX" oninput="liveValidate('phone', this); updatePreview(); updateProgress();" maxlength="10" />
+                <span class="input-icon" id="icon_phone"></span>
+              </div>
+              <div class="field-error" id="err_phone">Enter a valid 10-digit number</div>
+            </div>
+
+            <!-- ID -->
+            <div class="form-group">
+              <label data-i18n="label_id">Citizenship / Passport / PAN</label>
+              <input type="text" id="id_no" placeholder="नागरिकता / पासपोर्ट / PAN" oninput="updatePreview();" />
+            </div>
+
+            <!-- Date + BS Date -->
+            <div class="form-group">
+              <label data-i18n="label_date">मिति | Date (AD)</label>
+              <input type="date" id="date" oninput="renderBSDate(); updatePreview();" />
+            </div>
+
+          </div>
+
+          <!-- BS Date display -->
+          <div style="margin: 10px 0; display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
+            <div class="bs-date-display" id="bsDateDisplay">
+              <span class="bs-label">बि.सं. मिति (BS Date)</span>
+              <span id="bsDateText">—</span>
+            </div>
+            <div style="font-size: 12px; color: var(--muted);">Auto-converted from AD date</div>
+          </div>
+
+          <div class="form-grid" style="margin-top: 14px;">
+            <!-- Multiple Accounts -->
+            <div class="form-group">
+              <label data-i18n="label_accounts">Multiple Accounts</label>
+              <textarea id="accounts" placeholder="खाता १, खाता २..." oninput="updatePreview();"></textarea>
+            </div>
+
+            <!-- Attachments -->
+            <div class="form-group">
+              <label data-i18n="label_attachments">Attachments</label>
+              <textarea id="attachments" placeholder="चेकबुक, एटिएम कार्ड, पासबुक..." oninput="updatePreview();"></textarea>
+            </div>
+
+            <!-- Signature -->
+            <div class="form-group">
+              <label data-i18n="label_signature">Signature Upload</label>
+              <input type="file" id="signature" accept="image/*" />
+              <img id="signaturePreview" class="signature-preview" alt="Signature preview" />
+            </div>
+
+            <!-- Output Mode -->
+            <div class="form-group">
+              <label data-i18n="label_output">Letter Output Format</label>
+              <select id="output_mode" onchange="updatePreview()">
+                <option value="single" data-i18n="output_single">Single language</option>
+                <option value="bilingual" data-i18n="output_bilingual">Bilingual side by side</option>
+                <option value="stacked" data-i18n="output_stacked">Bilingual one after another</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="btn-row">
+            <button class="btn btn-primary" onclick="generateLetter()">✨ Generate Letter</button>
+            <button class="btn btn-secondary" onclick="saveForm()">💾 Save Form</button>
+            <button class="btn btn-secondary btn-sm" onclick="loadSavedLetters()">🕘 History</button>
+          </div>
+        </div>
       </div>
 
-      <div class="mode-switcher" role="group" aria-label="Theme toggle">
-        <button type="button" id="themeBtn" onclick="toggleTheme()">Dark Mode</button>
+      <!-- DOCUMENTS CHECKLIST -->
+      <div class="card">
+        <div class="card-header collapse-header" onclick="toggleCollapse('checklist')">
+          <div class="card-header-title">📋 What to Bring to the Bank</div>
+          <span class="collapse-arrow" id="arrow_checklist">▼</span>
+        </div>
+        <div class="collapse-body card-body" id="body_checklist">
+          <p style="font-size: 13px; color: var(--muted); margin: 0 0 12px;">Tick off items before your visit:</p>
+          <ul class="checklist" id="checklistItems">
+            <li><input type="checkbox" id="c1" /><label for="c1">Original Citizenship Certificate (नागरिकता प्रमाणपत्र)</label></li>
+            <li><input type="checkbox" id="c2" /><label for="c2">Passbook (पासबुक)</label></li>
+            <li><input type="checkbox" id="c3" /><label for="c3">ATM / Debit Card (एटिएम कार्ड)</label></li>
+            <li><input type="checkbox" id="c4" /><label for="c4">Cheque Book (चेकबुक) — if issued</label></li>
+            <li><input type="checkbox" id="c5" /><label for="c5">This Closing Letter (यो पत्र)</label></li>
+            <li><input type="checkbox" id="c6" /><label for="c6">Passport-size Photo (पासपोर्ट फोटो)</label></li>
+            <li><input type="checkbox" id="c7" /><label for="c7">Account Opening Form copy (if available)</label></li>
+          </ul>
+          <div style="margin-top: 12px; font-size: 13px; color: var(--muted);" id="checklistProgress">0 / 7 items checked</div>
+        </div>
       </div>
+
+      <!-- MID ADSENSE -->
+      <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1239173186536702" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+
+      <!-- RELATED LETTERS -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-header-title">🔗 Related Letters</div>
+        </div>
+        <div class="card-body">
+          <div class="related-grid">
+            <a href="#">📄 FD Closing Letter</a>
+            <a href="#">📑 Cheque Book Request</a>
+            <a href="#">📊 Bank Statement Request</a>
+            <a href="#">✏️ Account Update Letter</a>
+            <a href="#">🔑 ATM Card Replacement</a>
+            <a href="#">💱 Currency Exchange Request</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- FEEDBACK -->
+      <div class="card">
+        <div class="card-header collapse-header" onclick="toggleCollapse('feedback')">
+          <div class="card-header-title">💬 Feedback</div>
+          <span class="collapse-arrow" id="arrow_feedback">▼</span>
+        </div>
+        <div class="collapse-body card-body" id="body_feedback">
+          <div style="margin-bottom: 12px;">
+            <div style="font-size: 13px; font-weight: 600; margin-bottom: 6px;">Rate this tool:</div>
+            <div class="star-rating" id="starRating">
+              <button onclick="setRating(1)" aria-label="1 star">★</button>
+              <button onclick="setRating(2)" aria-label="2 stars">★</button>
+              <button onclick="setRating(3)" aria-label="3 stars">★</button>
+              <button onclick="setRating(4)" aria-label="4 stars">★</button>
+              <button onclick="setRating(5)" aria-label="5 stars">★</button>
+            </div>
+          </div>
+          <div class="form-grid">
+            <div class="form-group">
+              <label>Your Name</label>
+              <input type="text" id="feedback_name" placeholder="तपाईंको नाम" />
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" id="feedback_email" placeholder="you@example.com" />
+            </div>
+            <div class="form-group" style="grid-column: 1/-1;">
+              <label>Message</label>
+              <textarea id="feedback_msg" placeholder="आफ्नो सुझाव लेख्नुहोस्..."></textarea>
+            </div>
+          </div>
+          <div class="btn-row">
+            <button class="btn btn-primary btn-sm" onclick="sendFeedback()">Send Feedback</button>
+          </div>
+        </div>
+      </div>
+
     </div>
 
-    <div class="toolbar">
-      <button class="btn btn-secondary" onclick="fillSampleData()" data-i18n="btn_sample">Sample Data</button>
-      <button class="btn btn-secondary" onclick="clearSavedData()" data-i18n="btn_clear">Clear Saved</button>
+    <!-- RIGHT: LIVE PREVIEW -->
+    <div>
+      <div class="preview-panel">
+        <div class="preview-header">
+          <div style="font-weight: 600; font-size: 14px;">👁 Live Preview</div>
+          <div style="font-size: 12px; color: var(--muted);">Updates as you type</div>
+        </div>
+        <div class="preview-body" id="livePreview">
+          <div class="placeholder-msg">
+            Fill in the form fields to see your letter preview here in real-time.
+          </div>
+        </div>
+        <div class="preview-actions">
+          <button class="btn btn-primary btn-sm" onclick="generateLetter()">✨ Generate Full Letter</button>
+          <button class="btn btn-sm btn-secondary" onclick="copyLetterText()">📋 Copy Text</button>
+        </div>
+      </div>
+
+      <!-- SIDE ADSENSE -->
+      <div class="ad-slot" style="margin-top: 16px;">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1239173186536702" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
     </div>
   </div>
 
-  <div id="site-header"></div>
-
-  <div class="container">
-    <div class="page-hero">
-      <div class="breadcrumb">
-        <a href="/" data-i18n="breadcrumb_home">गृहपृष्ठ</a> ›
-        <a href="/letter-for-bank/bank-letters.html" data-i18n="breadcrumb_bank">बैंक पत्र</a> ›
-        <span data-i18n="breadcrumb_current">खाता बन्द गर्ने पत्र</span>
-      </div>
-      <h1 data-i18n="hero_title">🔒 बैंक खाता बन्द गर्ने निवेदन पत्र</h1>
-      <p data-i18n="hero_subtitle">Bank Account Closing Letter — Nepal</p>
-      <p class="meta-line" data-i18n="hero_meta">Generate Nepali, English, or both. Save, download PDF, print, and share.</p>
-    </div>
-
-    <div class="form-card">
-      <div class="section-header">
-        <div class="form-section-title" data-i18n="form_title">📝 विवरण भर्नुहोस्</div>
-        <div class="chips">
-          <button type="button" id="tpl_default" class="active" onclick="setTemplate('default')" data-i18n="tpl_default">Default</button>
-          <button type="button" id="tpl_savings" onclick="setTemplate('savings')" data-i18n="tpl_savings">Savings</button>
-          <button type="button" id="tpl_current" onclick="setTemplate('current')" data-i18n="tpl_current">Current</button>
-          <button type="button" id="tpl_fd" onclick="setTemplate('fd')" data-i18n="tpl_fd">FD Closing</button>
-        </div>
-      </div>
-
-      <div class="form-grid">
-        <div class="form-group">
-          <label data-i18n="label_full_name">पूरा नाम * | Full Name</label>
-          <input type="text" id="full_name" placeholder="राम बहादुर श्रेष्ठ" />
-        </div>
-
-        <div class="form-group">
-          <label data-i18n="label_bank_name">बैंकको नाम * | Bank Name</label>
-          <select id="bank_name"></select>
-        </div>
-
-        <div class="form-group">
-          <label data-i18n="label_branch">शाखा | Branch</label>
-          <input type="text" id="branch_name" placeholder="दमौली शाखा" />
-        </div>
-
-        <div class="form-group">
-          <label data-i18n="label_account_no">खाता नम्बर * | Account Number</label>
-          <input type="text" id="account_no" placeholder="XXXXXXXXXXXXXXXX" />
-        </div>
-
-        <div class="form-group">
-          <label data-i18n="label_reason">खाता बन्द गर्नुको कारण | Reason</label>
-          <select id="reason"></select>
-        </div>
-
-        <div class="form-group">
-          <label data-i18n="label_refund">बाँकी रकम फिर्ता पाउने विधि | Refund Method</label>
-          <select id="refund"></select>
-        </div>
-
-        <div class="form-group">
-          <label data-i18n="label_address">ठेगाना * | Address</label>
-          <input type="text" id="address" placeholder="शुक्लागण्डकी-३, तनहुँ" />
-        </div>
-
-        <div class="form-group">
-          <label data-i18n="label_phone">सम्पर्क नम्बर | Phone</label>
-          <input type="tel" id="phone" placeholder="९८XXXXXXXX" />
-        </div>
-
-        <div class="form-group">
-          <label data-i18n="label_id">Citizenship / Passport / PAN</label>
-          <input type="text" id="id_no" placeholder="नागरिकता / पासपोर्ट / PAN" />
-        </div>
-
-        <div class="form-group">
-          <label data-i18n="label_date">मिति | Date</label>
-          <input type="date" id="date" />
-        </div>
-
-        <div class="form-group">
-          <label data-i18n="label_alt_date">Date</label>
-          <input type="text" id="alt_date" readonly />
-        </div>
-
-        <div class="form-group">
-          <label data-i18n="label_accounts">Multiple Accounts</label>
-          <textarea id="accounts" placeholder="खाता १, खाता २..."></textarea>
-        </div>
-
-        <div class="form-group">
-          <label data-i18n="label_attachments">Attachments</label>
-          <textarea id="attachments" placeholder="चेकबुक, एटिएम कार्ड, पासबुक..."></textarea>
-        </div>
-
-        <div class="form-group">
-          <label data-i18n="label_signature">Signature Upload</label>
-          <input type="file" id="signature" accept="image/*" />
-          <img id="signaturePreview" class="signature-preview" style="display:none;" alt="Signature preview" />
-        </div>
-
-        <div class="form-group">
-          <label data-i18n="label_output">Letter Output</label>
-          <select id="output_mode" onchange="renderPreview()">
-            <option value="single" data-i18n="output_single">Single language</option>
-            <option value="bilingual" data-i18n="output_bilingual">Bilingual side by side</option>
-            <option value="stacked" data-i18n="output_stacked">Bilingual one after another</option>
-          </select>
-        </div>
-      </div>
-
-      <div class="btn-row">
-        <button class="btn btn-primary" onclick="renderPreview()" data-i18n="btn_generate">📄 पत्र बनाउनुहोस्</button>
-        <button class="btn btn-secondary" onclick="saveForm()" data-i18n="btn_save">💾 Save Form</button>
-        <button class="btn btn-success" onclick="loadSavedLetters()" data-i18n="btn_history">🕘 History</button>
-      </div>
-    </div>
-
-    <div class="section-card">
-      <div class="section-header">
-        <div class="form-section-title" data-i18n="related_title">Related Letters</div>
-      </div>
-      <div class="related-grid">
-        <a href="#" data-i18n="rel_fd">FD Closing Letter</a>
-        <a href="#" data-i18n="rel_cheque">Cheque Book Request</a>
-        <a href="#" data-i18n="rel_statement">Bank Statement Request</a>
-      </div>
-    </div>
-
-    <div class="feedback-card">
-      <div class="section-header">
-        <div class="form-section-title" data-i18n="feedback_title">Feedback</div>
-      </div>
-      <div class="form-grid">
-        <div class="form-group">
-          <label data-i18n="feedback_name">Your Name</label>
-          <input type="text" id="feedback_name" placeholder="तपाईंको नाम" />
-        </div>
-        <div class="form-group">
-          <label data-i18n="feedback_email">Email</label>
-          <input type="email" id="feedback_email" placeholder="you@example.com" />
-        </div>
-        <div class="form-group" style="grid-column:1/-1;">
-          <label data-i18n="feedback_msg">Message</label>
-          <textarea id="feedback_msg" placeholder="आफ्नो सुझाव लेख्नुहोस्..."></textarea>
-        </div>
-      </div>
-      <div class="btn-row">
-        <button class="btn btn-primary" onclick="sendFeedback()" data-i18n="feedback_send">Send Feedback</button>
-      </div>
-    </div>
+  <!-- BOTTOM ADSENSE -->
+  <div class="ad-slot">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1239173186536702" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
   </div>
 
-  <div class="modal-overlay" id="modalOverlay">
-    <div class="modal">
-      <div class="modal-header">
-        <div class="modal-title" data-i18n="modal_title">✅ Letter Ready!</div>
-        <div class="modal-actions action-row">
-          <button class="btn btn-secondary" onclick="closeModal()" data-i18n="btn_close">✖ Close</button>
-          <button class="btn btn-primary" onclick="window.print()" data-i18n="btn_print">🖨️ Print</button>
-          <button class="btn btn-success" onclick="downloadPDF()" data-i18n="btn_pdf">⬇ PDF</button>
-          <button class="btn btn-secondary" onclick="shareLetter()" data-i18n="btn_share">📤 Share</button>
-        </div>
-      </div>
-      <div class="modal-body">
-        <div class="letter-doc" id="letterDoc"></div>
+</div>
+
+<!-- FOOTER from components -->
+<div id="site-footer"></div>
+
+<!-- MOBILE STICKY ACTION BAR -->
+<div class="mobile-action-bar" role="toolbar" aria-label="Mobile actions">
+  <button class="btn btn-primary btn-sm" style="flex:1;" onclick="generateLetter()">✨ Generate</button>
+  <button class="btn btn-success btn-sm" onclick="downloadPDF()">⬇ PDF</button>
+  <button class="btn btn-whatsapp btn-sm" onclick="shareWhatsApp()">📲 WhatsApp</button>
+  <button class="btn btn-secondary btn-sm" onclick="window.print()">🖨</button>
+</div>
+
+<!-- LETTER MODAL -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeModalOnBackdrop(event)">
+  <div class="modal" id="mainModal">
+    <div class="modal-header">
+      <div style="font-weight: 700; font-size: 16px;">✅ Letter Ready!</div>
+      <div class="modal-actions">
+        <button class="btn btn-sm btn-secondary" onclick="closeModal()">✖ Close</button>
+        <button class="btn btn-sm btn-primary" onclick="window.print()">🖨️ Print</button>
+        <button class="btn btn-sm btn-success" onclick="downloadPDF()">⬇ PDF</button>
+        <button class="btn btn-sm btn-secondary" onclick="copyLetterText()">📋 Copy</button>
+        <button class="btn btn-sm btn-whatsapp" onclick="shareWhatsApp()">📲 WhatsApp</button>
       </div>
     </div>
+    <div class="modal-body" id="printArea">
+      <div id="letterDoc"></div>
+    </div>
   </div>
+</div>
 
-  <div id="site-footer"></div>
-  <div class="toast" id="toast"></div>
+<!-- HISTORY MODAL -->
+<div class="modal-overlay" id="historyOverlay" onclick="closeHistoryOnBackdrop(event)">
+  <div class="modal">
+    <div class="modal-header">
+      <div style="font-weight: 700; font-size: 16px;">🕘 Letter History</div>
+      <div class="modal-actions">
+        <button class="btn btn-sm btn-danger" onclick="clearHistory()">🗑 Clear All</button>
+        <button class="btn btn-sm btn-secondary" onclick="closeHistoryModal()">✖ Close</button>
+      </div>
+    </div>
+    <div class="modal-body" id="historyDoc"></div>
+  </div>
+</div>
 
-  <script src="/components/loader.js"></script>
-  <script src="/components/letter.js"></script>
+<div class="toast" id="toast"></div>
 
-  <script>
-    const bankOptions = {
-      ne: ["नबिल बैंक लि.","नेपाल बैंक लि.","ग्लोबल आइएमई बैंक","कुमारी बैंक","प्रभु बैंक","एनआईसी एशिया बैंक","सिद्धार्थ बैंक","हिमालयन बैंक","लक्ष्मी सनराइज बैंक","राष्ट्रिय वाणिज्य बैंक"],
-      en: ["Nabil Bank Ltd.","Nepal Bank Ltd.","Global IME Bank","Kumari Bank","Prabhu Bank","NIC Asia Bank","Siddhartha Bank","Himalayan Bank","Laxmi Sunrise Bank","Rastriya Banijya Bank"]
-    };
+<!-- COMPONENTS LOADER -->
+<script src="/components/loader.js"></script>
+<script src="/components/letter.js"></script>
 
-    const translations = {
-      ne: {
-        breadcrumb_home: "गृहपृष्ठ",
-        breadcrumb_bank: "बैंक पत्र",
-        breadcrumb_current: "खाता बन्द गर्ने पत्र",
-        hero_title: "🔒 बैंक खाता बन्द गर्ने निवेदन पत्र",
-        hero_subtitle: "Bank Account Closing Letter — Nepal",
-        hero_meta: "नेपाली, English, वा दुवैमा पत्र बनाउनुहोस्। Save, PDF, print, share.",
-        form_title: "📝 विवरण भर्नुहोस्",
-        label_full_name: "पूरा नाम * | Full Name",
-        label_bank_name: "बैंकको नाम * | Bank Name",
-        label_branch: "शाखा | Branch",
-        label_account_no: "खाता नम्बर * | Account Number",
-        label_reason: "खाता बन्द गर्नुको कारण | Reason",
-        label_refund: "बाँकी रकम फिर्ता पाउने विधि | Refund Method",
-        label_address: "ठेगाना * | Address",
-        label_phone: "सम्पर्क नम्बर | Phone",
-        label_id: "Citizenship / Passport / PAN",
-        label_date: "मिति | Date",
-        label_alt_date: "Date",
-        label_accounts: "Multiple Accounts",
-        label_attachments: "Attachments",
-        label_signature: "Signature Upload",
-        label_output: "Letter Output",
-        btn_generate: "📄 Generate Letter",
-        btn_save: "💾 Save Form",
-        btn_history: "🕘 History",
-        btn_sample: "Sample Data",
-        btn_clear: "Clear Saved",
-        btn_close: "✖ Close",
-        btn_print: "🖨️ Print",
-        btn_pdf: "⬇ PDF",
-        btn_share: "📤 Share",
-        modal_title: "✅ Letter Ready!",
-        related_title: "Related Letters",
-        rel_fd: "FD Closing Letter",
-        rel_cheque: "Cheque Book Request",
-        rel_statement: "Bank Statement Request",
-        feedback_title: "Feedback",
-        feedback_name: "Your Name",
-        feedback_email: "Email",
-        feedback_msg: "Message",
-        feedback_send: "Send Feedback",
-        output_single: "एकल भाषा",
-        output_bilingual: "दुवै भाषा",
-        output_stacked: "दुवै भाषा (एकपछि अर्को)",
-        tpl_default: "Default",
-        tpl_savings: "Savings",
-        tpl_current: "Current",
-        tpl_fd: "FD Closing",
-        err_name: "❌ नाम अनिवार्य छ!",
-        err_bank: "❌ बैंकको नाम अनिवार्य छ!",
-        err_acc: "❌ खाता नम्बर अनिवार्य छ!",
-        reason_personal: "व्यक्तिगत कारणले",
-        reason_bank_transfer: "अर्को बैंकमा सरेकोले",
-        reason_inactive: "खाता निष्क्रिय भएकोले",
-        reason_business_closed: "व्यवसाय बन्द भएकोले",
-        reason_fee: "सेवा शुल्क धेरै भएकोले",
-        reason_salary: "तलब खाता परिवर्तन गर्नुपर्ने भएकोले",
-        reason_joint: "संयुक्त खाताको आवश्यक नभएकोले",
-        reason_other: "अन्य कारण",
-        refund_cash: "नगद (Cash)",
-        refund_transfer: "अर्को खातामा स्थानान्तरण",
-        refund_cheque: "चेक",
-        refund_wallet: "Digital Wallet",
-        letter_subject: "विषय: बैंक खाता बन्द गर्ने सम्बन्धमा ।",
-        letter_salutation: "श्रीमान् शाखा प्रबन्धक महोदय,",
-        letter_closing: "निवेदक,",
-        account_no: "खाता नं.",
-        citizenship: "ना.प्र./पासपोर्ट/PAN",
-        contact: "सम्पर्क",
-        date_label: "मिति",
-        template_subject_savings: "विषय: बचत खाता बन्द गर्ने सम्बन्धमा ।",
-        template_subject_current: "विषय: चालु खाता बन्द गर्ने सम्बन्धमा ।",
-        template_subject_fd: "विषय: मुद्दति खाता बन्द गर्ने सम्बन्धमा ।"
-      },
-      en: {
-        breadcrumb_home: "Home",
-        breadcrumb_bank: "Bank Letters",
-        breadcrumb_current: "Account Closing Letter",
-        hero_title: "🔒 Bank Account Closing Application",
-        hero_subtitle: "Bank Account Closing Letter — Nepal",
-        hero_meta: "Generate letters in Nepali, English, or both. Save, PDF, print, share.",
-        form_title: "📝 Fill in Details",
-        label_full_name: "Full Name * | पूरा नाम",
-        label_bank_name: "Bank Name * | बैंकको नाम",
-        label_branch: "Branch | शाखा",
-        label_account_no: "Account Number * | खाता नम्बर",
-        label_reason: "Reason for Closing | खाता बन्द गर्नुको कारण",
-        label_refund: "Refund Method | बाँकी रकम फिर्ता पाउने विधि",
-        label_address: "Address * | ठेगाना",
-        label_phone: "Phone | सम्पर्क नम्बर",
-        label_id: "Citizenship / Passport / PAN",
-        label_date: "Date | मिति",
-        label_alt_date: "Date",
-        label_accounts: "Multiple Accounts",
-        label_attachments: "Attachments",
-        label_signature: "Signature Upload",
-        label_output: "Letter Output",
-        btn_generate: "📄 Generate Letter",
-        btn_save: "💾 Save Form",
-        btn_history: "🕘 History",
-        btn_sample: "Sample Data",
-        btn_clear: "Clear Saved",
-        btn_close: "✖ Close",
-        btn_print: "🖨️ Print",
-        btn_pdf: "⬇ PDF",
-        btn_share: "📤 Share",
-        modal_title: "✅ Letter Ready!",
-        related_title: "Related Letters",
-        rel_fd: "FD Closing Letter",
-        rel_cheque: "Cheque Book Request",
-        rel_statement: "Bank Statement Request",
-        feedback_title: "Feedback",
-        feedback_name: "Your Name",
-        feedback_email: "Email",
-        feedback_msg: "Message",
-        feedback_send: "Send Feedback",
-        output_single: "Single language",
-        output_bilingual: "Bilingual side by side",
-        output_stacked: "Bilingual one after another",
-        tpl_default: "Default",
-        tpl_savings: "Savings",
-        tpl_current: "Current",
-        tpl_fd: "FD Closing",
-        err_name: "❌ Name is required!",
-        err_bank: "❌ Bank name is required!",
-        err_acc: "❌ Account number is required!",
-        reason_personal: "Personal reasons",
-        reason_bank_transfer: "Transferred to another bank",
-        reason_inactive: "Account has become inactive",
-        reason_business_closed: "Business has been closed",
-        reason_fee: "High service fees",
-        reason_salary: "Need to change salary account",
-        reason_joint: "Joint account no longer needed",
-        reason_other: "Other reasons",
-        refund_cash: "Cash",
-        refund_transfer: "Transfer to another account",
-        refund_cheque: "Cheque",
-        refund_wallet: "Digital Wallet",
-        letter_subject: "Subject: Request for Bank Account Closure.",
-        letter_salutation: "Dear Branch Manager,",
-        letter_closing: "Applicant,",
-        account_no: "Account No.",
-        citizenship: "Citizenship / Passport / PAN",
-        contact: "Phone",
-        date_label: "Date",
-        template_subject_savings: "Subject: Request to Close Savings Account.",
-        template_subject_current: "Subject: Request to Close Current Account.",
-        template_subject_fd: "Subject: Request to Close Fixed Deposit Account."
-      }
-    };
+<script>
+/* ============================================================
+   DATA
+============================================================ */
+const BANKS = {
+  ne: ["नबिल बैंक लि.","नेपाल बैंक लि.","ग्लोबल आइएमई बैंक","कुमारी बैंक","प्रभु बैंक","एनआईसी एशिया बैंक","सिद्धार्थ बैंक","हिमालयन बैंक","लक्ष्मी सनराइज बैंक","राष्ट्रिय वाणिज्य बैंक","सिभिल बैंक","एनएमबी बैंक","मेगा बैंक","सनराइज बैंक","एभरेस्ट बैंक","माछापुच्छ्रे बैंक","सेञ्चुरी कमर्सियल बैंक","सानिमा बैंक","कृषि विकास बैंक"],
+  en: ["Nabil Bank Ltd.","Nepal Bank Ltd.","Global IME Bank","Kumari Bank","Prabhu Bank","NIC Asia Bank","Siddhartha Bank","Himalayan Bank","Laxmi Sunrise Bank","Rastriya Banijya Bank","Civil Bank","NMB Bank","Mega Bank","Sunrise Bank","Everest Bank","Machhapuchchhre Bank","Century Commercial Bank","Sanima Bank","Agriculture Development Bank"]
+};
 
-    let currentLang = localStorage.getItem("preferred_lang");
-    if (!currentLang) {
-      const browserLang = (navigator.language || "ne").toLowerCase();
-      currentLang = browserLang.startsWith("en") ? "en" : "ne";
-    }
+const BRANCHES = {
+  "Nabil Bank Ltd.": ["Kathmandu Main","Pokhara","Butwal","Biratnagar","Dharan","Hetauda","Nepalgunj","Birgunj","Damauli","Bharatpur"],
+  "नबिल बैंक लि.": ["काठमाडौँ शाखा","पोखरा शाखा","बुटवल शाखा","विराटनगर शाखा","धरान शाखा","हेटौँडा शाखा","नेपालगञ्ज शाखा","बीरगञ्ज शाखा","दमौली शाखा","भरतपुर शाखा"],
+  "Global IME Bank": ["New Road","Thamel","Putalisadak","Baneshwor","Lalitpur","Bhaktapur","Kirtipur","Pokhara","Damauli","Surkhet"],
+  "ग्लोबल आइएमई बैंक": ["न्यू रोड","ठमेल","पुतलीसडक","बानेश्वर","ललितपुर","भक्तपुर","कीर्तिपुर","पोखरा","दमौली","सुर्खेत"]
+};
 
-    let signatureDataUrl = localStorage.getItem("signature_data") || "";
-    let currentTemplate = localStorage.getItem("preferred_template") || "default";
+const TRANSLITMAP = {
+  'a':'अ','aa':'आ','i':'इ','ii':'ई','u':'उ','uu':'ऊ','e':'ए','ai':'ऐ','o':'ओ','au':'औ',
+  'k':'क','kh':'ख','g':'ग','gh':'घ','c':'च','ch':'छ','j':'ज','jh':'झ','t':'त','th':'थ',
+  'd':'द','dh':'ध','n':'न','p':'प','ph':'फ','b':'ब','bh':'भ','m':'म','y':'य','r':'र',
+  'l':'ल','v':'व','w':'व','s':'स','sh':'श','h':'ह','R':'र्','N':'ं','H':'ः'
+};
 
-    function showToast(message, type = "info") {
-      const el = document.getElementById("toast");
-      el.textContent = message;
-      el.style.display = "block";
-      el.style.background = type === "error" ? "#dc3545" : type === "success" ? "#198754" : "#111827";
-      setTimeout(() => el.style.display = "none", 2400);
-    }
+const I18N = {
+  ne: {
+    breadcrumb_home:"गृहपृष्ठ", breadcrumb_bank:"बैंक पत्र", breadcrumb_current:"खाता बन्द गर्ने पत्र",
+    hero_title:"🔒 बैंक खाता बन्द गर्ने निवेदन पत्र",
+    form_title:"📝 विवरण भर्नुहोस्",
+    label_full_name:"पूरा नाम *", label_bank_name:"बैंकको नाम *", label_branch:"शाखा",
+    label_account_no:"खाता नम्बर *", label_reason:"खाता बन्द गर्नुको कारण", label_refund:"बाँकी रकम फिर्ता",
+    label_address:"ठेगाना *", label_phone:"सम्पर्क नम्बर", label_id:"Citizenship / Passport / PAN",
+    label_date:"मिति (AD)", label_accounts:"Multiple Accounts", label_attachments:"Attachments",
+    label_signature:"Signature Upload", label_output:"Letter Output Format",
+    output_single:"एकल भाषा", output_bilingual:"दुवै भाषा", output_stacked:"दुवै भाषा (एकपछि अर्को)",
+    tpl_default:"Default", tpl_savings:"Savings", tpl_current:"Current", tpl_fd:"FD Closing",
+    err_name:"❌ नाम अनिवार्य छ!", err_bank:"❌ बैंकको नाम अनिवार्य छ!", err_acc:"❌ खाता नम्बर अनिवार्य छ!",
+    letter_subject:"विषय: बैंक खाता बन्द गर्ने सम्बन्धमा ।",
+    letter_salutation:"श्रीमान् शाखा प्रबन्धक महोदय,",
+    letter_closing:"निवेदक,",
+    account_no:"खाता नं.", citizenship:"ना.प्र./पासपोर्ट/PAN", contact:"सम्पर्क", date_label:"मिति",
+    template_subject_savings:"विषय: बचत खाता बन्द गर्ने सम्बन्धमा ।",
+    template_subject_current:"विषय: चालु खाता बन्द गर्ने सम्बन्धमा ।",
+    template_subject_fd:"विषय: मुद्दति खाता बन्द गर्ने सम्बन्धमा ।"
+  },
+  en: {
+    breadcrumb_home:"Home", breadcrumb_bank:"Bank Letters", breadcrumb_current:"Account Closing Letter",
+    hero_title:"🔒 Bank Account Closing Application",
+    form_title:"📝 Fill in Details",
+    label_full_name:"Full Name *", label_bank_name:"Bank Name *", label_branch:"Branch",
+    label_account_no:"Account Number *", label_reason:"Reason for Closing", label_refund:"Refund Method",
+    label_address:"Address *", label_phone:"Phone", label_id:"Citizenship / Passport / PAN",
+    label_date:"Date (AD)", label_accounts:"Multiple Accounts", label_attachments:"Attachments",
+    label_signature:"Signature Upload", label_output:"Letter Output Format",
+    output_single:"Single language", output_bilingual:"Bilingual side by side", output_stacked:"Bilingual one after another",
+    tpl_default:"Default", tpl_savings:"Savings", tpl_current:"Current", tpl_fd:"FD Closing",
+    err_name:"❌ Name is required!", err_bank:"❌ Bank name is required!", err_acc:"❌ Account number is required!",
+    letter_subject:"Subject: Request for Bank Account Closure.",
+    letter_salutation:"Dear Branch Manager,",
+    letter_closing:"Applicant,",
+    account_no:"Account No.", citizenship:"Citizenship / Passport / PAN", contact:"Phone", date_label:"Date",
+    template_subject_savings:"Subject: Request to Close Savings Account.",
+    template_subject_current:"Subject: Request to Close Current Account.",
+    template_subject_fd:"Subject: Request to Close Fixed Deposit Account."
+  }
+};
 
-    function setTheme(theme) {
-      document.documentElement.dataset.theme = theme;
-      localStorage.setItem("preferred_theme", theme);
-      document.getElementById("themeBtn").textContent = theme === "dark" ? "Light Mode" : "Dark Mode";
-    }
+/* ============================================================
+   STATE
+============================================================ */
+let currentLang = localStorage.getItem("preferred_lang") || (navigator.language.startsWith("en") ? "en" : "ne");
+let currentTemplate = localStorage.getItem("preferred_template") || "default";
+let currentTone = localStorage.getItem("preferred_tone") || "formal";
+let signatureDataUrl = localStorage.getItem("signature_data") || "";
+let translitOn = false;
+let userRating = 0;
+let aiGeneratedBody = { ne: null, en: null };
 
-    function toggleTheme() {
-      const next = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
-      setTheme(next);
-    }
+/* ============================================================
+   BS DATE CONVERSION
+============================================================ */
+const BS_MONTHS_NE = ["बैशाख","जेठ","असार","श्रावण","भाद्र","आश्विन","कार्तिक","मङ्सिर","पौष","माघ","फाल्गुन","चैत्र"];
+const BS_DATA = {
+  2080:[31,31,31,32,31,31,30,29,30,29,30,30],
+  2081:[31,31,32,31,31,31,30,29,30,29,30,30],
+  2082:[31,31,32,32,31,30,30,29,30,29,30,30],
+  2083:[31,32,31,32,31,30,30,30,29,29,30,30],
+  2084:[31,31,31,32,31,31,30,29,30,29,30,30]
+};
 
-    function updateStaticText(lang) {
-      document.querySelectorAll("[data-i18n]").forEach(el => {
-        const key = el.getAttribute("data-i18n");
-        if (translations[lang][key]) el.textContent = translations[lang][key];
-      });
-      document.documentElement.lang = lang === "both" ? "ne" : lang;
-      document.getElementById("btnNepali").classList.toggle("active", lang === "ne");
-      document.getElementById("btnEnglish").classList.toggle("active", lang === "en");
-      document.getElementById("btnBoth").classList.toggle("active", lang === "both");
-    }
-
-    function populateSelects(lang) {
-      const bank = document.getElementById("bank_name");
-      bank.innerHTML = bankOptions[lang].map(v => `<option value="${v}">${v}</option>`).join("");
-
-      const reason = document.getElementById("reason");
-      const reasonItems = lang === "en"
-        ? ["Personal reasons","Transferred to another bank","Account has become inactive","Business has been closed","High service fees","Need to change salary account","Joint account no longer needed","Other reasons"]
-        : ["व्यक्तिगत कारणले","अर्को बैंकमा सरेकोले","खाता निष्क्रिय भएकोले","व्यवसाय बन्द भएकोले","सेवा शुल्क धेरै भएकोले","तलब खाता परिवर्तन गर्नुपर्ने भएकोले","संयुक्त खाताको आवश्यक नभएकोले","अन्य कारण"];
-      reason.innerHTML = reasonItems.map(v => `<option value="${v}">${v}</option>`).join("");
-
-      const refund = document.getElementById("refund");
-      const refundItems = lang === "en"
-        ? ["Cash","Transfer to another account","Cheque","Digital Wallet"]
-        : ["नगद (Cash)","अर्को खातामा स्थानान्तरण","चेक","Digital Wallet"];
-      refund.innerHTML = refundItems.map(v => `<option value="${v}">${v}</option>`).join("");
-    }
-
-    function updatePlaceholders(lang) {
-      document.getElementById("full_name").placeholder = lang === "en" ? "Ram Bahadur Shrestha" : "राम बहादुर श्रेष्ठ";
-      document.getElementById("bank_name").placeholder = lang === "en" ? "Select a bank" : "बैंक छान्नुहोस्";
-      document.getElementById("branch_name").placeholder = lang === "en" ? "Damauli Branch" : "दमौली शाखा";
-      document.getElementById("address").placeholder = lang === "en" ? "Shuklagandaki-3, Tanahun" : "शुक्लागण्डकी-३, तनहुँ";
-      document.getElementById("phone").placeholder = lang === "en" ? "984XXXXXXX" : "९८XXXXXXXX";
-      document.getElementById("id_no").placeholder = lang === "en" ? "Citizenship / Passport / PAN" : "नागरिकता / पासपोर्ट / PAN";
-      document.getElementById("accounts").placeholder = lang === "en" ? "Account 1, Account 2..." : "खाता १, खाता २...";
-      document.getElementById("attachments").placeholder = lang === "en" ? "Cheque book, ATM card, passbook..." : "चेकबुक, एटिएम कार्ड, पासबुक...";
-      document.getElementById("feedback_name").placeholder = lang === "en" ? "Your name" : "तपाईंको नाम";
-      document.getElementById("feedback_msg").placeholder = lang === "en" ? "Share your feedback..." : "आफ्नो सुझाव लेख्नुहोस्...";
-    }
-
-    function renderAltDate() {
-      const d = document.getElementById("date").valueAsDate || new Date();
-      const eng = d.toLocaleDateString("en-GB", { day: "2-digit", month: "long", year: "numeric" });
-      const nep = d.toLocaleDateString("ne-NP", { day: "2-digit", month: "long", year: "numeric" });
-
-      if (currentLang === "en") document.getElementById("alt_date").value = eng;
-      else if (currentLang === "ne") document.getElementById("alt_date").value = nep;
-      else document.getElementById("alt_date").value = `नेपाली: ${nep} | English: ${eng}`;
-    }
-
-    function setLanguage(lang) {
-      currentLang = lang;
-      localStorage.setItem("preferred_lang", lang);
-
-      const baseLang = lang === "both" ? "ne" : lang;
-      updateStaticText(lang);
-      populateSelects(baseLang);
-      updatePlaceholders(baseLang);
-
-      document.getElementById("output_mode").value = lang === "both" ? "bilingual" : "single";
-      renderAltDate();
-      applyTemplate(currentTemplate);
-      renderPreview(true);
-    }
-
-    function setTemplate(name) {
-      currentTemplate = name;
-      localStorage.setItem("preferred_template", name);
-      document.querySelectorAll(".chips button").forEach(b => b.classList.remove("active"));
-      document.getElementById("tpl_" + name).classList.add("active");
-      applyTemplate(name);
-      renderPreview(true);
-    }
-
-    function applyTemplate(name) {
-      const lang = currentLang === "en" ? "en" : "ne";
-      const reasonEl = document.getElementById("reason");
-
-      if (name === "savings") {
-        document.getElementById("account_no").placeholder = lang === "en" ? "Savings account number" : "बचत खाता नम्बर";
-        reasonEl.value = lang === "en" ? "Personal reasons" : "व्यक्तिगत कारणले";
-      } else if (name === "current") {
-        document.getElementById("account_no").placeholder = lang === "en" ? "Current account number" : "चालु खाता नम्बर";
-        reasonEl.value = lang === "en" ? "Need to change salary account" : "तलब खाता परिवर्तन गर्नुपर्ने भएकोले";
-      } else if (name === "fd") {
-        document.getElementById("account_no").placeholder = lang === "en" ? "FD account number" : "मुद्दति खाता नम्बर";
-        reasonEl.value = lang === "en" ? "Account has become inactive" : "खाता निष्क्रिय भएकोले";
-      } else {
-        document.getElementById("account_no").placeholder = "XXXXXXXXXXXXXXXX";
-        reasonEl.value = lang === "en" ? "Personal reasons" : "व्यक्तिगत कारणले";
-      }
-      document.getElementById("refund").value = lang === "en" ? "Cash" : "नगद (Cash)";
-    }
-
-    function getFormData() {
-      return {
-        name: document.getElementById("full_name").value.trim(),
-        bank: document.getElementById("bank_name").value.trim(),
-        branch: document.getElementById("branch_name").value.trim(),
-        accNo: document.getElementById("account_no").value.trim(),
-        reason: document.getElementById("reason").value.trim(),
-        refund: document.getElementById("refund").value.trim(),
-        address: document.getElementById("address").value.trim(),
-        phone: document.getElementById("phone").value.trim(),
-        idNo: document.getElementById("id_no").value.trim(),
-        accounts: document.getElementById("accounts").value.trim(),
-        attachments: document.getElementById("attachments").value.trim(),
-        date: document.getElementById("date").value
-      };
-    }
-
-    function validateForm() {
-      const d = getFormData();
-      const t = translations[currentLang === "en" ? "en" : "ne"];
-      if (!d.name) return t.err_name;
-      if (!d.bank) return t.err_bank;
-      if (!d.accNo) return t.err_acc;
-      return null;
-    }
-
-    function fmtDate(lang, d) {
-      return d.toLocaleDateString(lang === "en" ? "en-GB" : "ne-NP", {
-        day: "2-digit",
-        month: "long",
-        year: "numeric"
-      });
-    }
-
-    function templateSubject(lang) {
-      const t = translations[lang];
-      const name = currentTemplate || "default";
-      if (name === "savings") return t.template_subject_savings;
-      if (name === "current") return t.template_subject_current;
-      if (name === "fd") return t.template_subject_fd;
-      return t.letter_subject;
-    }
-
-    function buildLetter(lang) {
-      const t = translations[lang];
-      const d = getFormData();
-      const dateObj = document.getElementById("date").valueAsDate || new Date();
-      const dateText = fmtDate(lang, dateObj);
-
-      const reason = d.reason || (lang === "en" ? "Personal reasons" : "व्यक्तिगत कारणले");
-      const refund = d.refund || (lang === "en" ? "Cash" : "नगद (Cash)");
-
-      const accountsBlock = d.accounts ? `<p><strong>${lang === "en" ? "Other Accounts:" : "अन्य खाता:"}</strong> ${escapeHtml(d.accounts)}</p>` : "";
-      const attachmentsBlock = d.attachments ? `<p><strong>${lang === "en" ? "Attachments:" : "संलग्न कागजात:"}</strong> ${escapeHtml(d.attachments)}</p>` : "";
-      const signatureBlock = signatureDataUrl ? `<p style="margin-top:24px;"><img src="${signatureDataUrl}" alt="Signature" style="max-width:180px;max-height:90px;" /></p>` : "";
-
-      if (lang === "ne") {
-        return `
-          <p class="right">${t.date_label}: ${dateText}</p><br/>
-          <p><strong>${t.letter_salutation}</strong></p>
-          <p>${escapeHtml(d.bank)}${d.branch ? ", " + escapeHtml(d.branch) : ""},</p>
-          <p>${escapeHtml(d.address)}</p><br/>
-          <p><strong>${templateSubject("ne")}</strong></p><br/>
-          <p>महोदय,</p>
-          <p>म <strong>${escapeHtml(d.name)}</strong>, ${escapeHtml(d.address)} बासिन्दाको तपाईंको बैंकमा खाता नम्बर <strong>${escapeHtml(d.accNo)}</strong> रहेको छ । <strong>${escapeHtml(reason)}</strong> उक्त खाता बन्द गर्न चाहेकोले कृपया खाता बन्द गरी बाँकी रकम <strong>${escapeHtml(refund)}</strong> मार्फत फिर्ता गरिदिनुहुन हार्दिक अनुरोध गर्दछु ।</p>
-          ${accountsBlock}
-          ${attachmentsBlock}
-          <br/><br/>
-          <p>${t.letter_closing}</p>
-          <p>..............................</p>
-          <p><strong>${escapeHtml(d.name)}</strong></p>
-          <p>${t.account_no}: ${escapeHtml(d.accNo)}</p>
-          <p>${escapeHtml(d.address)}</p>
-          ${d.idNo ? `<p>${t.citizenship}: ${escapeHtml(d.idNo)}</p>` : ""}
-          ${d.phone ? `<p>${t.contact}: ${escapeHtml(d.phone)}</p>` : ""}
-          ${signatureBlock}
-        `;
-      }
-
-      return `
-        <p class="right">${t.date_label}: ${dateText}</p><br/>
-        <p><strong>${t.letter_salutation}</strong></p>
-        <p>${escapeHtml(d.bank)}${d.branch ? ", " + escapeHtml(d.branch) : ""},</p>
-        <p>${escapeHtml(d.address)}</p><br/>
-        <p><strong>${templateSubject("en")}</strong></p><br/>
-        <p>Sir/Madam,</p>
-        <p>I, <strong>${escapeHtml(d.name)}</strong>, resident of ${escapeHtml(d.address)}, hold account number <strong>${escapeHtml(d.accNo)}</strong> in your bank. As <strong>${escapeHtml(reason)}</strong>, I kindly request you to close the account and return the remaining balance via <strong>${escapeHtml(refund)}</strong>.</p>
-        ${accountsBlock}
-        ${attachmentsBlock}
-        <br/><br/>
-        <p>${t.letter_closing}</p>
-        <p>..............................</p>
-        <p><strong>${escapeHtml(d.name)}</strong></p>
-        <p>${t.account_no}: ${escapeHtml(d.accNo)}</p>
-        <p>${escapeHtml(d.address)}</p>
-        ${d.idNo ? `<p>${t.citizenship}: ${escapeHtml(d.idNo)}</p>` : ""}
-        ${d.phone ? `<p>${t.contact}: ${escapeHtml(d.phone)}</p>` : ""}
-        ${signatureBlock}
-      `;
-    }
-
-    function renderPreview(skipValidation = false) {
-      const err = validateForm();
-      if (err) {
-        if (!skipValidation) showToast(err, "error");
-        return;
-      }
-
-      const mode = document.getElementById("output_mode").value;
-      const letterDoc = document.getElementById("letterDoc");
-      const ne = buildLetter("ne");
-      const en = buildLetter("en");
-
-      if (currentLang === "both" || mode === "bilingual") {
-        letterDoc.innerHTML = `
-          <div class="letter-split">
-            <div class="letter-panel">
-              <div class="letter-title">नेपाली</div>
-              ${ne}
-            </div>
-            <div class="letter-panel">
-              <div class="letter-title">English</div>
-              ${en}
-            </div>
-          </div>
-        `;
-      } else if (mode === "stacked") {
-        letterDoc.innerHTML = `
-          <div class="letter-panel" style="margin-bottom:16px;">
-            <div class="letter-title">नेपाली</div>
-            ${ne}
-          </div>
-          <div class="letter-panel">
-            <div class="letter-title">English</div>
-            ${en}
-          </div>
-        `;
-      } else {
-        letterDoc.innerHTML = currentLang === "en" ? en : ne;
-      }
-
-      saveAutoDraft();
-      document.getElementById("modalOverlay").style.display = "block";
-      addToHistory();
-    }
-
-    function downloadPDF() {
-      const element = document.getElementById("letterDoc");
-      const opt = {
-        margin: 10,
-        filename: `bank-account-closing-${Date.now()}.pdf`,
-        image: { type: "jpeg", quality: 0.98 },
-        html2canvas: { scale: 2, useCORS: true },
-        jsPDF: { unit: "mm", format: "a4", orientation: "portrait" }
-      };
-      html2pdf().set(opt).from(element).save();
-    }
-
-    function shareLetter() {
-      const text = currentLang === "en"
-        ? "Bank Account Closing Letter generated."
-        : "बैंक खाता बन्द गर्ने निवेदन तयार गरिएको छ।";
-      if (navigator.share) {
-        navigator.share({ title: document.title, text });
-      } else {
-        navigator.clipboard.writeText(text);
-        showToast(currentLang === "en" ? "Copied share text." : "शेयर टेक्स्ट कपी भयो।", "success");
+function adToBs(adYear, adMonth, adDay) {
+  try {
+    // Reference: BS 2000/01/01 = AD 1943/04/14
+    const refAD = new Date(1943, 3, 14);
+    const inputAD = new Date(adYear, adMonth - 1, adDay);
+    let days = Math.floor((inputAD - refAD) / 86400000);
+    let bsYear = 2000, bsMonth = 1, bsDay = 1;
+    outer: for (let y = 2000; ; y++) {
+      const monthDays = BS_DATA[y] || [31,31,32,31,31,31,30,29,30,29,30,30];
+      for (let m = 0; m < 12; m++) {
+        if (days < monthDays[m]) { bsYear = y; bsMonth = m + 1; bsDay = days + 1; break outer; }
+        days -= monthDays[m];
       }
     }
+    const ne_digits = (n) => String(n).replace(/\d/g, d => '०१२३४५६७८९'[d]);
+    return `${ne_digits(bsYear)} साल ${BS_MONTHS_NE[bsMonth-1]} ${ne_digits(bsDay)} गते`;
+  } catch(e) { return ""; }
+}
 
-    function escapeHtml(str) {
-      return String(str)
-        .replaceAll("&", "&amp;")
-        .replaceAll("<", "&lt;")
-        .replaceAll(">", "&gt;")
-        .replaceAll('"', "&quot;")
-        .replaceAll("'", "&#039;");
-    }
+function renderBSDate() {
+  const d = document.getElementById("date").valueAsDate;
+  if (!d) { document.getElementById("bsDateText").textContent = "—"; return; }
+  const utc = new Date(d.getTime() + d.getTimezoneOffset() * 60000);
+  const bs = adToBs(utc.getFullYear(), utc.getMonth() + 1, utc.getDate());
+  document.getElementById("bsDateText").textContent = bs || "—";
+  updatePreview();
+}
 
-    function saveForm() {
-      const d = getFormData();
-      localStorage.setItem("bank_form_data", JSON.stringify(d));
-      localStorage.setItem("preferred_template", currentTemplate);
-      showToast(currentLang === "en" ? "Form saved." : "फारम सेभ भयो।", "success");
-    }
+/* ============================================================
+   TRANSLITERATION
+============================================================ */
+function toggleTranslit() {
+  translitOn = !translitOn;
+  const btn = document.getElementById("translitBtn");
+  btn.textContent = translitOn ? "अ ON" : "अ↔A";
+  btn.style.background = translitOn ? "#7c3aed" : "";
+  btn.style.color = translitOn ? "#fff" : "";
+  showToast(translitOn ? "Nepali transliteration ON" : "Transliteration OFF", "info");
+}
 
-    function saveAutoDraft() {
-      const d = {
-        full_name: document.getElementById("full_name").value,
-        bank_name: document.getElementById("bank_name").value,
-        branch_name: document.getElementById("branch_name").value,
-        account_no: document.getElementById("account_no").value,
-        reason: document.getElementById("reason").value,
-        refund: document.getElementById("refund").value,
-        address: document.getElementById("address").value,
-        phone: document.getElementById("phone").value,
-        id_no: document.getElementById("id_no").value,
-        accounts: document.getElementById("accounts").value,
-        attachments: document.getElementById("attachments").value,
-        date: document.getElementById("date").value,
-        output_mode: document.getElementById("output_mode").value
-      };
-      localStorage.setItem("bank_form_autosave", JSON.stringify(d));
-    }
+function romanToNepali(text) {
+  if (!translitOn) return text;
+  let result = "";
+  let i = 0;
+  while (i < text.length) {
+    let matched = false;
+    const two = text.slice(i, i+2).toLowerCase();
+    const one = text[i].toLowerCase();
+    if (TRANSLITMAP[two]) { result += TRANSLITMAP[two]; i += 2; matched = true; }
+    else if (TRANSLITMAP[one]) { result += TRANSLITMAP[one]; i += 1; matched = true; }
+    if (!matched) { result += text[i]; i++; }
+  }
+  return result;
+}
 
-    function loadSavedDraft() {
-      const raw = localStorage.getItem("bank_form_autosave") || localStorage.getItem("bank_form_data");
-      if (!raw) return;
-      const d = JSON.parse(raw);
+/* ============================================================
+   INLINE VALIDATION
+============================================================ */
+function liveValidate(field, el) {
+  const v = el.value.trim();
+  const fg = document.getElementById("fg_" + field);
+  const icon = document.getElementById("icon_" + field);
+  let ok = false;
+  if (field === "name") ok = v.length >= 2;
+  else if (field === "acc") ok = v.length >= 6 && /^\d+$/.test(v.replace(/\s/g,""));
+  else if (field === "addr") ok = v.length >= 3;
+  else if (field === "phone") ok = /^[9][6-9]\d{8}$/.test(v) || /^[०-९]{10}$/.test(v);
+  if (!fg) return;
+  fg.classList.toggle("has-error", v.length > 0 && !ok);
+  fg.classList.toggle("has-success", ok);
+  if (icon) { icon.textContent = v.length === 0 ? "" : ok ? "✓" : "✗"; icon.className = "input-icon " + (v.length === 0 ? "" : ok ? "valid" : "invalid"); }
+}
 
-      document.getElementById("full_name").value = d.full_name || "";
-      document.getElementById("bank_name").value = d.bank_name || "";
-      document.getElementById("branch_name").value = d.branch_name || "";
-      document.getElementById("account_no").value = d.account_no || "";
-      document.getElementById("reason").value = d.reason || "";
-      document.getElementById("refund").value = d.refund || "";
-      document.getElementById("address").value = d.address || "";
-      document.getElementById("phone").value = d.phone || "";
-      document.getElementById("id_no").value = d.id_no || "";
-      document.getElementById("accounts").value = d.accounts || "";
-      document.getElementById("attachments").value = d.attachments || "";
-      document.getElementById("date").value = d.date || "";
-      document.getElementById("output_mode").value = d.output_mode || "single";
-    }
+function validateForm() {
+  const d = getFormData();
+  const t = I18N[currentLang === "en" ? "en" : "ne"];
+  if (!d.name) return t.err_name;
+  if (!d.bank) return t.err_bank;
+  if (!d.accNo) return t.err_acc;
+  return null;
+}
 
-    function clearSavedData() {
-      localStorage.removeItem("bank_form_autosave");
-      localStorage.removeItem("bank_form_data");
-      showToast(currentLang === "en" ? "Saved data cleared." : "सेभ डाटा हटाइयो।", "success");
-    }
+/* ============================================================
+   FORM PROGRESS
+============================================================ */
+function updateProgress() {
+  const fields = ["full_name","bank_name","account_no","address","phone","date","reason"];
+  let filled = fields.filter(f => { const el = document.getElementById(f); return el && el.value.trim() !== ""; }).length;
+  const pct = Math.round((filled / fields.length) * 100);
+  document.getElementById("progressFill").style.width = pct + "%";
+  document.getElementById("progressLabel").textContent = `Form completion: ${pct}%`;
+}
 
-    function loadSavedLetters() {
-      const history = JSON.parse(localStorage.getItem("saved_letters_history") || "[]");
-      if (!history.length) {
-        showToast(currentLang === "en" ? "No saved history yet." : "अहिलेसम्म इतिहास छैन।", "info");
-        return;
-      }
-      document.getElementById("letterDoc").innerHTML = `
-        <div class="history-list">
-          ${history.slice().reverse().map(item => `
-            <div class="history-item">
-              <div><strong>${escapeHtml(item.name || "")}</strong></div>
-              <div class="small-muted">${escapeHtml(item.bank || "")} · ${escapeHtml(item.date || "")}</div>
-              <div class="small-muted">${escapeHtml(item.account_no || "")}</div>
-            </div>
-          `).join("")}
-        </div>
-      `;
-      document.getElementById("modalOverlay").style.display = "block";
-    }
+/* ============================================================
+   BRANCH DATALIST
+============================================================ */
+function updateBranchList() {
+  const bank = document.getElementById("bank_name").value;
+  const dl = document.getElementById("branch_list");
+  const list = BRANCHES[bank] || [];
+  dl.innerHTML = list.map(b => `<option value="${b}">`).join("");
+}
 
-    function addToHistory() {
-      const d = getFormData();
-      const history = JSON.parse(localStorage.getItem("saved_letters_history") || "[]");
-      history.push({
-        name: d.name,
-        bank: d.bank,
-        account_no: d.accNo,
-        date: d.date || new Date().toISOString().slice(0,10)
-      });
-      localStorage.setItem("saved_letters_history", JSON.stringify(history.slice(-25)));
-    }
+/* ============================================================
+   LANGUAGE & SELECTS
+============================================================ */
+function setLanguage(lang) {
+  currentLang = lang;
+  localStorage.setItem("preferred_lang", lang);
+  const base = lang === "both" ? "ne" : lang;
+  updateStaticText(lang);
+  populateSelects(base);
+  document.getElementById("btnNepali").classList.toggle("active", lang === "ne");
+  document.getElementById("btnEnglish").classList.toggle("active", lang === "en");
+  document.getElementById("btnBoth").classList.toggle("active", lang === "both");
+  document.getElementById("output_mode").value = lang === "both" ? "bilingual" : "single";
+  document.documentElement.lang = base;
+  applyTemplate(currentTemplate);
+  updatePreview();
+}
 
-    function fillSampleData() {
-      document.getElementById("full_name").value = currentLang === "en" ? "Ram Bahadur Shrestha" : "राम बहादुर श्रेष्ठ";
-      document.getElementById("bank_name").value = document.getElementById("bank_name").options[0]?.value || "";
-      document.getElementById("branch_name").value = currentLang === "en" ? "Damauli Branch" : "दमौली शाखा";
-      document.getElementById("account_no").value = "1234567890123456";
-      document.getElementById("reason").value = currentLang === "en" ? "Personal reasons" : "व्यक्तिगत कारणले";
-      document.getElementById("refund").value = currentLang === "en" ? "Cash" : "नगद (Cash)";
-      document.getElementById("address").value = currentLang === "en" ? "Shuklagandaki-3, Tanahun" : "शुक्लागण्डकी-३, तनहुँ";
-      document.getElementById("phone").value = "984XXXXXXXX";
-      document.getElementById("id_no").value = "12-34-567890";
-      document.getElementById("accounts").value = currentLang === "en" ? "Savings account, Salary account" : "बचत खाता, तलब खाता";
-      document.getElementById("attachments").value = currentLang === "en" ? "Cheque book, ATM card" : "चेकबुक, एटिएम कार्ड";
-      document.getElementById("output_mode").value = "single";
-      renderAltDate();
-      showToast(currentLang === "en" ? "Sample data loaded." : "Sample data राखियो।", "success");
-    }
+function updateStaticText(lang) {
+  const t = I18N[lang === "both" ? "ne" : lang];
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.getAttribute("data-i18n");
+    if (t && t[key]) el.textContent = t[key];
+  });
+}
 
-    function sendFeedback() {
-      showToast(currentLang === "en" ? "Thanks for your feedback." : "तपाईंको सुझावका लागि धन्यवाद।", "success");
-    }
+function populateSelects(lang) {
+  const bankEl = document.getElementById("bank_name");
+  bankEl.innerHTML = BANKS[lang].map(v => `<option value="${v}">${v}</option>`).join("");
 
-    function closeModal() {
-      document.getElementById("modalOverlay").style.display = "none";
-    }
+  const reasons = lang === "en"
+    ? ["Personal reasons","Transferred to another bank","Account has become inactive","Business has been closed","High service fees","Need to change salary account","Joint account no longer needed","Other reasons"]
+    : ["व्यक्तिगत कारणले","अर्को बैंकमा सरेकोले","खाता निष्क्रिय भएकोले","व्यवसाय बन्द भएकोले","सेवा शुल्क धेरै भएकोले","तलब खाता परिवर्तन गर्नुपर्ने भएकोले","संयुक्त खाताको आवश्यकता नभएकोले","अन्य कारण"];
+  document.getElementById("reason").innerHTML = reasons.map(v => `<option value="${v}">${v}</option>`).join("");
 
-    function handleSignatureUpload(e) {
-      const file = e.target.files && e.target.files[0];
-      if (!file) return;
-      const reader = new FileReader();
-      reader.onload = () => {
-        signatureDataUrl = reader.result;
-        localStorage.setItem("signature_data", signatureDataUrl);
-        const img = document.getElementById("signaturePreview");
-        img.src = signatureDataUrl;
-        img.style.display = "block";
-        showToast(currentLang === "en" ? "Signature uploaded." : "Signature अपलोड भयो।", "success");
-      };
-      reader.readAsDataURL(file);
-    }
+  const refunds = lang === "en"
+    ? ["Cash","Transfer to another account","Cheque","Digital Wallet"]
+    : ["नगद (Cash)","अर्को खातामा स्थानान्तरण","चेक","Digital Wallet"];
+  document.getElementById("refund").innerHTML = refunds.map(v => `<option value="${v}">${v}</option>`).join("");
 
-    document.addEventListener("DOMContentLoaded", () => {
-      const theme = localStorage.getItem("preferred_theme") || "light";
-      setTheme(theme);
+  updateBranchList();
+}
 
-      populateSelects(currentLang === "both" ? "ne" : currentLang);
-      loadSavedDraft();
+/* ============================================================
+   TEMPLATE
+============================================================ */
+function setTemplate(name) {
+  currentTemplate = name;
+  localStorage.setItem("preferred_template", name);
+  document.querySelectorAll(".chip").forEach(b => b.classList.remove("active"));
+  const btn = document.getElementById("tpl_" + name);
+  if (btn) btn.classList.add("active");
+  applyTemplate(name);
+  updatePreview();
+}
 
-      updateStaticText(currentLang);
-      updatePlaceholders(currentLang === "both" ? "ne" : currentLang);
-      setLanguage(currentLang);
-      setTemplate(currentTemplate);
+function applyTemplate(name) {
+  const lang = currentLang === "en" ? "en" : "ne";
+  aiGeneratedBody = { ne: null, en: null };
+}
 
-      if (signatureDataUrl) {
-        const img = document.getElementById("signaturePreview");
-        img.src = signatureDataUrl;
-        img.style.display = "block";
-      }
+/* ============================================================
+   TONE
+============================================================ */
+function setTone(tone) {
+  currentTone = tone;
+  localStorage.setItem("preferred_tone", tone);
+  document.querySelectorAll(".tone-btn").forEach(b => b.classList.remove("active"));
+  const btn = document.getElementById("tone_" + tone);
+  if (btn) btn.classList.add("active");
+  aiGeneratedBody = { ne: null, en: null };
+  updatePreview();
+}
 
-      renderAltDate();
+/* ============================================================
+   FORM DATA
+============================================================ */
+function getFormData() {
+  return {
+    name: document.getElementById("full_name").value.trim(),
+    bank: document.getElementById("bank_name").value.trim(),
+    branch: document.getElementById("branch_name").value.trim(),
+    accNo: document.getElementById("account_no").value.trim(),
+    reason: document.getElementById("reason").value.trim(),
+    refund: document.getElementById("refund").value.trim(),
+    address: document.getElementById("address").value.trim(),
+    phone: document.getElementById("phone").value.trim(),
+    idNo: document.getElementById("id_no").value.trim(),
+    accounts: document.getElementById("accounts").value.trim(),
+    attachments: document.getElementById("attachments").value.trim(),
+    date: document.getElementById("date").value
+  };
+}
 
-      document.getElementById("date").addEventListener("change", renderAltDate);
-      document.getElementById("signature").addEventListener("change", handleSignatureUpload);
+/* ============================================================
+   DATE FORMATTING
+============================================================ */
+function fmtDate(lang, d) {
+  return d.toLocaleDateString(lang === "en" ? "en-GB" : "ne-NP", { day:"2-digit", month:"long", year:"numeric" });
+}
 
-      ["full_name","bank_name","branch_name","account_no","reason","refund","address","phone","id_no","accounts","attachments","date","output_mode"].forEach(id => {
-        const el = document.getElementById(id);
-        if (!el) return;
-        el.addEventListener("input", saveAutoDraft);
-        el.addEventListener("change", saveAutoDraft);
-      });
+function getBSDate() {
+  return document.getElementById("bsDateText").textContent || "";
+}
+
+function templateSubject(lang) {
+  const t = I18N[lang];
+  if (currentTemplate === "savings") return t.template_subject_savings;
+  if (currentTemplate === "current") return t.template_subject_current;
+  if (currentTemplate === "fd") return t.template_subject_fd;
+  return t.letter_subject;
+}
+
+/* ============================================================
+   BUILD LETTER (STATIC)
+============================================================ */
+function buildLetter(lang, aiBody) {
+  const t = I18N[lang];
+  const d = getFormData();
+  const dateObj = document.getElementById("date").valueAsDate || new Date();
+  const utc = new Date(dateObj.getTime() + dateObj.getTimezoneOffset() * 60000);
+  const dateText = fmtDate(lang, utc);
+  const bsText = getBSDate();
+  const reason = d.reason || (lang === "en" ? "Personal reasons" : "व्यक्तिगत कारणले");
+  const refund = d.refund || (lang === "en" ? "Cash" : "नगद (Cash)");
+  const accountsBlock = d.accounts ? `<p><strong>${lang === "en" ? "Other Accounts:" : "अन्य खाता:"}</strong> ${esc(d.accounts)}</p>` : "";
+  const attachmentsBlock = d.attachments ? `<p><strong>${lang === "en" ? "Attachments:" : "संलग्न कागजात:"}</strong> ${esc(d.attachments)}</p>` : "";
+  const sigBlock = signatureDataUrl ? `<p style="margin-top:20px;"><img src="${signatureDataUrl}" alt="Signature" style="max-width:180px;max-height:80px;border:1px solid #e5e7eb;border-radius:6px;" /></p>` : "";
+  const dateBlock = lang === "ne" && bsText && bsText !== "—"
+    ? `<p class="right">${t.date_label}: ${bsText} (${dateText})</p>`
+    : `<p class="right">${t.date_label}: ${dateText}</p>`;
+
+  let bodyPara;
+  if (aiBody) {
+    bodyPara = `<p>${aiBody}</p>`;
+  } else if (lang === "ne") {
+    bodyPara = `<p>म <strong>${esc(d.name)}</strong>, ${esc(d.address)} बासिन्दाको तपाईंको बैंकमा खाता नम्बर <strong>${esc(d.accNo)}</strong> रहेको छ । <strong>${esc(reason)}</strong> उक्त खाता बन्द गर्न चाहेकोले कृपया खाता बन्द गरी बाँकी रकम <strong>${esc(refund)}</strong> मार्फत फिर्ता गरिदिनुहुन हार्दिक अनुरोध गर्दछु ।</p>`;
+  } else {
+    bodyPara = `<p>I, <strong>${esc(d.name)}</strong>, resident of ${esc(d.address)}, hold account number <strong>${esc(d.accNo)}</strong> in your bank. As <strong>${esc(reason)}</strong>, I kindly request you to close the account and return the remaining balance via <strong>${esc(refund)}</strong>.</p>`;
+  }
+
+  return `
+    ${dateBlock}<br/>
+    <p><strong>${t.letter_salutation}</strong></p>
+    <p>${esc(d.bank)}${d.branch ? ", " + esc(d.branch) : ""},</p>
+    <p>${esc(d.address)}</p><br/>
+    <p><strong>${templateSubject(lang)}</strong></p><br/>
+    <p>${lang === "ne" ? "महोदय," : "Sir/Madam,"}</p>
+    ${bodyPara}
+    ${accountsBlock}
+    ${attachmentsBlock}
+    <br/>
+    <p>${t.letter_closing}</p>
+    <p>..............................</p>
+    <p><strong>${esc(d.name)}</strong></p>
+    <p>${t.account_no}: ${esc(d.accNo)}</p>
+    <p>${esc(d.address)}</p>
+    ${d.idNo ? `<p>${t.citizenship}: ${esc(d.idNo)}</p>` : ""}
+    ${d.phone ? `<p>${t.contact}: ${esc(d.phone)}</p>` : ""}
+    ${sigBlock}
+  `;
+}
+
+/* ============================================================
+   LIVE PREVIEW (fast, no AI)
+============================================================ */
+function updatePreview() {
+  const d = getFormData();
+  if (!d.name && !d.bank && !d.accNo) {
+    document.getElementById("livePreview").innerHTML = '<div class="placeholder-msg">Fill in the form fields to see your letter preview here in real-time.</div>';
+    return;
+  }
+  const lang = currentLang === "both" ? "ne" : currentLang;
+  const html = buildLetter(lang, null);
+  document.getElementById("livePreview").innerHTML = `<div class="letter-content">${html}</div>`;
+}
+
+/* ============================================================
+   AI GENERATION (Anthropic API)
+============================================================ */
+async function generateAIBody(lang) {
+  const d = getFormData();
+  if (!d.name || !d.bank || !d.accNo) return null;
+  const toneDesc = { formal:"formal and professional", polite:"polite and respectful", brief:"brief and to the point", detailed:"detailed and comprehensive" }[currentTone] || "formal";
+  const prompt = lang === "ne"
+    ? `Write ONLY the main body paragraph of a Nepali bank account closing letter (1-2 sentences, ${toneDesc} tone) for:\nName: ${d.name}\nAddress: ${d.address}\nBank: ${d.bank}${d.branch ? ", "+d.branch : ""}\nAccount: ${d.accNo}\nReason: ${d.reason}\nRefund via: ${d.refund}\nWrite in Devanagari script only. No salutation, no subject, no signature. Just the body paragraph.`
+    : `Write ONLY the main body paragraph of an English bank account closing letter (1-2 sentences, ${toneDesc} tone) for:\nName: ${d.name}\nAddress: ${d.address}\nBank: ${d.bank}${d.branch ? ", "+d.branch : ""}\nAccount: ${d.accNo}\nReason: ${d.reason}\nRefund via: ${d.refund}\nNo salutation, no subject, no signature. Just the body paragraph.`;
+
+  const loader = document.getElementById("aiLoader");
+  const loaderText = document.getElementById("aiLoaderText");
+  loaderText.textContent = lang === "ne" ? "AI ले नेपाली पत्र तयार गर्दैछ..." : "AI is generating English letter...";
+  loader.classList.add("show");
+
+  try {
+    const res = await fetch("https://api.anthropic.com/v1/messages", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        model: "claude-sonnet-4-20250514",
+        max_tokens: 1000,
+        messages: [{ role: "user", content: prompt }]
+      })
     });
-  </script>
+    const data = await res.json();
+    const text = data.content?.map(c => c.text || "").join("").trim();
+    return text || null;
+  } catch(e) {
+    console.error("AI error:", e);
+    return null;
+  } finally {
+    loader.classList.remove("show");
+  }
+}
+
+async function generateLetter() {
+  const err = validateForm();
+  if (err) { showToast(err, "error"); return; }
+
+  const loader = document.getElementById("aiLoader");
+  loader.classList.add("show");
+
+  let neBody = null, enBody = null;
+  if (currentLang === "ne" || currentLang === "both") neBody = await generateAIBody("ne");
+  if (currentLang === "en" || currentLang === "both") enBody = await generateAIBody("en");
+  if (currentLang === "ne" && !enBody) enBody = await generateAIBody("en");
+  if (currentLang === "en" && !neBody) neBody = await generateAIBody("ne");
+
+  aiGeneratedBody = { ne: neBody, en: enBody };
+  loader.classList.remove("show");
+
+  renderLetterModal();
+  saveAutoDraft();
+  addToHistory();
+  document.getElementById("modalOverlay").style.display = "block";
+}
+
+function renderLetterModal() {
+  const mode = document.getElementById("output_mode").value;
+  const ne = buildLetter("ne", aiGeneratedBody.ne);
+  const en = buildLetter("en", aiGeneratedBody.en);
+  const doc = document.getElementById("letterDoc");
+
+  if (currentLang === "both" || mode === "bilingual") {
+    doc.innerHTML = `<div class="letter-split"><div class="letter-panel"><div class="letter-title">नेपाली</div>${ne}</div><div class="letter-panel"><div class="letter-title">English</div>${en}</div></div>`;
+  } else if (mode === "stacked") {
+    doc.innerHTML = `<div class="letter-panel" style="margin-bottom:16px;"><div class="letter-title">नेपाली</div>${ne}</div><div class="letter-panel"><div class="letter-title">English</div>${en}</div>`;
+  } else {
+    doc.innerHTML = `<div class="letter-panel">${currentLang === "en" ? en : ne}</div>`;
+  }
+}
+
+/* ============================================================
+   PDF & SHARE
+============================================================ */
+function downloadPDF() {
+  const el = document.getElementById("letterDoc");
+  if (!el.innerHTML.trim()) { showToast("Please generate a letter first", "error"); return; }
+  html2pdf().set({
+    margin: 12, filename: `bank-account-closing-${Date.now()}.pdf`,
+    image: { type:"jpeg", quality:0.98 },
+    html2canvas: { scale:2, useCORS:true },
+    jsPDF: { unit:"mm", format:"a4", orientation:"portrait" }
+  }).from(el).save();
+  showToast("PDF downloading...", "success");
+}
+
+function copyLetterText() {
+  const el = document.getElementById("letterDoc") || document.getElementById("livePreview");
+  const text = el.innerText || el.textContent;
+  if (!text.trim()) { showToast("Nothing to copy", "error"); return; }
+  navigator.clipboard.writeText(text).then(() => showToast("Letter copied to clipboard", "success")).catch(() => showToast("Copy failed", "error"));
+}
+
+function shareWhatsApp() {
+  const d = getFormData();
+  const text = encodeURIComponent(`Bank Account Closing Letter\nName: ${d.name}\nBank: ${d.bank}\nAccount: ${d.accNo}\n\nGenerated at letter.madankc.com.np`);
+  window.open(`https://wa.me/?text=${text}`, "_blank");
+}
+
+/* ============================================================
+   HISTORY
+============================================================ */
+function addToHistory() {
+  const d = getFormData();
+  const list = JSON.parse(localStorage.getItem("saved_letters_history") || "[]");
+  list.push({ name:d.name, bank:d.bank, account_no:d.accNo, date:d.date || new Date().toISOString().slice(0,10), template:currentTemplate });
+  localStorage.setItem("saved_letters_history", JSON.stringify(list.slice(-30)));
+}
+
+function loadSavedLetters() {
+  const list = JSON.parse(localStorage.getItem("saved_letters_history") || "[]");
+  const doc = document.getElementById("historyDoc");
+  if (!list.length) { showToast("No history yet", "info"); return; }
+  doc.innerHTML = `<div class="history-list">${list.slice().reverse().map((item,i) => `
+    <div class="history-item">
+      <div class="history-item-info">
+        <strong>${esc(item.name || "—")}</strong>
+        <div class="history-item-meta">${esc(item.bank||"")} · Acc: ${esc(item.account_no||"")} · ${esc(item.date||"")} · ${esc(item.template||"")}</div>
+      </div>
+    </div>`).join("")}</div>`;
+  document.getElementById("historyOverlay").style.display = "block";
+}
+
+function clearHistory() {
+  localStorage.removeItem("saved_letters_history");
+  document.getElementById("historyDoc").innerHTML = '<p style="color:var(--muted);padding:20px;">History cleared.</p>';
+  showToast("History cleared", "success");
+}
+
+/* ============================================================
+   SAVE / LOAD
+============================================================ */
+function saveForm() {
+  const d = getFormData();
+  localStorage.setItem("bank_form_data", JSON.stringify(d));
+  showToast("Form saved", "success");
+}
+
+function saveAutoDraft() {
+  const fields = ["full_name","bank_name","branch_name","account_no","reason","refund","address","phone","id_no","accounts","attachments","date","output_mode"];
+  const d = {};
+  fields.forEach(f => { const el = document.getElementById(f); if(el) d[f] = el.value; });
+  localStorage.setItem("bank_form_autosave", JSON.stringify(d));
+}
+
+function loadSavedDraft() {
+  const raw = localStorage.getItem("bank_form_autosave") || localStorage.getItem("bank_form_data");
+  if (!raw) return;
+  const d = JSON.parse(raw);
+  Object.entries(d).forEach(([k,v]) => { const el = document.getElementById(k); if(el) el.value = v||""; });
+}
+
+function clearSavedData() {
+  ["bank_form_autosave","bank_form_data"].forEach(k => localStorage.removeItem(k));
+  ["full_name","branch_name","account_no","address","phone","id_no","accounts","attachments","date"].forEach(id => { const el = document.getElementById(id); if(el) el.value=""; });
+  showToast("Saved data cleared", "success");
+  updatePreview(); updateProgress();
+}
+
+function fillSampleData() {
+  const lang = currentLang === "en" ? "en" : "ne";
+  document.getElementById("full_name").value = lang === "en" ? "Ram Bahadur Shrestha" : "राम बहादुर श्रेष्ठ";
+  document.getElementById("bank_name").value = document.getElementById("bank_name").options[0]?.value || "";
+  document.getElementById("branch_name").value = lang === "en" ? "Damauli Branch" : "दमौली शाखा";
+  document.getElementById("account_no").value = "1234567890123456";
+  document.getElementById("address").value = lang === "en" ? "Shuklagandaki-3, Tanahun" : "शुक्लागण्डकी-३, तनहुँ";
+  document.getElementById("phone").value = "9840000000";
+  document.getElementById("id_no").value = "12-34-567890";
+  document.getElementById("accounts").value = lang === "en" ? "Savings, Salary account" : "बचत खाता, तलब खाता";
+  document.getElementById("attachments").value = lang === "en" ? "Cheque book, ATM card, Passbook" : "चेकबुक, एटिएम कार्ड, पासबुक";
+  document.getElementById("date").value = new Date().toISOString().slice(0,10);
+  updateBranchList();
+  renderBSDate();
+  updatePreview();
+  updateProgress();
+  showToast("Sample data loaded", "success");
+}
+
+/* ============================================================
+   CHECKLIST
+============================================================ */
+function initChecklist() {
+  const checks = document.querySelectorAll("#checklistItems input[type=checkbox]");
+  checks.forEach(c => c.addEventListener("change", () => {
+    const checked = document.querySelectorAll("#checklistItems input:checked").length;
+    document.getElementById("checklistProgress").textContent = `${checked} / ${checks.length} items checked`;
+    if (checked === checks.length) showToast("All items ready! ✓", "success");
+  }));
+}
+
+/* ============================================================
+   COLLAPSE
+============================================================ */
+function toggleCollapse(name) {
+  const body = document.getElementById("body_" + name);
+  const arrow = document.getElementById("arrow_" + name);
+  body.classList.toggle("open");
+  arrow.classList.toggle("open");
+}
+
+/* ============================================================
+   STAR RATING
+============================================================ */
+function setRating(n) {
+  userRating = n;
+  document.querySelectorAll("#starRating button").forEach((b,i) => b.classList.toggle("active", i < n));
+}
+
+/* ============================================================
+   FEEDBACK
+============================================================ */
+function sendFeedback() {
+  const msg = document.getElementById("feedback_msg").value.trim();
+  if (!msg) { showToast("Please write a message", "error"); return; }
+  showToast(`Thanks for your ${userRating ? userRating + "★ " : ""}feedback!`, "success");
+  ["feedback_name","feedback_email","feedback_msg"].forEach(id => { document.getElementById(id).value = ""; });
+  userRating = 0;
+  document.querySelectorAll("#starRating button").forEach(b => b.classList.remove("active"));
+}
+
+/* ============================================================
+   MODALS
+============================================================ */
+function closeModal() { document.getElementById("modalOverlay").style.display = "none"; }
+function closeHistoryModal() { document.getElementById("historyOverlay").style.display = "none"; }
+function closeModalOnBackdrop(e) { if (e.target === document.getElementById("modalOverlay")) closeModal(); }
+function closeHistoryOnBackdrop(e) { if (e.target === document.getElementById("historyOverlay")) closeHistoryModal(); }
+
+/* ============================================================
+   THEME
+============================================================ */
+function setTheme(t) {
+  document.documentElement.dataset.theme = t;
+  localStorage.setItem("preferred_theme", t);
+  document.getElementById("themeBtn").textContent = t === "dark" ? "☀️ Light" : "🌙 Dark";
+}
+function toggleTheme() { setTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark"); }
+
+/* ============================================================
+   TOAST
+============================================================ */
+function showToast(msg, type="info") {
+  const el = document.getElementById("toast");
+  el.textContent = msg;
+  el.className = "toast " + type;
+  el.style.display = "block";
+  clearTimeout(el._t);
+  el._t = setTimeout(() => el.style.display = "none", 3000);
+}
+
+/* ============================================================
+   UTILS
+============================================================ */
+function esc(s) {
+  return String(s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#039;");
+}
+
+/* ============================================================
+   AUTO-SAVE ON FIELD CHANGE
+============================================================ */
+function attachAutoSave() {
+  const ids = ["full_name","bank_name","branch_name","account_no","reason","refund","address","phone","id_no","accounts","attachments","date","output_mode"];
+  ids.forEach(id => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.addEventListener("input", saveAutoDraft);
+    el.addEventListener("change", saveAutoDraft);
+  });
+}
+
+/* ============================================================
+   SIGNATURE
+============================================================ */
+function handleSignatureUpload(e) {
+  const file = e.target.files && e.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = () => {
+    signatureDataUrl = reader.result;
+    localStorage.setItem("signature_data", signatureDataUrl);
+    const img = document.getElementById("signaturePreview");
+    img.src = signatureDataUrl; img.style.display = "block";
+    showToast("Signature uploaded", "success");
+    updatePreview();
+  };
+  reader.readAsDataURL(file);
+}
+
+/* ============================================================
+   KEYBOARD SHORTCUTS
+============================================================ */
+document.addEventListener("keydown", e => {
+  if ((e.ctrlKey || e.metaKey) && e.key === "Enter") { e.preventDefault(); generateLetter(); }
+  if ((e.ctrlKey || e.metaKey) && e.key === "s") { e.preventDefault(); saveForm(); }
+  if (e.key === "Escape") { closeModal(); closeHistoryModal(); }
+});
+
+/* ============================================================
+   INIT
+============================================================ */
+document.addEventListener("DOMContentLoaded", () => {
+  const theme = localStorage.getItem("preferred_theme") || "light";
+  setTheme(theme);
+
+  const base = currentLang === "both" ? "ne" : currentLang;
+  populateSelects(base);
+  loadSavedDraft();
+  updateStaticText(currentLang);
+  setLanguage(currentLang);
+  setTemplate(currentTemplate);
+  setTone(currentTone);
+
+  if (signatureDataUrl) {
+    const img = document.getElementById("signaturePreview");
+    img.src = signatureDataUrl; img.style.display = "block";
+  }
+
+  document.getElementById("date").value = new Date().toISOString().slice(0,10);
+  renderBSDate();
+  updateProgress();
+  updatePreview();
+  initChecklist();
+  attachAutoSave();
+
+  document.getElementById("date").addEventListener("change", renderBSDate);
+  document.getElementById("signature").addEventListener("change", handleSignatureUpload);
+
+  // Checklist default open
+  document.getElementById("body_checklist").classList.add("open");
+  document.getElementById("arrow_checklist").classList.add("open");
+});
+</script>
 </body>
 </html>
