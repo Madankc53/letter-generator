@@ -7,10 +7,16 @@
   <meta name="description" content="नेपालमा बैंक खाता बन्द गर्नको लागि तयार निवेदन पत्र।" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://letter.madankc.com.np/letter-for-bank/account-closing.html" />
-  <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Nepal&family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="/components/letter.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Nepal&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/components/letter.css" />
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1239173186536702" crossorigin="anonymous"></script>
 
   <style>
+    body {
+      font-family: 'DM Sans', sans-serif;
+    }
+
     .topbar {
       display: flex;
       justify-content: flex-end;
@@ -21,7 +27,7 @@
 
     .lang-switcher {
       display: inline-flex;
-      border: 1px solid #ccc;
+      border: 1px solid #d0d0d0;
       border-radius: 999px;
       overflow: hidden;
       background: #fff;
@@ -40,320 +46,434 @@
       color: #fff;
     }
 
-    [dir="rtl"] .topbar {
-      justify-content: flex-start;
+    .letter-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
     }
 
-    .hidden {
-      display: none !important;
+    .letter-panel {
+      border: 1px solid #e5e5e5;
+      border-radius: 12px;
+      padding: 16px;
+      background: #fff;
+    }
+
+    .letter-title {
+      margin: 0 0 12px;
+      font-weight: 700;
+    }
+
+    @media (max-width: 900px) {
+      .letter-split {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 <body>
-<div class="topbar">
-  <div class="lang-switcher" role="group" aria-label="Language switcher">
-    <button type="button" id="btnNe" class="active" onclick="setLanguage('ne')">नेपाली</button>
-    <button type="button" id="btnEn" onclick="setLanguage('en')">English</button>
-  </div>
-</div>
-
-<div id="site-header"></div>
-
-<div class="page-hero">
-  <div class="breadcrumb">
-    <a href="/" data-i18n="breadcrumb_home">गृहपृष्ठ</a> ›
-    <a href="/letter-for-bank/bank-letters.html" data-i18n="breadcrumb_bank">बैंक पत्र</a> ›
-    <span data-i18n="breadcrumb_current">खाता बन्द गर्ने पत्र</span>
-  </div>
-  <h1 data-i18n="hero_title">🔒 बैंक खाता बन्द गर्ने निवेदन पत्र</h1>
-  <p data-i18n="hero_subtitle">Bank Account Closing Letter — Nepal</p>
-</div>
-
-<div class="form-card">
-  <div class="form-section-title" data-i18n="form_title">📝 विवरण भर्नुहोस्</div>
-
-  <div class="form-grid">
-    <div class="form-group">
-      <label data-i18n="label_full_name">पूरा नाम * | Full Name</label>
-      <input type="text" id="full_name" placeholder="राम बहादुर श्रेष्ठ" required />
-    </div>
-
-    <div class="form-group">
-      <label data-i18n="label_bank_name">बैंकको नाम * | Bank Name</label>
-      <input type="text" id="bank_name" placeholder="नबिल बैंक लि." required />
-    </div>
-
-    <div class="form-group">
-      <label data-i18n="label_branch">शाखा | Branch</label>
-      <input type="text" id="branch_name" placeholder="दमौली शाखा" />
-    </div>
-
-    <div class="form-group">
-      <label data-i18n="label_account_no">खाता नम्बर * | Account Number</label>
-      <input type="text" id="account_no" placeholder="XXXXXXXXXXXXXXXX" required />
-    </div>
-
-    <div class="form-group">
-      <label data-i18n="label_reason">खाता बन्द गर्नुको कारण | Reason</label>
-      <select id="reason">
-        <option value="व्यक्तिगत कारणले" data-i18n="reason_personal">व्यक्तिगत कारणले</option>
-        <option value="अर्को बैंकमा सरेकोले" data-i18n="reason_bank_transfer">अर्को बैंकमा सरेकोले</option>
-        <option value="खाता निष्क्रिय भएकोले" data-i18n="reason_inactive">खाता निष्क्रिय भएकोले</option>
-        <option value="व्यवसाय बन्द भएकोले" data-i18n="reason_business_closed">व्यवसाय बन्द भएकोले</option>
-      </select>
-    </div>
-
-    <div class="form-group">
-      <label data-i18n="label_refund">बाँकी रकम फिर्ता पाउने विधि | Refund Method</label>
-      <select id="refund">
-        <option value="नगद" data-i18n="refund_cash">नगद (Cash)</option>
-        <option value="अर्को खातामा स्थानान्तरण" data-i18n="refund_transfer">अर्को खातामा स्थानान्तरण</option>
-      </select>
-    </div>
-
-    <div class="form-group">
-      <label data-i18n="label_address">ठेगाना * | Address</label>
-      <input type="text" id="address" placeholder="शुक्लागण्डकी-३, तनहुँ" required />
-    </div>
-
-    <div class="form-group">
-      <label data-i18n="label_phone">सम्पर्क नम्बर | Phone</label>
-      <input type="tel" id="phone" placeholder="९८XXXXXXXX" />
-    </div>
-
-    <div class="form-group">
-      <label data-i18n="label_citizenship">नागरिकता नम्बर | Citizenship No.</label>
-      <input type="text" id="citizenship_no" placeholder="XX-XX-XXXXXXX" />
-    </div>
-
-    <div class="form-group">
-      <label data-i18n="label_date">मिति | Date</label>
-      <input type="date" id="date" />
+  <div class="topbar">
+    <div class="lang-switcher" role="group" aria-label="Language switcher">
+      <button type="button" id="btnNe" onclick="setLanguage('ne')">नेपाली</button>
+      <button type="button" id="btnEn" onclick="setLanguage('en')">English</button>
     </div>
   </div>
 
-  <div class="btn-row">
-    <button class="btn btn-secondary" onclick="resetForm()" data-i18n="btn_reset">🔄 Reset</button>
-    <button class="btn btn-primary" onclick="generateLetter()" data-i18n="btn_generate">📄 पत्र बनाउनुहोस्</button>
-  </div>
-</div>
+  <div id="site-header"></div>
 
-<div class="modal-overlay" id="modalOverlay">
-  <div class="modal">
-    <div class="modal-header">
-      <div class="modal-title" data-i18n="modal_title">✅ पत्र तयार छ!</div>
-      <div class="modal-actions">
-        <button class="btn btn-secondary btn-sm" onclick="closeModal()" data-i18n="btn_close">✖ बन्द</button>
-        <button class="btn btn-primary btn-sm" onclick="window.print()" data-i18n="btn_print">🖨️ Print</button>
+  <div class="page-hero">
+    <div class="breadcrumb">
+      <a href="/" data-i18n="breadcrumb_home">गृहपृष्ठ</a> ›
+      <a href="/letter-for-bank/bank-letters.html" data-i18n="breadcrumb_bank">बैंक पत्र</a> ›
+      <span data-i18n="breadcrumb_current">खाता बन्द गर्ने पत्र</span>
+    </div>
+    <h1 data-i18n="hero_title">🔒 बैंक खाता बन्द गर्ने निवेदन पत्र</h1>
+    <p data-i18n="hero_subtitle">Bank Account Closing Letter — Nepal</p>
+  </div>
+
+  <div class="form-card">
+    <div class="form-section-title" data-i18n="form_title">📝 विवरण भर्नुहोस्</div>
+
+    <div class="form-grid">
+      <div class="form-group">
+        <label data-i18n="label_full_name">पूरा नाम * | Full Name</label>
+        <input type="text" id="full_name" placeholder="राम बहादुर श्रेष्ठ" required />
+      </div>
+
+      <div class="form-group">
+        <label data-i18n="label_bank_name">बैंकको नाम * | Bank Name</label>
+        <input type="text" id="bank_name" placeholder="Nabil Bank Ltd." required />
+      </div>
+
+      <div class="form-group">
+        <label data-i18n="label_branch">शाखा | Branch</label>
+        <input type="text" id="branch_name" placeholder="Damauli Branch" />
+      </div>
+
+      <div class="form-group">
+        <label data-i18n="label_account_no">खाता नम्बर * | Account Number</label>
+        <input type="text" id="account_no" placeholder="XXXXXXXXXXXXXXXX" required />
+      </div>
+
+      <div class="form-group">
+        <label data-i18n="label_reason">खाता बन्द गर्नुको कारण | Reason</label>
+        <select id="reason"></select>
+      </div>
+
+      <div class="form-group">
+        <label data-i18n="label_refund">बाँकी रकम फिर्ता पाउने विधि | Refund Method</label>
+        <select id="refund"></select>
+      </div>
+
+      <div class="form-group">
+        <label data-i18n="label_address">ठेगाना * | Address</label>
+        <input type="text" id="address" placeholder="Shuklagandaki-3, Tanahun" required />
+      </div>
+
+      <div class="form-group">
+        <label data-i18n="label_phone">सम्पर्क नम्बर | Phone</label>
+        <input type="tel" id="phone" placeholder="984XXXXXXX" />
+      </div>
+
+      <div class="form-group">
+        <label data-i18n="label_citizenship">नागरिकता नम्बर | Citizenship No.</label>
+        <input type="text" id="citizenship_no" placeholder="XX-XX-XXXXXXX" />
+      </div>
+
+      <div class="form-group">
+        <label data-i18n="label_date">मिति | Date</label>
+        <input type="date" id="date" />
+      </div>
+
+      <div class="form-group">
+        <label data-i18n="label_output">पत्रको ढाँचा | Letter Output</label>
+        <select id="output_mode" onchange="renderPreview()">
+          <option value="single" data-i18n="output_single">Single language</option>
+          <option value="bilingual" data-i18n="output_bilingual">Bilingual side by side</option>
+        </select>
       </div>
     </div>
-    <div class="modal-body">
-      <div class="letter-doc" id="letterDoc"></div>
+
+    <div class="btn-row">
+      <button class="btn btn-secondary" onclick="resetForm()" data-i18n="btn_reset">🔄 Reset</button>
+      <button class="btn btn-primary" onclick="renderPreview()" data-i18n="btn_generate">📄 पत्र बनाउनुहोस्</button>
     </div>
   </div>
-</div>
 
-<div id="site-footer"></div>
-<div class="toast" id="toast"></div>
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal">
+      <div class="modal-header">
+        <div class="modal-title" data-i18n="modal_title">✅ पत्र तयार छ!</div>
+        <div class="modal-actions">
+          <button class="btn btn-secondary btn-sm" onclick="closeModal()" data-i18n="btn_close">✖ बन्द</button>
+          <button class="btn btn-primary btn-sm" onclick="window.print()" data-i18n="btn_print">🖨️ Print</button>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="letter-doc" id="letterDoc"></div>
+      </div>
+    </div>
+  </div>
 
-<script src="/components/loader.js"></script>
-<script src="/components/letter.js"></script>
+  <div id="site-footer"></div>
+  <div class="toast" id="toast"></div>
 
-<script>
-  const translations = {
-    ne: {
-      breadcrumb_home: "गृहपृष्ठ",
-      breadcrumb_bank: "बैंक पत्र",
-      breadcrumb_current: "खाता बन्द गर्ने पत्र",
-      hero_title: "🔒 बैंक खाता बन्द गर्ने निवेदन पत्र",
-      hero_subtitle: "Bank Account Closing Letter — Nepal",
-      form_title: "📝 विवरण भर्नुहोस्",
-      label_full_name: "पूरा नाम * | Full Name",
-      label_bank_name: "बैंकको नाम * | Bank Name",
-      label_branch: "शाखा | Branch",
-      label_account_no: "खाता नम्बर * | Account Number",
-      label_reason: "खाता बन्द गर्नुको कारण | Reason",
-      label_refund: "बाँकी रकम फिर्ता पाउने विधि | Refund Method",
-      label_address: "ठेगाना * | Address",
-      label_phone: "सम्पर्क नम्बर | Phone",
-      label_citizenship: "नागरिकता नम्बर | Citizenship No.",
-      label_date: "मिति | Date",
-      btn_reset: "🔄 Reset",
-      btn_generate: "📄 पत्र बनाउनुहोस्",
-      modal_title: "✅ पत्र तयार छ!",
-      btn_close: "✖ बन्द",
-      btn_print: "🖨️ Print",
-      err_name: "❌ नाम अनिवार्य छ!",
-      err_bank: "❌ बैंकको नाम अनिवार्य छ!",
-      err_acc: "❌ खाता नम्बर अनिवार्य छ!",
-      letter_subject: "विषय: बैंक खाता बन्द गर्ने सम्बन्धमा ।",
-      letter_salutation: "श्रीमान् शाखा प्रबन्धक महोदय,",
-      letter_body_prefix: "म",
-      letter_body_suffix: "बासिन्दाको तपाईंको बैंकमा खाता नम्बर",
-      letter_body_request: "उक्त खाता बन्द गर्न चाहेकोले कृपया खाता बन्द गरी बाँकी रकम",
-      letter_body_end: "मार्फत फिर्ता गरिदिनुहुन हार्दिक अनुरोध गर्दछु ।",
-      letter_closing: "निवेदक,",
-      reason_personal: "व्यक्तिगत कारणले",
-      reason_bank_transfer: "अर्को बैंकमा सरेकोले",
-      reason_inactive: "खाता निष्क्रिय भएकोले",
-      reason_business_closed: "व्यवसाय बन्द भएकोले",
-      refund_cash: "नगद (Cash)",
-      refund_transfer: "अर्को खातामा स्थानान्तरण"
-    },
-    en: {
-      breadcrumb_home: "Home",
-      breadcrumb_bank: "Bank Letters",
-      breadcrumb_current: "Account Closing Letter",
-      hero_title: "🔒 Bank Account Closing Application",
-      hero_subtitle: "Bank Account Closing Letter — Nepal",
-      form_title: "📝 Fill in Details",
-      label_full_name: "Full Name * | पूरा नाम",
-      label_bank_name: "Bank Name * | बैंकको नाम",
-      label_branch: "Branch | शाखा",
-      label_account_no: "Account Number * | खाता नम्बर",
-      label_reason: "Reason for Closing | खाता बन्द गर्नुको कारण",
-      label_refund: "Refund Method | बाँकी रकम फिर्ता पाउने विधि",
-      label_address: "Address * | ठेगाना",
-      label_phone: "Phone | सम्पर्क नम्बर",
-      label_citizenship: "Citizenship No. | नागरिकता नम्बर",
-      label_date: "Date | मिति",
-      btn_reset: "🔄 Reset",
-      btn_generate: "📄 Generate Letter",
-      modal_title: "✅ Letter Ready!",
-      btn_close: "✖ Close",
-      btn_print: "🖨️ Print",
-      err_name: "❌ Name is required!",
-      err_bank: "❌ Bank name is required!",
-      err_acc: "❌ Account number is required!",
-      letter_subject: "Subject: Request for Bank Account Closure.",
-      letter_salutation: "Dear Branch Manager,",
-      letter_body_prefix: "I,",
-      letter_body_suffix: "resident of",
-      letter_body_request: "holding account number",
-      letter_body_end: "kindly request you to close the account and return the remaining balance via",
-      letter_closing: "Applicant,",
-      reason_personal: "Personal reasons",
-      reason_bank_transfer: "Transferred to another bank",
-      reason_inactive: "Account has become inactive",
-      reason_business_closed: "Business has been closed",
-      refund_cash: "Cash",
-      refund_transfer: "Transfer to another account"
-    }
-  };
+  <script src="/components/loader.js"></script>
+  <script src="/components/letter.js"></script>
 
-  let currentLang = "ne";
+  <script>
+    const translations = {
+      ne: {
+        breadcrumb_home: "गृहपृष्ठ",
+        breadcrumb_bank: "बैंक पत्र",
+        breadcrumb_current: "खाता बन्द गर्ने पत्र",
+        hero_title: "🔒 बैंक खाता बन्द गर्ने निवेदन पत्र",
+        hero_subtitle: "Bank Account Closing Letter — Nepal",
+        form_title: "📝 विवरण भर्नुहोस्",
+        label_full_name: "पूरा नाम * | Full Name",
+        label_bank_name: "बैंकको नाम * | Bank Name",
+        label_branch: "शाखा | Branch",
+        label_account_no: "खाता नम्बर * | Account Number",
+        label_reason: "खाता बन्द गर्नुको कारण | Reason",
+        label_refund: "बाँकी रकम फिर्ता पाउने विधि | Refund Method",
+        label_address: "ठेगाना * | Address",
+        label_phone: "सम्पर्क नम्बर | Phone",
+        label_citizenship: "नागरिकता नम्बर | Citizenship No.",
+        label_date: "मिति | Date",
+        label_output: "पत्रको ढाँचा | Letter Output",
+        btn_reset: "🔄 Reset",
+        btn_generate: "📄 पत्र बनाउनुहोस्",
+        modal_title: "✅ पत्र तयार छ!",
+        btn_close: "✖ बन्द",
+        btn_print: "🖨️ Print",
+        err_name: "❌ नाम अनिवार्य छ!",
+        err_bank: "❌ बैंकको नाम अनिवार्य छ!",
+        err_acc: "❌ खाता नम्बर अनिवार्य छ!",
+        reason_personal: "व्यक्तिगत कारणले",
+        reason_bank_transfer: "अर्को बैंकमा सरेकोले",
+        reason_inactive: "खाता निष्क्रिय भएकोले",
+        reason_business_closed: "व्यवसाय बन्द भएकोले",
+        refund_cash: "नगद (Cash)",
+        refund_transfer: "अर्को खातामा स्थानान्तरण",
+        output_single: "एकल भाषा",
+        output_bilingual: "दुवै भाषा",
+        letter_subject: "विषय: बैंक खाता बन्द गर्ने सम्बन्धमा ।",
+        letter_salutation: "श्रीमान् शाखा प्रबन्धक महोदय,",
+        letter_body: "म <strong>{name}</strong>, {address} बासिन्दाको तपाईंको बैंकमा खाता नम्बर <strong>{accNo}</strong> रहेको छ । <strong>{reason}</strong> उक्त खाता बन्द गर्न चाहेकोले कृपया खाता बन्द गरी बाँकी रकम <strong>{refund}</strong> मार्फत फिर्ता गरिदिनुहुन हार्दिक अनुरोध गर्दछु ।",
+        letter_closing: "निवेदक,",
+        account_no: "खाता नं.",
+        citizenship: "ना.प्र.नं.",
+        contact: "सम्पर्क",
+        date_label: "मिति"
+      },
+      en: {
+        breadcrumb_home: "Home",
+        breadcrumb_bank: "Bank Letters",
+        breadcrumb_current: "Account Closing Letter",
+        hero_title: "🔒 Bank Account Closing Application",
+        hero_subtitle: "Bank Account Closing Letter — Nepal",
+        form_title: "📝 Fill in Details",
+        label_full_name: "Full Name * | पूरा नाम",
+        label_bank_name: "Bank Name * | बैंकको नाम",
+        label_branch: "Branch | शाखा",
+        label_account_no: "Account Number * | खाता नम्बर",
+        label_reason: "Reason for Closing | खाता बन्द गर्नुको कारण",
+        label_refund: "Refund Method | बाँकी रकम फिर्ता पाउने विधि",
+        label_address: "Address * | ठेगाना",
+        label_phone: "Phone | सम्पर्क नम्बर",
+        label_citizenship: "Citizenship No. | नागरिकता नम्बर",
+        label_date: "Date | मिति",
+        label_output: "Letter Output | पत्रको ढाँचा",
+        btn_reset: "🔄 Reset",
+        btn_generate: "📄 Generate Letter",
+        modal_title: "✅ Letter Ready!",
+        btn_close: "✖ Close",
+        btn_print: "🖨️ Print",
+        err_name: "❌ Name is required!",
+        err_bank: "❌ Bank name is required!",
+        err_acc: "❌ Account number is required!",
+        reason_personal: "Personal reasons",
+        reason_bank_transfer: "Transferred to another bank",
+        reason_inactive: "Account has become inactive",
+        reason_business_closed: "Business has been closed",
+        refund_cash: "Cash",
+        refund_transfer: "Transfer to another account",
+        output_single: "Single language",
+        output_bilingual: "Bilingual side by side",
+        letter_subject: "Subject: Request for Bank Account Closure.",
+        letter_salutation: "Dear Branch Manager,",
+        letter_body: "I <strong>{name}</strong>, resident of {address}, hold account number <strong>{accNo}</strong> in your bank. As <strong>{reason}</strong>, I kindly request you to close the account and return the remaining balance via <strong>{refund}</strong>.",
+        letter_closing: "Applicant,",
+        account_no: "Account No.",
+        citizenship: "Citizenship No.",
+        contact: "Phone",
+        date_label: "Date"
+      }
+    };
 
-  document.getElementById("date").valueAsDate = new Date();
-
-  function setLanguage(lang) {
-    currentLang = lang;
-    document.documentElement.lang = lang;
-    document.documentElement.dir = "ltr";
-
-    document.getElementById("btnNe").classList.toggle("active", lang === "ne");
-    document.getElementById("btnEn").classList.toggle("active", lang === "en");
-
-    document.querySelectorAll("[data-i18n]").forEach(el => {
-      const key = el.getAttribute("data-i18n");
-      if (translations[lang][key]) el.textContent = translations[lang][key];
-    });
-
-    updateSelectOptions(lang);
-  }
-
-  function updateSelectOptions(lang) {
-    const reasonSelect = document.getElementById("reason");
-    const refundSelect = document.getElementById("refund");
-
-    if (lang === "en") {
-      reasonSelect.options[0].text = translations.en.reason_personal;
-      reasonSelect.options[1].text = translations.en.reason_bank_transfer;
-      reasonSelect.options[2].text = translations.en.reason_inactive;
-      reasonSelect.options[3].text = translations.en.reason_business_closed;
-
-      refundSelect.options[0].text = translations.en.refund_cash;
-      refundSelect.options[1].text = translations.en.refund_transfer;
-    } else {
-      reasonSelect.options[0].text = translations.ne.reason_personal;
-      reasonSelect.options[1].text = translations.ne.reason_bank_transfer;
-      reasonSelect.options[2].text = translations.ne.reason_inactive;
-      reasonSelect.options[3].text = translations.ne.reason_business_closed;
-
-      refundSelect.options[0].text = translations.ne.refund_cash;
-      refundSelect.options[1].text = translations.ne.refund_transfer;
-    }
-  }
-
-  function generateLetter() {
-    const t = translations[currentLang];
-    const name = document.getElementById("full_name").value.trim();
-    const bank = document.getElementById("bank_name").value.trim();
-    const branch = document.getElementById("branch_name").value.trim();
-    const accNo = document.getElementById("account_no").value.trim();
-    const reason = document.getElementById("reason").value;
-    const refund = document.getElementById("refund").value;
-    const address = document.getElementById("address").value.trim();
-    const phone = document.getElementById("phone").value.trim();
-    const cit = document.getElementById("citizenship_no").value.trim();
-    const dateStr = getDate();
-
-    if (!name) { showToast(t.err_name, "error"); return; }
-    if (!bank) { showToast(t.err_bank, "error"); return; }
-    if (!accNo) { showToast(t.err_acc, "error"); return; }
-
-    let html = "";
-
-    if (currentLang === "ne") {
-      html = `
-        <p class="right">मिति: ${dateStr}</p><br/>
-        <p><strong>${t.letter_salutation}</strong></p>
-        <p>${bank}${branch ? ", " + branch : ""},</p>
-        <p>${address}</p><br/>
-        <p><strong>${t.letter_subject}</strong></p><br/>
-        <p>महोदय,</p>
-        <p>म <strong>${name}</strong>, ${address} बासिन्दाको तपाईंको बैंकमा खाता नम्बर <strong>${accNo}</strong> रहेको छ । <strong>${reason}</strong> उक्त खाता बन्द गर्न चाहेकोले कृपया खाता बन्द गरी बाँकी रकम <strong>${refund}</strong> मार्फत फिर्ता गरिदिनुहुन हार्दिक अनुरोध गर्दछु ।</p>
-        <br/><br/>
-        <p>${t.letter_closing}</p><br/><br/>
-        <p>..............................</p>
-        <p><strong>${name}</strong></p>
-        <p>खाता नं.: ${accNo}</p>
-        <p>${address}</p>
-        ${cit ? '<p>ना.प्र.नं.: ' + cit + '</p>' : ''}
-        ${phone ? '<p>सम्पर्क: ' + phone + '</p>' : ''}
-      `;
-    } else {
-      html = `
-        <p class="right">Date: ${dateStr}</p><br/>
-        <p><strong>${t.letter_salutation}</strong></p>
-        <p>${bank}${branch ? ", " + branch : ""},</p>
-        <p>${address}</p><br/>
-        <p><strong>${t.letter_subject}</strong></p><br/>
-        <p>Sir/Madam,</p>
-        <p>I, <strong>${name}</strong>, resident of ${address}, hold account number <strong>${accNo}</strong> in your bank. As ${reason.toLowerCase()}, I kindly request you to close the account and return the remaining balance via <strong>${refund}</strong>.</p>
-        <br/><br/>
-        <p>${t.letter_closing}</p><br/><br/>
-        <p>..............................</p>
-        <p><strong>${name}</strong></p>
-        <p>Account No.: ${accNo}</p>
-        <p>${address}</p>
-        ${cit ? '<p>Citizenship No.: ' + cit + '</p>' : ''}
-        ${phone ? '<p>Phone: ' + phone + '</p>' : ''}
-      `;
+    let currentLang = localStorage.getItem("preferred_lang");
+    if (!currentLang) {
+      const browserLang = (navigator.language || "ne").toLowerCase();
+      currentLang = browserLang.startsWith("en") ? "en" : "ne";
     }
 
-    showLetter(html);
-  }
+    const reasonMap = {
+      ne: ["व्यक्तिगत कारणले", "अर्को बैंकमा सरेकोले", "खाता निष्क्रिय भएकोले", "व्यवसाय बन्द भएकोले"],
+      en: ["Personal reasons", "Transferred to another bank", "Account has become inactive", "Business has been closed"]
+    };
 
-  function resetForm() {
-    document.querySelectorAll("input").forEach(input => {
-      if (input.type !== "date") input.value = "";
-    });
-    document.getElementById("reason").selectedIndex = 0;
-    document.getElementById("refund").selectedIndex = 0;
+    const refundMap = {
+      ne: ["नगद (Cash)", "अर्को खातामा स्थानान्तरण"],
+      en: ["Cash", "Transfer to another account"]
+    };
+
     document.getElementById("date").valueAsDate = new Date();
-  }
 
-  setLanguage("ne");
-</script>
+    function updateStaticText(lang) {
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        if (translations[lang][key]) {
+          el.textContent = translations[lang][key];
+        }
+      });
+    }
+
+    function updatePlaceholders(lang) {
+      document.getElementById("full_name").placeholder = lang === "en" ? "Ram Bahadur Shrestha" : "राम बहादुर श्रेष्ठ";
+      document.getElementById("bank_name").placeholder = lang === "en" ? "Nabil Bank Ltd." : "नबिल बैंक लि.";
+      document.getElementById("branch_name").placeholder = lang === "en" ? "Damauli Branch" : "दमौली शाखा";
+      document.getElementById("account_no").placeholder = "XXXXXXXXXXXXXXXX";
+      document.getElementById("address").placeholder = lang === "en" ? "Shuklagandaki-3, Tanahun" : "शुक्लागण्डकी-३, तनहुँ";
+      document.getElementById("phone").placeholder = lang === "en" ? "984XXXXXXX" : "९८XXXXXXXX";
+      document.getElementById("citizenship_no").placeholder = "XX-XX-XXXXXXX";
+    }
+
+    function populateSelects(lang) {
+      const reason = document.getElementById("reason");
+      const refund = document.getElementById("refund");
+
+      reason.innerHTML = reasonMap[lang]
+        .map(v => `<option value="${v}">${v}</option>`)
+        .join("");
+
+      refund.innerHTML = refundMap[lang]
+        .map(v => `<option value="${v}">${v}</option>`)
+        .join("");
+    }
+
+    function setLanguage(lang) {
+      currentLang = lang;
+      localStorage.setItem("preferred_lang", lang);
+      document.documentElement.lang = lang;
+
+      document.getElementById("btnNe").classList.toggle("active", lang === "ne");
+      document.getElementById("btnEn").classList.toggle("active", lang === "en");
+
+      updateStaticText(lang);
+      updatePlaceholders(lang);
+      populateSelects(lang);
+
+      renderPreview(true);
+    }
+
+    function formatDate(lang) {
+      const d = document.getElementById("date").valueAsDate || new Date();
+      return d.toLocaleDateString(lang === "en" ? "en-GB" : "ne-NP", {
+        year: "numeric",
+        month: "long",
+        day: "numeric"
+      });
+    }
+
+    function buildLetter(lang) {
+      const t = translations[lang];
+      const name = document.getElementById("full_name").value.trim();
+      const bank = document.getElementById("bank_name").value.trim();
+      const branch = document.getElementById("branch_name").value.trim();
+      const accNo = document.getElementById("account_no").value.trim();
+      const reason = document.getElementById("reason").value.trim();
+      const refund = document.getElementById("refund").value.trim();
+      const address = document.getElementById("address").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const cit = document.getElementById("citizenship_no").value.trim();
+      const dateStr = formatDate(lang);
+
+      if (!name) return { error: t.err_name };
+      if (!bank) return { error: t.err_bank };
+      if (!accNo) return { error: t.err_acc };
+
+      const reasonText = reason || (lang === "en" ? "Personal reasons" : "व्यक्तिगत कारणले");
+      const refundText = refund || (lang === "en" ? "Cash" : "नगद (Cash)");
+
+      if (lang === "ne") {
+        return {
+          html: `
+            <p class="right">${t.date_label}: ${dateStr}</p><br/>
+            <p><strong>${t.letter_salutation}</strong></p>
+            <p>${bank}${branch ? ", " + branch : ""},</p>
+            <p>${address}</p><br/>
+            <p><strong>${t.letter_subject}</strong></p><br/>
+            <p>महोदय,</p>
+            <p>${t.letter_body
+              .replace("{name}", name)
+              .replace("{address}", address)
+              .replace("{accNo}", accNo)
+              .replace("{reason}", reasonText)
+              .replace("{refund}", refundText)}</p>
+            <br/><br/>
+            <p>${t.letter_closing}</p><br/><br/>
+            <p>..............................</p>
+            <p><strong>${name}</strong></p>
+            <p>${t.account_no}: ${accNo}</p>
+            <p>${address}</p>
+            ${cit ? `<p>${t.citizenship}: ${cit}</p>` : ""}
+            ${phone ? `<p>${t.contact}: ${phone}</p>` : ""}
+          `
+        };
+      }
+
+      return {
+        html: `
+          <p class="right">${t.date_label}: ${dateStr}</p><br/>
+          <p><strong>${t.letter_salutation}</strong></p>
+          <p>${bank}${branch ? ", " + branch : ""},</p>
+          <p>${address}</p><br/>
+          <p><strong>${t.letter_subject}</strong></p><br/>
+          <p>Sir/Madam,</p>
+          <p>${t.letter_body
+            .replace("{name}", name)
+            .replace("{address}", address)
+            .replace("{accNo}", accNo)
+            .replace("{reason}", reasonText)
+            .replace("{refund}", refundText)}</p>
+          <br/><br/>
+          <p>${t.letter_closing}</p><br/><br/>
+          <p>..............................</p>
+          <p><strong>${name}</strong></p>
+          <p>${t.account_no}: ${accNo}</p>
+          <p>${address}</p>
+          ${cit ? `<p>${t.citizenship}: ${cit}</p>` : ""}
+          ${phone ? `<p>${t.contact}: ${phone}</p>` : ""}
+        `
+      };
+    }
+
+    function renderPreview(skipValidation = false) {
+      const mode = document.getElementById("output_mode").value;
+      const single = buildLetter(currentLang);
+      const english = buildLetter("en");
+      const nepali = buildLetter("ne");
+
+      if (single.error) {
+        if (!skipValidation) showToast(single.error, "error");
+        return;
+      }
+
+      const letterDoc = document.getElementById("letterDoc");
+
+      if (mode === "bilingual") {
+        if (english.error || nepali.error) {
+          showToast(single.error || "Validation error", "error");
+          return;
+        }
+
+        letterDoc.innerHTML = `
+          <div class="letter-split">
+            <div class="letter-panel">
+              <div class="letter-title">नेपाली</div>
+              ${nepali.html}
+            </div>
+            <div class="letter-panel">
+              <div class="letter-title">English</div>
+              ${english.html}
+            </div>
+          </div>
+        `;
+      } else {
+        letterDoc.innerHTML = single.html;
+      }
+
+      document.getElementById("modalOverlay").style.display = "flex";
+    }
+
+    function resetForm() {
+      document.querySelectorAll("input").forEach(input => {
+        if (input.type !== "date") input.value = "";
+      });
+
+      document.getElementById("date").valueAsDate = new Date();
+      document.getElementById("reason").selectedIndex = 0;
+      document.getElementById("refund").selectedIndex = 0;
+      document.getElementById("output_mode").value = "single";
+      renderPreview(true);
+    }
+
+    function closeModal() {
+      document.getElementById("modalOverlay").style.display = "none";
+    }
+
+    populateSelects(currentLang);
+    setLanguage(currentLang);
+  </script>
 </body>
 </html>
