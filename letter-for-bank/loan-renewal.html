@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ऋण नवीकरण निवेदन पत्र | Loan Renewal Letter Nepal</title>
+  <meta name="description" content="नेपालमा बैंकमा ऋण नवीकरण गर्नको लागि तयार निवेदन पत्र।"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://letter.madankc.com.np/letter-for-bank/loan-renewal.html"/>
+  <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Nepal&family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/components/letter.css"/>
+</head>
+<body>
+<div id="site-header"></div>
+<div class="page-hero">
+  <div class="breadcrumb"><a href="/">गृहपृष्ठ</a> › <a href="/letter-for-bank/bank-letters.html">बैंक पत्र</a> › ऋण नवीकरण पत्र</div>
+  <h1>🔄 ऋण नवीकरण निवेदन पत्र</h1>
+  <p>Loan Renewal Letter — Nepal</p>
+</div>
+<div class="container">
+  <div class="ad-slot">📢 Advertisement</div>
+  <div class="form-card">
+    <div class="form-section-title">📝 विवरण भर्नुहोस्</div>
+    <div class="form-grid">
+      <div class="form-group"><label>पूरा नाम * | Full Name</label><input type="text" id="full_name" placeholder="राम बहादुर श्रेष्ठ"/></div>
+      <div class="form-group"><label>बैंकको नाम * | Bank Name</label><input type="text" id="bank_name" placeholder="नबिल बैंक लि."/></div>
+      <div class="form-group"><label>शाखा | Branch</label><input type="text" id="branch_name" placeholder="दमौली शाखा"/></div>
+      <div class="form-group"><label>ऋण खाता नम्बर * | Loan Account No.</label><input type="text" id="loan_no" placeholder="XXXXXXXXXXXXXXXX"/></div>
+      <div class="form-group"><label>ऋणको प्रकार | Loan Type</label>
+        <select id="loan_type">
+          <option value="व्यक्तिगत ऋण">व्यक्तिगत ऋण</option>
+          <option value="व्यापार ऋण">व्यापार ऋण</option>
+          <option value="घर कर्जा">घर कर्जा</option>
+          <option value="कृषि ऋण">कृषि ऋण</option>
+          <option value="वाहन ऋण">वाहन ऋण</option>
+        </select>
+      </div>
+      <div class="form-group"><label>ऋणको रकम | Loan Amount</label><input type="text" id="loan_amount" placeholder="रु. ५,००,०००"/></div>
+      <div class="form-group"><label>नवीकरण अवधि | Renewal Period</label>
+        <select id="period">
+          <option value="१ वर्ष">१ वर्ष (1 Year)</option>
+          <option value="२ वर्ष">२ वर्ष (2 Years)</option>
+          <option value="३ वर्ष">३ वर्ष (3 Years)</option>
+          <option value="५ वर्ष">५ वर्ष (5 Years)</option>
+        </select>
+      </div>
+      <div class="form-group"><label>ठेगाना * | Address</label><input type="text" id="address" placeholder="शुक्लागण्डकी-३, तनहुँ"/></div>
+      <div class="form-group"><label>सम्पर्क नम्बर | Phone</label><input type="tel" id="phone" placeholder="९८XXXXXXXX"/></div>
+      <div class="form-group"><label>नागरिकता नम्बर | Citizenship No.</label><input type="text" id="citizenship_no" placeholder="XX-XX-XXXXXXX"/></div>
+      <div class="form-group"><label>मिति | Date</label><input type="date" id="date"/></div>
+    </div>
+    <div class="btn-row">
+      <button class="btn btn-secondary" onclick="resetForm()">🔄 Reset</button>
+      <button class="btn btn-primary" onclick="generateLetter()">📄 पत्र बनाउनुहोस्</button>
+    </div>
+  </div>
+  <div class="ad-slot">📢 Advertisement</div>
+</div>
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal">
+    <div class="modal-header">
+      <div class="modal-title">✅ पत्र तयार छ!</div>
+      <div class="modal-actions">
+        <button class="btn btn-secondary btn-sm" onclick="closeModal()">✖ बन्द</button>
+        <button class="btn btn-primary btn-sm" onclick="window.print()">🖨️ Print</button>
+      </div>
+    </div>
+    <div class="modal-body"><div class="letter-doc" id="letterDoc"></div></div>
+  </div>
+</div>
+<div id="site-footer"></div>
+<div class="toast" id="toast"></div>
+<script src="/components/loader.js"></script>
+<script src="/components/letter.js"></script>
+<script>
+document.getElementById('date').valueAsDate = new Date();
+function generateLetter() {
+  const name = document.getElementById('full_name').value.trim();
+  const bank = document.getElementById('bank_name').value.trim();
+  const branch = document.getElementById('branch_name').value.trim();
+  const loanNo = document.getElementById('loan_no').value.trim();
+  const loanType = document.getElementById('loan_type').value;
+  const amount = document.getElementById('loan_amount').value.trim();
+  const period = document.getElementById('period').value;
+  const address = document.getElementById('address').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+  const cit = document.getElementById('citizenship_no').value.trim();
+  const dateStr = getDate();
+  if (!name) { showToast('❌ नाम अनिवार्य छ!', 'error'); return; }
+  if (!bank) { showToast('❌ बैंकको नाम अनिवार्य छ!', 'error'); return; }
+  if (!loanNo) { showToast('❌ ऋण खाता नम्बर अनिवार्य छ!', 'error'); return; }
+  const html = `
+    <p class="right">मिति: ${dateStr}</p><br/>
+    <p><strong>श्रीमान् शाखा प्रबन्धक महोदय,</strong></p>
+    <p>${bank}${branch ? ', ' + branch : ''},</p>
+    <p>${address}</p><br/>
+    <p><strong>विषय: ${loanType} नवीकरण गर्ने सम्बन्धमा ।</strong></p><br/>
+    <p>महोदय,</p>
+    <p>म <strong>${name}</strong>, ${address} बासिन्दाको तपाईंको बैंकमा ऋण खाता नम्बर <strong>${loanNo}</strong> अन्तर्गत ${amount ? '<strong>' + amount + '</strong> को' : ''} <strong>${loanType}</strong> लिएको छु । उक्त ऋण नवीकरण गर्नु परेकोले थप <strong>${period}</strong> का लागि नवीकरण गरिदिनुहुन हार्दिक अनुरोध गर्दछु । म नियमित किस्ता तिरिरहेको छु र भविष्यमा पनि तिर्न प्रतिबद्ध छु ।</p>
+    <br/><br/>
+    <p>निवेदक,</p><br/><br/>
+    <p>..............................</p>
+    <p><strong>${name}</strong></p>
+    <p>ऋण खाता नं.: ${loanNo}</p>
+    <p>${address}</p>
+    ${cit ? '<p>ना.प्र.नं.: ' + cit + '</p>' : ''}
+    ${phone ? '<p>सम्पर्क: ' + phone + '</p>' : ''}
+  `;
+  showLetter(html);
+}
+</script>
+</body>
+</html>
